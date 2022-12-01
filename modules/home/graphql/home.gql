@@ -1,0 +1,97 @@
+query GetHomeData {
+    poolGetFeaturedPoolGroups {
+        ...GqlPoolFeaturedPoolGroup
+    }
+    contentGetNewsItems {
+        id
+        text
+        image
+        url
+        source
+        timestamp
+        discussionUrl
+    }
+}
+
+query GetHomeFeaturedPools {
+    featuredPoolGroups: poolGetFeaturedPoolGroups {
+        ...GqlPoolFeaturedPoolGroup
+    }
+}
+
+query GetHomeNewsItems {
+    newsItems: contentGetNewsItems {
+        id
+        text
+        image
+        url
+        source
+        timestamp
+        discussionUrl
+    }
+}
+
+fragment GqlPoolFeaturedPoolGroup on GqlPoolFeaturedPoolGroup {
+    id
+    icon
+    title
+    items {
+        ... on GqlFeaturePoolGroupItemExternalLink {
+            id
+            image
+            buttonText
+            buttonUrl
+        }
+        ... on GqlPoolMinimal {
+            ...GqlPoolCardData
+        }
+    }
+}
+
+fragment GqlPoolCardData on GqlPoolMinimal {
+    id
+    address
+    name
+    dynamicData {
+        totalLiquidity
+        totalShares
+        apr {
+            hasRewardApr
+            thirdPartyApr
+            nativeRewardApr
+            swapApr
+            total
+            items {
+                id
+                title
+                apr
+                subItems {
+                    id
+                    title
+                    apr
+                }
+            }
+        }
+    }
+    allTokens {
+        id
+        address
+        isNested
+        isPhantomBpt
+        weight
+    }
+    displayTokens {
+        id
+        address
+        name
+        weight
+        symbol
+        nestedTokens {
+            id
+            address
+            name
+            weight
+            symbol
+        }
+    }
+}
