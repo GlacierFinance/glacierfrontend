@@ -50,6 +50,7 @@ a {
     -webkit-animation: move 15s infinite linear;*/
 }
 
+
 @-webkit-keyframes move {
     0% {
         background-position: 0% 50%;

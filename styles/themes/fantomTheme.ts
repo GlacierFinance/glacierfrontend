@@ -65,6 +65,22 @@ export const fantomTheme: Partial<ChakraTheme> = {
             lineHeight: '115%',
             letterSpacing: '-0.03rem',
         },
+        
+        homehero: {
+            fontFamily: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+            fontSize: ['112px'],
+            fontWeight: '700',
+            lineHeight: '134px',
+            letterSpacing: '1.92px',
+            backgroundClip:'text', 
+            border: '2.47px solid', 
+            borderImageSource: "linear-gradient(180deg, #DFCAD7 16.67%, #A16AB8 49.48%, #BACDFF 75.38%, #5D9988 100%)",
+            borderImageSlice:'1', 
+            mixBlendMode:'screen', 
+            textShadow:'text-shadow: 0px 8.50312px 76.528px rgba(0, 0, 0, 0.5), 0px 6.43072px 10.3881px #000000', 
+            WebkitTextFillColor:'transparent', 
+            backgroundImage: 'linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 50.9%, #F6ECFD 100%)', 
+        },
     },
     colors: {
         gray: {
