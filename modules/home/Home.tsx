@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem } from '@chakra-ui/react';
+import { Box, Grid, GridItem, Flex, useTheme } from '@chakra-ui/react';
 import { HomeHero } from '~/modules/home/components/HomeHero';
 import { HomePools } from '~/modules/home/components/HomePools';
 import { HomeNews } from '~/modules/home/components/HomeNews';
@@ -6,13 +6,14 @@ import { HomeWhyUs } from '~/modules/home/components/HomeWhyUs';
 import { HomeBeetsInfo } from '~/modules/home/components/HomeBeetsInfo';
 import { HomeLearn } from '~/modules/home/components/HomeLearn';
 import { useNetworkConfig } from '~/lib/global/useNetworkConfig';
-
+import image from '/Users/topg/glacierfrontend/public/images/HomeBg01.png'
 
 export function Home() {
+    const theme = useTheme();
     const { chainId } = useNetworkConfig();
     return (
-        <Box >
-            <HomeHero />
+        <Box>    
+    <HomeHero />
             <Grid
                 templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
                 columnGap={{ base: '0', lg: '16' }}
@@ -29,7 +30,6 @@ export function Home() {
                     <HomeNews />
                 </GridItem>
             </Grid>
-
             <Grid
                 templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
                 columnGap={{ base: '0', lg: '16' }}
@@ -50,5 +50,6 @@ export function Home() {
                 <HomeLearn />
             </Box>
         </Box>
-    );
+            
+            );
 }

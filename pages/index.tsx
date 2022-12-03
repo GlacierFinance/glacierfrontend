@@ -1,5 +1,6 @@
 import { Home } from '~/modules/home/Home';
 import Head from 'next/head';
+import { Box } from '@chakra-ui/react';
 import { initializeApolloClient, loadApolloState } from '~/apollo/client';
 import { GetHomeData } from '~/apollo/generated/operations';
 import { useEffect, useRef } from 'react';
@@ -34,7 +35,7 @@ function HomePage() {
     return (
         <>
             <Head>
-                <title>Beethoven X</title>
+                <title>Glacier Fi</title>
             </Head>
             <Home />
         </>

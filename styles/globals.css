@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=VT323&display=swap');
+
 html,
 body {
     height: 100%;
     padding: 0;
     margin: 0;
     background-blend-mode: normal;
+    font-family: 'Space Grotesk';
 }
 
 a {
