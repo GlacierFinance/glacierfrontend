@@ -4,6 +4,13 @@ export function BeetsFonts() {
     return (
         <Global
             styles={`
+            @font-face {
+                font-family: 'Space';
+                src: url('/fonts/spacegrotesk.woff2') format('woff2'),
+                        url('/fonts/spacegrotesk.woff') format('woff');
+                font-weight: 700;
+                font-style: normal;
+            }
                 @font-face {
                     font-family: 'Gotham';
                     src: url('/fonts/gotham-light-webfont.woff2') format('woff2'),
