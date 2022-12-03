@@ -1,4 +1,6 @@
 import { Box, Button, Flex, HStack, Link, Text, useTheme } from '@chakra-ui/react';
+import Image from 'next/image';
+import  placeholder from '../../../public/images/glacierhero.png'; 
 
 import { NextLink } from '~/components/link/NextLink';
 import { useNetworkConfig } from '~/lib/global/useNetworkConfig';
@@ -21,13 +23,16 @@ export function HomeHero() {
                 md:
                     chainId === '10'
                         ? "url('/images/hero-image-optimism.jpg')"
-                        : "url('/images/hero-image-fantom.jpg')",
+                        : "url('/images/glacierhero.png')",
             }}
-            backgroundPosition="center"
+            
+            backgroundPosition="75% 50%"
+            
             backgroundRepeat="no-repeat"
-            backgroundSize="cover"
+            backgroundSize="contain"
             boxShadow="0px 0px 24px 0px rgba(0,0,0,0.25);"
         >
+           
             <Flex flex="1" mt="20" pl={{ base: '4', xl: '8' }} mb="12" alignItems="center">
                 <Flex flexDirection="column" width={{ base: 'auto', lg: '580px' }}>
                     <Text
@@ -37,9 +42,9 @@ export function HomeHero() {
                         color="white"
                         fontWeight="semibold"
                     >
-                        Welcome to
+                        Glacier
                         <br />
-                        Beethoven X
+                        
                     </Text>
                     <Text
                         color="white"
@@ -68,6 +73,11 @@ export function HomeHero() {
                         {"I'm new! Help me get started."}
                     </Link>*/}
                 </Flex>
+                {/* <Flex justify='end' padding='4' marginLeft='36' >
+                    <Image src={placeholder}  height='440px'
+                    objectFit="contain"
+                    />
+                </Flex> */}
             </Flex>
             <Box flex="1" display={{ base: 'none', md: 'block' }} />
         </Flex>

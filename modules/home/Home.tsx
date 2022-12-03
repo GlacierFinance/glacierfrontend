@@ -5,10 +5,13 @@ import { HomeNews } from '~/modules/home/components/HomeNews';
 import { HomeWhyUs } from '~/modules/home/components/HomeWhyUs';
 import { HomeBeetsInfo } from '~/modules/home/components/HomeBeetsInfo';
 import { HomeLearn } from '~/modules/home/components/HomeLearn';
+import { useNetworkConfig } from '~/lib/global/useNetworkConfig';
+
 
 export function Home() {
+    const { chainId } = useNetworkConfig();
     return (
-        <Box>
+        <Box >
             <HomeHero />
             <Grid
                 templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
