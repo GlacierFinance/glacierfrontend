@@ -1,4 +1,4 @@
-import { Box, Button, Flex, HStack, Link, Text, useTheme } from '@chakra-ui/react';
+import {  Box, Button, Flex, HStack, Img, Link, Text, useTheme } from '@chakra-ui/react';
 import Image from 'next/image';
 import  placeholder from '../../../public/images/glacierhero.png'; 
 
@@ -31,25 +31,21 @@ export function HomeHero() {
             boxShadow="0px 0px 24px 0px rgba(0,0,0,0.25);"
         >
            
-            <Flex flex="1" mt="20" pl={{ base: '4', xl: '8' }} mb="12" alignItems="center">
-                <Flex flexDirection="column" width={{ base: 'auto', lg: '580px' }}>
-                    <Text
-                        textStyle={{ base: 'h2', lg: 'homehero' }}
-                        textTransform="uppercase"
-                        className="homehero"
-                        
-                    >
-                        Glacier
-                        <br />
-                        
-                    </Text>
-                    <Text
+           <Flex flex="1" pl={{ base: '4', xl: '8' }} mb="12" alignItems="center" lineHeight="2">
+                <Flex flexDirection="column" width={{ base: 'auto', lg: '580px' }}            mr="8"
+                        ml="16">
+                <img src='./images/glaciertext.png'
+                    width="500"
+                    />
+                    
+                <Text
                         color="white"
                         as="h5"
                         textStyle={{ base: undefined, lg: 'h5' }}
                         fontSize={{ base: 'lg', lg: undefined }}
-                        my={{ base: '6', lg: '10' }}
-                        mr="8"
+                        mb={{ base: '6', lg: '10' }}
+                        mt="10"
+                        maxW="400"
                     >
                         The future of DeFi re-imagineered. Your next generation Decentralised Exchange.
                     </Text>
