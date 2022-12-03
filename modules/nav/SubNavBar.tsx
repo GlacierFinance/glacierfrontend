@@ -16,7 +16,7 @@ export function SubNavBar() {
 
     return (
         <HStack px={{ base: '4', xl: '8' }} justifyContent="flex-end" mt="5">
-            <BeetsBox px="4" py="2" rounded="lg" display="flex">
+            <BeetsBox px="3" py="1" rounded="none" border="1px" borderColor="white" display="flex">
                 <SubNavBarStat
                     loading={loading && !protocolData}
                     value={protocolData?.totalLiquidity || '0'}
@@ -40,7 +40,7 @@ export function SubNavBar() {
                     {loading && !beetsPrice ? (
                         <Skeleton height="16px" width="54px" />
                     ) : (
-                        <Text fontWeight="semibold" fontSize={{ base: 'sm', lg: 'md' }}>
+                        <Text fontWeight="semibold" fontSize={{ base: 'xs', lg: 'sm' }}>
                             {numeral(beetsPrice).format('$0.00[00]')}
                         </Text>
                     )}

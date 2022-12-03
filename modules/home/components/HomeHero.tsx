@@ -31,8 +31,8 @@ export function HomeHero() {
             boxShadow="0px 0px 24px 0px rgba(0,0,0,0.25);"
         >
            
-            <Flex flex="1" pl={{ base: '4', xl: '8' }} mb="12" alignItems="center" lineHeight="2">
-                <Flex flexDirection="column" width={{ base: 'auto', lg: '580px' }}            mr="8"
+            <Flex flex="1" pl={{ base: '4', xl: '8' }} mb="12" alignItems="center">
+                <Flex flexDirection="column" width={{ base: 'auto', lg: '580px' }} mr="8"
                         ml="16">
                 <img src='/images/glaciertext.png'
                     width="500"
@@ -40,13 +40,14 @@ export function HomeHero() {
                     <Text
                         color="white"
                         textStyle={{ base: undefined, lg: 'h5' }}
-                        fontSize={{ base: 'lg', lg: undefined }}
+                        fontSize='28px'
                         mb={{ base: '6', lg: '10' }}
                         mt="10"
-                        maxW="400"
-            
+                        maxW="550"
+                        lineHeight="40px"
+                        letterSpacing="2px"
                     >
-                        The future of DeFi re-imagineered. Your next generation Decentralised Exchange
+                        The future of DeFi re-imagined. Your next generation Decentralised Exchange
                     </Text>
 
                     <HStack spacing="4" mb={{ base: '6', lg: '10' }}>

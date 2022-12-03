@@ -11,13 +11,13 @@ interface Props extends StackProps {
 export function SubNavBarStat({ label, value, loading, ...rest }: Props) {
     return (
         <HStack mr={5} {...rest}>
-            <Text color="gray.200" fontSize={{ base: 'sm', lg: 'md' }}>
-                {label}:
+            <Text color="#FF00D6" fontSize={{ base: 'xs', lg: 'sm' }}>
+                {label}
             </Text>
             {loading ? (
                 <Skeleton height="16px" width="54px" />
             ) : (
-                <Text fontWeight="semibold" fontSize={{ base: 'sm', lg: 'md' }}>
+                <Text fontWeight="semibold" fontSize={{ base: 'xs', lg: 'sm' }}>
                     {numeral(value).format('$0.00a')}
                 </Text>
             )}
