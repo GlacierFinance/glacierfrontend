@@ -2,7 +2,7 @@ import { Box, Grid, GridItem, Flex, useTheme } from '@chakra-ui/react';
 import { HomeHero } from '~/modules/home/components/HomeHero';
 import { HomePools } from '~/modules/home/components/HomePools';
 import { HomeNews } from '~/modules/home/components/HomeNews';
-import { HomeWhyUs } from '~/modules/home/components/HomeWhyUs';
+// import { HomeWhyUs } from '~/modules/home/components/HomeWhyUs';
 import { HomeBeetsInfo } from '~/modules/home/components/HomeBeetsInfo';
 import { HomeLearn } from '~/modules/home/components/HomeLearn';
 import { useNetworkConfig } from '~/lib/global/useNetworkConfig';
@@ -39,8 +39,8 @@ export function Home() {
                 borderBottomColor="gray.100"
                 pb="24"
             >
-                <GridItem colSpan={2}>
-                    <HomeWhyUs />
+                <GridItem>
+                    {/* <HomeWhyUs /> */}
                 </GridItem>
                 <GridItem>
                     <HomeBeetsInfo />

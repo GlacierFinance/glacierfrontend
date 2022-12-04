@@ -15,7 +15,7 @@ export function PoolCard({ pool, ...rest }: Props) {
     return (
         <LinkBox as="article" flex="1" {...rest}>
             <Flex bgColor="whiteAlpha.100" height="216px" borderRadius="md" p="4" flexDirection="column">
-                <Box fontSize="lg" pb="6" flex="1">
+                <Box fontSize="lg" pb="6" flex="1" >
                     <NextLinkOverlay href={`pool/${pool.id}`}>
                         <Text noOfLines={2}>{pool.name}</Text>
                     </NextLinkOverlay>
@@ -31,11 +31,11 @@ export function PoolCard({ pool, ...rest }: Props) {
                 />
                 <Box flex="1" pt="6">
                     <AprTooltip
-                        textProps={{ fontSize: '2xl', fontWeight: 'normal', mr: '0', lineHeight: '26px' }}
+                        textProps={{ fontSize: 'xl', fontWeight: 'normal', mr: '0', lineHeight: '26px', color: '#FF00D6' }}
                         data={pool.dynamicData.apr}
                         placement="left"
                     />
-                    <Text color="gray.200">{numeral(dailyApr).format('0.00[0]%')} Daily</Text>
+                    <Text color="#9AA4DA" fontSize="sm">{numeral(dailyApr).format('0.00[0]%')} Daily</Text>
                 </Box>
             </Flex>
         </LinkBox>

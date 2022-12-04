@@ -69,12 +69,11 @@ export function HomePools(props: BoxProps) {
                 </>
             )}
 
-            <BeetsHeadline mb="10">Featured pools</BeetsHeadline>
+            <BeetsHeadline mb="10" textTransform="uppercase">Featured pools</BeetsHeadline>
             {featuredPoolGroups.map((group) => (
                 <Box mb="8" key={group.id}>
                     <Flex mb="4" alignItems="center">
-                        <Image src={group.icon} alt={`${group.id}-icon`} width="24px" height="24px" />
-                        <BeetsSubHeadline ml="2">{group.title}</BeetsSubHeadline>
+                        <BeetsSubHeadline ml="2" textTransform="uppercase">{group.title}</BeetsSubHeadline>
                     </Flex>
                     <PoolCardCarousel
                         items={group.items.map((item) => {
