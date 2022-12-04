@@ -25,7 +25,11 @@ export default function NavbarWalletConnectButton() {
                             if (!mounted || !account || !chain) {
                                 return (
                                     <Button
-                                        variant="primary"
+                                    border="2"
+                                    borderColor="#7d7f9a"
+                                    color="white"
+                                    ml="5"
+                                    textTransform="uppercase"
                                         _hover={{
                                             backgroundColor: 'beets.green',
                                             transform: 'scale(1.1)',

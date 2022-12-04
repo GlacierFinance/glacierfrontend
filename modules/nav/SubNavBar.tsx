@@ -15,9 +15,9 @@ export function SubNavBar() {
     const beetsPrice = data?.beetsPrice;
 
     return (
-        <HStack px={{ base: '4', xl: '8' }}>
+        <HStack px={{ base: '4', xl: '8' }} justifyContent="flex-end" mt="5">
             <BeetsBox px="4" py="2" rounded="lg" display="flex">
-                <NetworkSelectorPopover>
+                {/* <NetworkSelectorPopover>
                     <HStack spacing="1.5" mr={6} cursor="pointer">
                         <Image src={networkConfig.eth.iconUrl} width="20px" height="20px" />
                         <Text fontWeight="bold">{networkConfig.networkShortName}</Text>
@@ -25,7 +25,7 @@ export function SubNavBar() {
                             <ChevronDown size={18} />
                         </Box>
                     </HStack>
-                </NetworkSelectorPopover>
+                </NetworkSelectorPopover> */}
 
                 <SubNavBarStat
                     loading={loading && !protocolData}

@@ -1,4 +1,4 @@
-import { Box, Button, Flex, HStack, Image, Tooltip } from '@chakra-ui/react';
+import { Box, Button, Flex, HStack, Image, Tooltip, Text } from '@chakra-ui/react';
 import NavbarWalletConnectButton from './NavbarWalletConnectButton';
 import { NavbarLink } from '~/modules/nav/NavbarLink';
 import { useRouter } from 'next/router';
@@ -13,6 +13,9 @@ import { networkConfig } from '~/lib/config/network-config';
 import { NetworkSelectorPopover } from '~/modules/nav/NetworkSelectorPopover';
 import { Badge } from '@chakra-ui/layout';
 import { BeetsLogo } from '~/assets/logo/BeetsLogo';
+import GlacierLogo from 'public/images/glacierlogo.png';
+import NextImage from 'next/image';
+import { ChevronDown } from 'react-feather';
 
 interface Props {
     scrollY: MotionValue<number>;
@@ -40,19 +43,28 @@ export function Navbar({ scrollY }: Props) {
                     <motion.div style={{ opacity, position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
                         <Box width="full" height="full" bg="beets.base.800" shadow="lg" />
                     </motion.div>
-                    <Flex alignItems="center" mr="6" zIndex="2" cursor="pointer">
+                    <Flex alignItems="center" mr="6" zIndex="2" cursor="pointer" flex="1">
                         <NextLink href="/" chakraProps={{ _focus: { boxShadow: 'none' } }}>
                             {chainId === '10' ? (
                                 <BeetsBalLogo width="132px" />
                             ) : (
-                                <Box mb="2">
-                                    <BeetsLogo width="132px" />
+                                <Box ml="10">
+                                    <NextImage src={GlacierLogo} width="150px" />
                                 </Box>
                             )}
                         </NextLink>
                     </Flex>
-                    <Box flex="1" zIndex="2">
-                        <Flex alignItems="center" display={{ base: 'none', md: 'flex' }}>
+                    <Box display="flex" zIndex="2" justifyContent="flex-end" textTransform="uppercase">
+                    <NetworkSelectorPopover>
+                    <HStack spacing="1.5" mr={10} cursor="pointer">
+                        <Image src={networkConfig.eth.iconUrl} width="20px" height="20px" />
+                        <Text fontWeight="bold">{networkConfig.networkShortName}</Text>
+                        <Box>
+                            <ChevronDown size={18} />
+                        </Box>
+                    </HStack>
+                </NetworkSelectorPopover>
+                        <Flex alignItems="center" display={{ base: 'none', md: 'flex' }} color='white' gap="3">
                             <NavbarLink
                                 href={'/pools'}
                                 selected={router.asPath.startsWith('/pool')}
@@ -72,7 +84,7 @@ export function Navbar({ scrollY }: Props) {
                         <HStack spacing="3">
                             <NetworkSelectorPopover>
                                 <Button
-                                    bgColor="beets.lightAlpha.200"
+                                    bgColor="white"
                                     width="50px"
                                     height="40px"
                                     display="flex"
