@@ -16,7 +16,21 @@ export function SubNavBar() {
 
     return (
         <HStack px={{ base: '4', xl: '8' }} justifyContent="flex-end" mt="5">
+<<<<<<< HEAD
             <BeetsBox px="3" py="1" rounded="none" border="1px" borderColor="white" display="flex">
+=======
+            <BeetsBox px="4" py="2" rounded="lg" display="flex">
+                {/* <NetworkSelectorPopover>
+                    <HStack spacing="1.5" mr={6} cursor="pointer">
+                        <Image src={networkConfig.eth.iconUrl} width="20px" height="20px" />
+                        <Text fontWeight="bold">{networkConfig.networkShortName}</Text>
+                        <Box top="1px" position="relative">
+                            <ChevronDown size={18} />
+                        </Box>
+                    </HStack>
+                </NetworkSelectorPopover> */}
+
+>>>>>>> 522cc3a8a10a2f9a6fb1611d6d2827113f13e32e
                 <SubNavBarStat
                     loading={loading && !protocolData}
                     value={protocolData?.totalLiquidity || '0'}

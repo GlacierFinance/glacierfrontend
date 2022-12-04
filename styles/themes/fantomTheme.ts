@@ -12,6 +12,7 @@ export const fantomTheme: Partial<ChakraTheme> = {
         },
     },
     fonts: {
+<<<<<<< HEAD
         heading: `'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
         body: `'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
     },
@@ -33,6 +34,69 @@ export const fantomTheme: Partial<ChakraTheme> = {
         },
         h6: {
             fontFamily: `'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+=======
+        heading: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+        body: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+    },
+    textStyles: {
+        h1: {
+            fontFamily: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+            fontSize: ['3.0rem'],
+            lineHeight: '100%',
+            fontWeight: 'bold',
+            letterSpacing: '-0.1rem',
+        },
+        h2: {
+            fontFamily: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+            fontSize: ['2.7rem'],
+            fontWeight: '300',
+            lineHeight: '100%',
+            letterSpacing: '-0.1rem',
+        },
+        h3: {
+            fontFamily: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+            fontSize: ['1.8rem'],
+            fontWeight: '300',
+            lineHeight: '115%',
+            letterSpacing: '-0.05rem',
+        },
+        h4: {
+            fontFamily: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+            fontSize: ['1.8rem'],
+            fontWeight: '300',
+            lineHeight: '115%',
+            letterSpacing: '-0.05rem',
+        },
+        h5: {
+            fontFamily: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+            fontSize: ['1.5rem'],
+            fontWeight: '300',
+            lineHeight: '115%',
+            letterSpacing: '-0.03rem',
+        },
+        h6: {
+            fontFamily: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+            fontSize: ['1.2rem'],
+            fontWeight: '300',
+            lineHeight: '115%',
+            letterSpacing: '-0.03rem',
+>>>>>>> 522cc3a8a10a2f9a6fb1611d6d2827113f13e32e
+        },
+        
+        homehero: {
+            fontFamily: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+            fontSize: ['112px'],
+            fontWeight: '700',
+            lineHeight: '134px',
+            letterSpacing: '1.92px',
+            backgroundClip:'text', 
+            border: '2.47px solid', 
+            borderImageSource: "linear-gradient(180deg, #DFCAD7 16.67%, #A16AB8 49.48%, #BACDFF 75.38%, #5D9988 100%)",
+            borderImageSlice:'1', 
+            mixBlendMode:'screen', 
+            textShadow:'text-shadow: 0px 8.50312px 76.528px rgba(0, 0, 0, 0.5), 0px 6.43072px 10.3881px #000000', 
+            WebkitTextFillColor:'transparent', 
+            backgroundImage: 'linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 50.9%, #F6ECFD 100%)', 
         },
     },
     colors: {
