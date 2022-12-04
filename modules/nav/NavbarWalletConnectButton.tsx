@@ -1,5 +1,5 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { Box, Button, HStack, Skeleton, Spinner, Text, Tooltip } from '@chakra-ui/react';
+import { Box, Button, HStack, Skeleton, Spinner, Text, Tooltip, Flex } from '@chakra-ui/react';
 import Image from 'next/image';
 import BeetsSmart from '~/assets/icons/beetx-smarts.svg';
 import { useReactiveVar } from '@apollo/client';
@@ -10,6 +10,7 @@ import { useUserData } from '~/lib/user/useUserData';
 import { Image as ChakraImage } from '@chakra-ui/react';
 import { numberFormatLargeUsdValue } from '~/lib/util/number-formats';
 import { useEarlyLudwigNft } from '~/lib/global/useEarlyLudwigNft';
+import { NextLink } from '~/components/link/NextLink';
 
 export default function NavbarWalletConnectButton() {
     const txPending = useReactiveVar(txPendingVar);
@@ -24,25 +25,36 @@ export default function NavbarWalletConnectButton() {
                         {(() => {
                             if (!mounted || !account || !chain) {
                                 return (
-                                    <Button
-                                        border="2"
-                                        borderColor="#7d7f9a"
-                                        color="white"
-                                        ml="5"
-                                        textTransform="uppercase"
+                                        <Button ml='4' borderRadius="none" px='0' backgroundColor="black"
                                         _hover={{
-                                            backgroundColor: 'black',
-                                            transform: 'scale(1.1)',
+                                            opacity: '60%',
+                                            transform: 'scale(1.05)',
                                         }}
                                         _active={{
-                                            backgroundColor: 'black',
+                                            transform: 'scale(1.05)'
                                         }}
-                                        onClick={openConnectModal}
-                                        type="button"
-                                    >
-                                        <IconWallet stroke="black" boxSize="20px" />
-                                        <Box ml="2">Connect Wallet</Box>
-                                    </Button>
+                                        onClick={openConnectModal}>
+                                            <img src="./images/walletbutton.png" />
+                                        </Button>
+                                    // <Button
+                                    //     border="2"
+                                    //     borderColor="#7d7f9a"
+                                    //     color="white"
+                                    //     ml="5"
+                                    //     textTransform="uppercase"
+                                        // _hover={{
+                                        //     backgroundColor: 'black',
+                                        //     transform: 'scale(1.1)',
+                                        // }}
+                                        // _active={{
+                                        //     backgroundColor: 'black',
+                                        // }}
+                                        // onClick={openConnectModal}
+                                        // type="button"
+                                    // >
+                                    //     <IconWallet stroke="black" boxSize="20px" />
+                                    //     <Box ml="2">Connect Wallet</Box>
+                                    // </Button>
                                 );
                             }
 

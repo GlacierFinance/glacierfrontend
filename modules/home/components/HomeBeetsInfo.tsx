@@ -9,22 +9,27 @@ export function HomeBeetsInfo(props: BoxProps) {
     const { chainId } = useNetworkConfig();
 
     return (
-        <Box {...props}>
-            <BeetsHeadline mb="8">Governance redefined</BeetsHeadline>
-            <Box display="flex" justifyContent="center" mb="8" alignItems="center">
-                <NextImage
-                    src={chainId === '10' ? BeetsTokenInfoOpImage : BeetsTokenInfoImage}
-                    width="466px"
-                    height="253px"
-                />
-            </Box>
-            <Box mb="10">
+        <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center" position="relative">
+           <Box position="absolute" left="20px" top="-60px">
+                <img src="./images/governance.png" width="600" />
+           </Box>
+           <Box position="absolute" left="420px" top="-10px">
+                <img src="./images/redefined.png" width="400" />
+           </Box>
+            <Box mb="10" mt="32" justifyContent="center" textAlign="center" minW="800px" color="#9AA4DA" letterSpacing="1px">
                 Bringing power back to the people: The BEETs token grants users the ability to influence the evolution
                 of the protocol through decentralized governance; make sure your voice is heard and have your say in
                 decisions that shape the future of Beethoven X.
             </Box>
-            <Button variant="primary" as="a" href="https://docs.beets.fi/beets/tokenomics" target="_blank">
-                BEETS tokenomics
+            <Button as="a" href="https://docs.beets.fi/beets/tokenomics" target="_blank" borderRadius="none" mb="-6" backgroundColor="transparent"     _hover={{
+                                            background: "transparent",
+                                            transform: 'scale(1.05)',
+                                            opacity: "60%"
+                                        }}
+                                        _active={{
+                                            transform: 'scale(1.05)'
+                                        }}>
+                <img src="./images/beetsbutton.png" />
             </Button>
         </Box>
     );

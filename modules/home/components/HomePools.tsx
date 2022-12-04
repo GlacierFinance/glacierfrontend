@@ -89,7 +89,7 @@ export function HomePools(props: BoxProps) {
                                             key={item.id}
                                             overflowY="hidden"
                                         >
-                                            <Image
+                                            {/* <Image
                                                 src={item.image}
                                                 width="full"
                                                 position="absolute"
@@ -110,7 +110,7 @@ export function HomePools(props: BoxProps) {
                                                 _hover={{ transform: 'none', bgColor: 'beets.highlight' }}
                                             >
                                                 {item.buttonText}
-                                            </Button>
+                                            </Button> */}
                                         </Flex>
                                     );
                             }

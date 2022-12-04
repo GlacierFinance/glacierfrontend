@@ -5,7 +5,7 @@ import { useBoolean } from '@chakra-ui/hooks';
 import { BeetsSubHeadline } from '~/components/typography/BeetsSubHeadline';
 import { HomeNewsCard } from '~/modules/home/components/HomeNewsCard';
 import { useGetHomeNewsItemsQuery } from '~/apollo/generated/graphql-codegen-generated';
-import { HomeWhyUs } from '~/modules/home/components/HomeWhyUs';
+// import { HomeWhyUs } from '~/modules/home/components/HomeWhyUs';
 import { HomeBeetsInfo } from '~/modules/home/components/HomeBeetsInfo';
 
 export function HomeNews(props: BoxProps) {

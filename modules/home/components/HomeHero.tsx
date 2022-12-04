@@ -33,7 +33,7 @@ export function HomeHero() {
             <Flex flex="1" pl={{ base: '4', xl: '8' }} mb="12" alignItems="center">
                 <Flex flexDirection="column" width={{ base: 'auto', lg: '580px' }} mr="8"
                         ml="16">
-               <Box>
+               <Box mt="28">
                 <img src='/images/glaciertext.png'
                     width="500"
                     />
@@ -50,7 +50,7 @@ export function HomeHero() {
                         The future of DeFi re-imagined. Your next generation Decentralised Exchange
                     </Text>
 
-                    <HStack spacing="4" mb={{ base: '6', lg: '10' }}>
+                    <HStack spacing="16" mb={{ base: '6', lg: '10' }}>
                         <NextLink href="/pools" chakraProps={{ _hover: { opacity: '60%', transform: 'scale(1.05)'}}} 
                         // chakraProps={{ _hover: { textDecoration: 'none' } }}>
                         >
@@ -60,10 +60,13 @@ export function HomeHero() {
                             <img src='./images/investbutton.png' width='193px' />
                         {/* dont love this because no hover effects but it works minimally  */}
                         </NextLink>
-                        <NextLink href="/swap" chakraProps={{ _hover: { textDecoration: 'none' } }}>
+                        {/* <NextLink href="/swap" chakraProps={{ _hover: { textDecoration: 'none' } }}>
                             <Button width={{ base: '130px', lg: '160px' }} variant="secondary">
                                 Swap
                             </Button>
+                        </NextLink> */}
+                        <NextLink href="/swap" chakraProps={{ _hover: { opacity: '60%', transform: 'scale(1.05)'}}}>
+                            <img src="./images/swapbutton.png" width='200px' />
                         </NextLink>
                     </HStack>
                     {/*<Link color="beets.highlight" alignSelf="flex-start">

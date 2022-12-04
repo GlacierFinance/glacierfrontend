@@ -12,7 +12,10 @@ export function HomeLearn(props: BoxProps) {
                     <BeetsHeadline mb="8">Learning the notes</BeetsHeadline>
                     <Box>
                         DeFi can be confusing; whether you’re a beginner or a seasoned veteran, we want to provide you
-                        with information that helps. Check out the resources below to learn more about DeFi, Beethoven X
+                        with information that helps. 
+                        <br />
+                        <br />
+                        Check out the resources below to learn more about DeFi, Beethoven X
                         and the technology we provide.
                     </Box>
                 </GridItem>
@@ -78,13 +81,6 @@ export function HomeLearn(props: BoxProps) {
                         description="Beethoven X is an official friendly fork built on top of Balancer. Take a deep dive into the foundations that made it all possible and learn all there is to know about the wonders of Balancer technology."
                         url="https://docs.balancer.fi/"
                     />
-
-                    <Box flex="1" mt="12" mb="12">
-                        <BeetsSubHeadline mb="8">Want to dive even deeper?</BeetsSubHeadline>
-                        <Button variant="primary" as="a" href="https://docs.beets.fi" target="_blank">
-                            Check out our Docs
-                        </Button>
-                    </Box>
                 </GridItem>
             </Grid>
         </Box>
