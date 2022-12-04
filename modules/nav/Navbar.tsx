@@ -12,17 +12,9 @@ import { useNetworkConfig } from '~/lib/global/useNetworkConfig';
 import { networkConfig } from '~/lib/config/network-config';
 import { NetworkSelectorPopover } from '~/modules/nav/NetworkSelectorPopover';
 import { Badge } from '@chakra-ui/layout';
-<<<<<<< HEAD
 import GlacierLogo from 'public/images/glacierlogo.png';
 import NextImage from 'next/image';
 import { ChevronDown } from 'react-feather';
-
-=======
-import { BeetsLogo } from '~/assets/logo/BeetsLogo';
-import GlacierLogo from 'public/images/glacierlogo.png';
-import NextImage from 'next/image';
-import { ChevronDown } from 'react-feather';
->>>>>>> 522cc3a8a10a2f9a6fb1611d6d2827113f13e32e
 
 interface Props {
     scrollY: MotionValue<number>;
@@ -50,11 +42,7 @@ export function Navbar({ scrollY }: Props) {
                     <motion.div style={{ opacity, position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
                         <Box width="full" height="full" bg="beets.base.800" shadow="lg" />
                     </motion.div>
-<<<<<<< HEAD
                     <Flex alignItems="center" mr="6" zIndex="2" cursor="pointer" flex='1'>
-=======
-                    <Flex alignItems="center" mr="6" zIndex="2" cursor="pointer" flex="1">
->>>>>>> 522cc3a8a10a2f9a6fb1611d6d2827113f13e32e
                         <NextLink href="/" chakraProps={{ _focus: { boxShadow: 'none' } }}>
                             {chainId === '10' ? (
                                 <BeetsBalLogo width="132px" />

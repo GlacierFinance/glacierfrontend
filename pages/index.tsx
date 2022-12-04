@@ -35,11 +35,7 @@ function HomePage() {
     return (
         <>
             <Head>
-<<<<<<< HEAD
                 <title>Glacier Fi</title>
-=======
-                <title>Glacier Finance</title>
->>>>>>> 522cc3a8a10a2f9a6fb1611d6d2827113f13e32e
             </Head>
             <Home />
         </>

@@ -12,29 +12,7 @@ export const fantomTheme: Partial<ChakraTheme> = {
         },
     },
     fonts: {
-<<<<<<< HEAD
-        heading: `'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-        body: `'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-    },
-    textStyles: {
-        h1: {
-            fontFamily: `'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-        },
-        h2: {
-            fontFamily: `'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-        },
-        h3: {
-            fontFamily: `'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-        },
-        h4: {
-            fontFamily: `'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-        },
-        h5: {
-            fontFamily: `'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-        },
-        h6: {
-            fontFamily: `'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-=======
+
         heading: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
         body: `'Space', 'Gotham', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
     },
@@ -80,7 +58,6 @@ export const fantomTheme: Partial<ChakraTheme> = {
             fontWeight: '300',
             lineHeight: '115%',
             letterSpacing: '-0.03rem',
->>>>>>> 522cc3a8a10a2f9a6fb1611d6d2827113f13e32e
         },
         
         homehero: {

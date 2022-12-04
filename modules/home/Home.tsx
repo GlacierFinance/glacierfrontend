@@ -6,11 +6,7 @@ import { HomeNews } from '~/modules/home/components/HomeNews';
 import { HomeBeetsInfo } from '~/modules/home/components/HomeBeetsInfo';
 import { HomeLearn } from '~/modules/home/components/HomeLearn';
 import { useNetworkConfig } from '~/lib/global/useNetworkConfig';
-<<<<<<< HEAD
-import image from '/Users/topg/glacierfrontend/public/images/HomeBg01.png'
-=======
-import bg from '../../public/images/HomeBg01.png'; 
->>>>>>> 522cc3a8a10a2f9a6fb1611d6d2827113f13e32e
+
 
 export function Home() {
     const theme = useTheme();
