@@ -37,10 +37,11 @@ export function Navbar({ scrollY }: Props) {
                 display="flex"
                 flexDirection="column"
                 justifyContent="center"
+                background="transparent"
             >
                 <Flex px={{ base: '4', xl: '8' }} py="0" alignItems="center">
                     <motion.div style={{ opacity, position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
-                        <Box width="full" height="full" bg="beets.base.800" shadow="lg" />
+                        <Box width="full" height="full" bg="transparent" shadow="lg" />
                     </motion.div>
                     <Flex alignItems="center" mr="6" zIndex="2" cursor="pointer" flex='1'>
                         <NextLink href="/" chakraProps={{ _focus: { boxShadow: 'none' } }}>

@@ -13,16 +13,16 @@ export function HomeHero() {
             mx={{ base: `-${theme.space['4']}`, xl: `-${theme.space['8']}` }}
             overflow="hidden"
             maxHeight="600px"
-            backgroundImage={{
-                base:
-                    chainId === '10'
-                        ? "url('/images/hero-image-optimism-mobile.png')"
-                        : "url('/images/hero-image-fantom-mobile.png')",
-                md:
-                    chainId === '10'
-                        ? "url('/images/hero-image-optimism.jpg')"
-                        : "url('/images/glacierhero.png')",
-            }}
+            // backgroundImage={{
+            //     base:
+            //         chainId === '10'
+            //             ? "url('/images/hero-image-optimism-mobile.png')"
+            //             : "url('/images/hero-image-fantom-mobile.png')",
+            //     md:
+            //         chainId === '10'
+            //             ? "url('/images/hero-image-optimism.jpg')"
+            //             : "url('/images/glacierhero.png')",
+            // }}
             
             backgroundPosition="75% 50%"
             backgroundRepeat="no-repeat"
@@ -40,10 +40,10 @@ export function HomeHero() {
                </Box>
                     <Text
                         color="white"
-                        fontSize='28px'
+                        fontSize='24px'
                         mb={{ base: '6', lg: '10' }}
                         mt="55px"
-                        maxW="550"
+                        maxW="480"
                         lineHeight="40px"
                         letterSpacing="2px"
                     >
@@ -79,7 +79,15 @@ export function HomeHero() {
                     />
                 </Flex> */}
             </Flex>
-            <Box flex="1" display={{ base: 'none', md: 'block' }} />
+            <Box display="flex" flex="1" position="relative">
+               <Box position="absolute" left='150px' top="100px" width="400px">
+                <img src="./images/glacierherobg.png" />
+               </Box>
+               <Box position="absolute" left='150px' top="0" width="600px">
+                <img src="./images/glacierhero.png" />
+               </Box>
+            </Box>
+            <Box flex="0" display={{ base: 'none', md: 'block' }} />
         </Flex>
     );
 }
