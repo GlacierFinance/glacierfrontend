@@ -78,7 +78,11 @@ export function TradeCard() {
     }
 
     return (
-        <Box width="full" position="relative">
+        <Box width="full" position="relative" 
+            border="1px"
+            sx={{  boxBorder: "linear-gradient(to right,  #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 50.9%, #F6ECFD 100%)",}}
+     
+            >
             <Card
                 animate={controls}
                 position="relative"
