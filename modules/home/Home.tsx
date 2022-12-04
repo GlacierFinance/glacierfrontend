@@ -12,7 +12,7 @@ export function Home() {
     const theme = useTheme();
     const { chainId } = useNetworkConfig();
     return (
-        <Box >
+        <Box backgroundImage='./images/bg.png'>
             <HomeHero />
             <Grid
                 templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}

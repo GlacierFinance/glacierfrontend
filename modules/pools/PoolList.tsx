@@ -33,7 +33,9 @@ function PoolList() {
         pools.filter((pool) => pool.dynamicData.apr.hasRewardApr && hasBptInWalletForPool(pool.id)).length > 0;
 
     return (
-        <Box>
+        <Box
+            // backgroundImage='./images/bg.png'
+            >
             <PoolListMobileHeader />
             <PoolListTop />
 
