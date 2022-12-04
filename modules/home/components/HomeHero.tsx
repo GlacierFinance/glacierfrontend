@@ -51,10 +51,14 @@ export function HomeHero() {
                     </Text>
 
                     <HStack spacing="4" mb={{ base: '6', lg: '10' }}>
-                        <NextLink href="/pools" chakraProps={{ _hover: { textDecoration: 'none' } }}>
-                            <Button variant="primary" width={{ base: '130px', lg: '160px' }}>
+                        <NextLink href="/pools" 
+                        // chakraProps={{ _hover: { textDecoration: 'none' } }}>
+                        >
+                            {/* <Button bgImage='./images/investbutton.png' width='193px'>
                                 Invest
-                            </Button>
+                            </Button> */}
+                            <img src='./images/investbutton.png' width='193px' />
+                        {/* dont love this because no hover effects but it works minimally  */}
                         </NextLink>
                         <NextLink href="/swap" chakraProps={{ _hover: { textDecoration: 'none' } }}>
                             <Button width={{ base: '130px', lg: '160px' }} variant="secondary">
