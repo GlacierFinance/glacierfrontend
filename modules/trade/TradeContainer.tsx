@@ -17,7 +17,9 @@ export function TradeContainer() {
     const hasNoRoute = !loadingSwaps && (!swapInfo || swapInfo.swaps.length === 0);
 
     return (
-        <Box>
+        <Box
+            backgroundImage='./images/bg.png'
+        >
             <Grid
                 templateAreas={{
                     base: `"swap"
