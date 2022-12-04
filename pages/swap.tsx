@@ -3,15 +3,15 @@ import Head from 'next/head';
 import { TradeContainer } from '~/modules/trade/TradeContainer';
 import { PageMasthead } from '~/components/masthead/PageMasthead';
 import NextImage from 'next/image';
-import SwapMastheadImage from '~/assets/images/swap-masthead-image.png';
-import SwapMastheadOpImage from '~/assets/images/swap-masthead-image-OP.png';
+import SwapMastheadImage from '~/assets/images/bg.png';
+import SwapMastheadOpImage from '~/assets/images/bg.png';
 import { useNetworkConfig } from '~/lib/global/useNetworkConfig';
 import { UserTokenBalancesProvider } from '~/lib/user/useUserTokenBalances';
 
 function Swap() {
     const { chainId } = useNetworkConfig();
 
-    const TITLE = 'Beethoven X | Swap';
+    const TITLE = 'Glacier Finance | Swap';
     const DESCRIPTION = 'Intelligent trades at optimal prices. Swap your tokens with the Smart Order Router.';
 
     return (

@@ -12,8 +12,13 @@ export function Home() {
     const theme = useTheme();
     const { chainId } = useNetworkConfig();
     return (
+<<<<<<< HEAD
         <Box>    
     <HomeHero />
+=======
+        <Box backgroundImage='./images/bg.png'>
+            <HomeHero />
+>>>>>>> 09f5861124dc798d32541a203f1deb5f7f63bd0f
             <Grid
                 templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
                 columnGap={{ base: '0', lg: '16' }}
