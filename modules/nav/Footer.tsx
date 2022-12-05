@@ -2,26 +2,64 @@ import { Box, Flex, Grid, GridItem, HStack, Link, Text } from '@chakra-ui/react'
 import NextImage from 'next/image';
 import DegenBand from '~/assets/images/degen-band.png';
 import FooterImageOp from '~/assets/images/footer-OP.png';
-import DiscordIcon from '~/assets/icons/discord.svg';
-import TwitterIcon from '~/assets/icons/twitter.svg';
-import MediumIcon from '~/assets/icons/medium.svg';
-import GithubIcon from '~/assets/icons/github.svg';
+import DiscordIcon from '~/assets/icons/discordicon.png';
+import TwitterIcon from '~/assets/icons/twittericon.png';
+import YouTubeIcon from '~/assets/icons/youtubeicon.png';
+import GithubIcon from '~/assets/icons/githubicon.png';
+import TelegramIcon from '~/assets/icons/telegramicon.png';
 import { FooterLink } from '~/modules/nav/FooterLink';
 import { useNetworkConfig } from '~/lib/global/useNetworkConfig';
 import { networkConfig } from '~/lib/config/network-config';
-import { BeetsBalLogo } from '~/assets/logo/BeetsBalLogo';
-import { BeetsLogo } from '~/assets/logo/BeetsLogo';
-
+import GlacierLogo from 'public/images/glacierlogo.png';
+import { SubNavBarStat } from './SubNavBarStat';
+import { BeetsBox } from '~/components/box/BeetsBox';
+import { useGetProtocolDataQuery } from '~/apollo/generated/graphql-codegen-generated';
+// import { BeetsBalLogo } from '~/assets/logo/BeetsBalLogo';
+// import { BeetsLogo } from '~/assets/logo/BeetsLogo';
+   
 export function Footer() {
+    const networkConfig = useNetworkConfig();
+    const { data, loading } = useGetProtocolDataQuery({ fetchPolicy: 'cache-first' });
+    const protocolData = data?.protocolData;
+    const beetsPrice = data?.beetsPrice;
     const { chainId } = useNetworkConfig();
 
     return (
-        <Box width="full" px={{ base: '4', xl: '8' }} bgColor="beets.base.800" pt="24">
+        <Box width="full" px={{ base: '10', xl: '20' }} bgColor="transparent" pt="10">
             <Flex>
                 <Box flex="1">
-                    <Box mb="12">{chainId === '10' ? <BeetsBalLogo /> : <BeetsLogo />}</Box>
-                    <Grid templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} gap="8">
-                        <GridItem>
+                    <Flex display="flex" justifyContent="space-between">
+                        <Flex display="flex" flexDirection="row" gap="8">
+                            <Box>
+                                <NextImage src={GlacierLogo} width="150px" />
+                            </Box>
+                            <Flex display="flex" gap="2">
+                            <BeetsBox display="flex" alignItems="center">
+                                <SubNavBarStat
+                                    loading={loading && !protocolData}
+                                    value={protocolData?.totalLiquidity || '0'}
+                                    label="TVL"
+                                    display={{ base: 'none', sm: 'flex' }}
+                                    border="1px"
+                                    px="4"
+                                    py="0.5"
+                                    />
+                            </BeetsBox>
+                            <BeetsBox display="flex" alignItems="center">
+                                <SubNavBarStat
+                                    loading={loading && !protocolData}
+                                    value={protocolData?.totalLiquidity || '0'}
+                                    label="TVL"
+                                    display={{ base: 'none', sm: 'flex' }}
+                                    border="1px"
+                                    px="4"
+                                    py="0.5"
+                                    />
+                            </BeetsBox>
+                            </Flex>
+                        </Flex>
+                    {/* <Box>{chainId === '10' ? <BeetsBalLogo /> : <BeetsLogo />}</Box> */}
+                    <Flex display="flex" flexDirection="row" justifyContent="flex-end" gap="8">
                             <FooterLink href="/pools" linkType="internal">
                                 Invest
                             </FooterLink>
@@ -30,35 +68,14 @@ export function Footer() {
                             </FooterLink>
                             <FooterLink href="https://v1.beets.fi/#/stake" linkType="internal">
                                 Stake
-                                <Text as="span" fontSize="2xs">
-                                    {' '}
-                                    (FTM)
-                                </Text>
                             </FooterLink>
                             <FooterLink href="https://v1.beets.fi/#/launch" linkType="internal">
                                 Launch
-                                <Text as="span" fontSize="2xs">
-                                    {' '}
-                                    (FTM)
-                                </Text>
                             </FooterLink>
-                        </GridItem>
-                        <GridItem>
-                            <FooterLink href="https://snapshot.org/#/beets.eth">Vote</FooterLink>
-                            <FooterLink href="https://info.beets.fi">Analytics</FooterLink>
-                            <FooterLink href="https://docs.beets.fi">Docs & Help</FooterLink>
-                            <FooterLink href={networkConfig.createPoolUrl}>Compose a pool</FooterLink>
-                        </GridItem>
-                        <GridItem>
-                            <FooterLink href="https://pro.olympusdao.finance/#/bond">Olympus Bonds</FooterLink>
-                            <FooterLink href="https://app.multichain.org/#/router">Multichain Bridge</FooterLink>
-                            <FooterLink href="https://app.allbridge.io/bridge?from=SOL&to=FTM&asset=SOL">
-                                AllBridge
-                            </FooterLink>
-                        </GridItem>
-                    </Grid>
-
-                    <HStack spacing="6" mt="24">
+                        </Flex>
+                    </Flex>
+                    <Flex display="flex" flex="1" justifyContent='space-between' alignItems="center">
+                    <HStack gap="8" mt="24" mb="20">
                         <Box>
                             <Link href="https://discord.gg/jedS4zGk28" target="_blank" _active={{ boxShadow: 'none' }}>
                                 <NextImage src={DiscordIcon} />
@@ -75,6 +92,15 @@ export function Footer() {
                         </Box>
                         <Box>
                             <Link
+                                href="https://telegram.com/"
+                                target="_blank"
+                                _active={{ boxShadow: 'none' }}
+                            >
+                                <NextImage src={TelegramIcon} />
+                            </Link>
+                        </Box>
+                        <Box>
+                            <Link
                                 href="https://github.com/beethovenxfi"
                                 target="_blank"
                                 _active={{ boxShadow: 'none' }}
@@ -84,17 +110,18 @@ export function Footer() {
                         </Box>
                         <Box>
                             <Link
-                                href="https://beethovenxio.medium.com/"
+                                href="https://youtube.com/"
                                 target="_blank"
                                 _active={{ boxShadow: 'none' }}
                             >
-                                <NextImage src={MediumIcon} />
+                                <NextImage src={YouTubeIcon} />
                             </Link>
                         </Box>
                     </HStack>
-                </Box>
-                <Box flex="1" justifyContent="flex-end" display={{ base: 'none', lg: 'flex' }} ml="12">
-                    <NextImage src={chainId === '10' ? FooterImageOp : DegenBand} width="472px" height="394.8px" />
+                    <Text display="flex" justifyContent="flex-end">
+                Copyright &copy; GLACIER 2022
+                    </Text>
+                    </Flex>
                 </Box>
             </Flex>
         </Box>

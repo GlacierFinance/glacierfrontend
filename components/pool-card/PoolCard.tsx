@@ -14,7 +14,7 @@ export function PoolCard({ pool, ...rest }: Props) {
 
     return (
         <LinkBox as="article" flex="1" {...rest}>
-            <Flex bgColor="whiteAlpha.100" height="216px" borderRadius="md" p="4" flexDirection="column">
+            <Flex bgColor="transparent" border="2px" height="216px" borderRadius="none" p="4" flexDirection="column">
                 <Box fontSize="lg" pb="6" flex="1" >
                     <NextLinkOverlay href={`pool/${pool.id}`}>
                         <Text noOfLines={2}>{pool.name}</Text>

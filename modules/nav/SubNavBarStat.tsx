@@ -10,7 +10,7 @@ interface Props extends StackProps {
 
 export function SubNavBarStat({ label, value, loading, ...rest }: Props) {
     return (
-        <HStack mr={5} {...rest}>
+        <HStack {...rest}>
             <Text color="#FF00D6" fontSize={{ base: 'xs', lg: 'sm' }}>
                 {label}
             </Text>

@@ -5,9 +5,11 @@ export const fantomTheme: Partial<ChakraTheme> = {
         global: {
             html: {
                 backgroundColor:
-               'black'
+                'black'
             },
             body: {
+                backgroundImage:
+                './images/bg.png'
             },
         },
     },

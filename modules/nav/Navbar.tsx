@@ -37,7 +37,7 @@ export function Navbar({ scrollY }: Props) {
                 display="flex"
                 flexDirection="column"
                 justifyContent="center"
-                background="transparent"
+                backgroundColor="transparent"
             >
                 <Flex px={{ base: '4', xl: '8' }} py="0" alignItems="center">
                     <motion.div style={{ opacity, position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>

@@ -9,41 +9,41 @@ export function HomeHero() {
 
     return (
         <Flex
-            height={{ base: 'auto', lg: 'xl' }}
-            mx={{ base: `-${theme.space['4']}`, xl: `-${theme.space['8']}` }}
+            height={{ base: 'md', xl: 'xl' }}
+            ml={{ base: `-${theme.space['4']}`, xl: `-${theme.space['8']}` }}
             overflow="hidden"
             maxHeight="600px"
-            // backgroundImage={{
-            //     base:
-            //         chainId === '10'
-            //             ? "url('/images/hero-image-optimism-mobile.png')"
-            //             : "url('/images/hero-image-fantom-mobile.png')",
-            //     md:
-            //         chainId === '10'
-            //             ? "url('/images/hero-image-optimism.jpg')"
-            //             : "url('/images/glacierhero.png')",
-            // }}
+            backgroundImage={{
+                base:
+                    chainId === '10'
+                        ? "url('/images/hero-image-optimism-mobile.png')"
+                        : "url('/images/hero-image-fantom-mobile.png')",
+                md:
+                    chainId === '10'
+                        ? "url('/images/hero-image-optimism.jpg')"
+                        : "url('/images/glacierhero.png')",
+            }}
             
-            backgroundPosition="75% 50%"
+            backgroundPosition="88% 10%"
             backgroundRepeat="no-repeat"
             backgroundSize="contain"
             boxShadow="0px 0px 24px 0px rgba(0,0,0,0.25);"
         >
            
             <Flex flex="1" pl={{ base: '4', xl: '8' }} mb="12" alignItems="center">
-                <Flex flexDirection="column" width={{ base: 'auto', lg: '580px' }} mr="8"
+                <Flex flexDirection="column" width={{ md: '40%', lg: '80%' }} mr={{ base: "10", lg: "20"}}
                         ml="16">
                <Box mt="28">
                 <img src='/images/glaciertext.png'
-                    width="500"
+                     width='470'
                     />
                </Box>
                     <Text
                         color="white"
-                        fontSize='24px'
+                        fontSize='22px'
                         mb={{ base: '6', lg: '10' }}
-                        mt="55px"
-                        maxW="480"
+                        mt="40px"
+                        maxW='450'
                         lineHeight="40px"
                         letterSpacing="2px"
                     >
@@ -79,14 +79,14 @@ export function HomeHero() {
                     />
                 </Flex> */}
             </Flex>
-            <Box display="flex" flex="1" position="relative">
+            {/* <Box display="flex" flex="1" position="relative">
                <Box position="absolute" left='150px' top="100px" width="400px">
                 <img src="./images/glacierherobg.png" />
                </Box>
                <Box position="absolute" left='150px' top="0" width="600px">
                 <img src="./images/glacierhero.png" />
                </Box>
-            </Box>
+            </Box> */}
             <Box flex="0" display={{ base: 'none', md: 'block' }} />
         </Flex>
     );

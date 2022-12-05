@@ -33,12 +33,12 @@ function HomePage() {
     useV1Redirect();
 
     return (
-        <>
+        <Box>
             <Head>
                 <title>Glacier Fi</title>
             </Head>
             <Home />
-        </>
+        </Box>
     );
 }
 
