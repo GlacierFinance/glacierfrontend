@@ -7,9 +7,11 @@ export const fantomTheme: Partial<ChakraTheme> = {
                 // background:
                 // 'radial-gradient(ellipse at top, #030622a8, #000004), radial-gradient(ellipse at bottom, #000004, #000004) !important',
                 backgroundColor:
-               'transparent'
+                'transparent'
             },
-            body: {
+             body: {
+               backgroundImage:
+                './images/bg.png'
             //     color: '#C1C1D1',
             //     background:
             //         'radial-gradient(ellipse at top, #111111, #020202), radial-gradient(ellipse at bottom, #020202, #020202) !important',

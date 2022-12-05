@@ -21,10 +21,10 @@ export default function PoolStats() {
                     <Tabs width="full" variant="soft-rounded" display="flex" onChange={handleTabChanged} px="2">
                         <TabList>
                             <HStack spacing="2">
-                                <BeetsTab paddingX="4" paddingY="2" fontSize="xs">
+                                <BeetsTab paddingX="4" paddingY="2" fontSize="xs" textTransform="uppercase">
                                     My Stats
                                 </BeetsTab>
-                                <BeetsTab paddingX="4" paddingY="2" fontSize="xs">
+                                <BeetsTab paddingX="4" paddingY="2" fontSize="xs" textTransform="uppercase">
                                     Pool Stats
                                 </BeetsTab>
                             </HStack>

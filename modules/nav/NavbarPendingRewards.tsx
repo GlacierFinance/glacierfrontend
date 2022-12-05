@@ -43,7 +43,7 @@ export function NavbarPendingRewards() {
             //@ts-ignore */}
             <PopoverTrigger>
                 <Button
-                    bgColor="beets.lightAlpha.200"
+                    bgColor="black"
                     width="60px"
                     height="40px"
                     display="flex"
@@ -66,13 +66,13 @@ export function NavbarPendingRewards() {
                     <Skeleton />
                 </Button>
             </PopoverTrigger>
-            <PopoverContent bgColor="beets.base.900" _focus={{ boxShadow: 'none' }}>
+            <PopoverContent bgColor="black" _focus={{ boxShadow: 'none' }}>
                 <PopoverArrow color="beets.base.900" />
                 <PopoverCloseButton />
                 <PopoverHeader borderBottomWidth="0">Liquidity incentives</PopoverHeader>
                 <PopoverBody>
                     <BeetsBox px="4" py="2">
-                        <Box color="gray.200" pb="2" fontSize="sm">
+                        <Box color="#9AA4DA" pb="2" fontSize="sm">
                             Pending rewards
                         </Box>
                         {pendingRewards.map((item) => (
@@ -85,13 +85,13 @@ export function NavbarPendingRewards() {
                         </Box>
                     </BeetsBox>
                     <BeetsBox mt="4" px="4" py="2">
-                        <Box color="gray.200" pb="2" fontSize="sm">
+                        <Box color="#9AA4DA" pb="2" fontSize="sm">
                             Total staked
                         </Box>
                         <Box fontSize="xl" fontWeight="normal" lineHeight="26px">
                             {numberFormatUSDValue(stakedValueUSD)}
                         </Box>
-                        <Box color="gray.200" pt="2" fontSize="sm">
+                        <Box color="#9AA4DA" pt="2" fontSize="sm">
                             in {staking.length} {isMasterChefOrFreshBeets ? 'farm(s)' : 'gauge(s)'}
                         </Box>
                     </BeetsBox>

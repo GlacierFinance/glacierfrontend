@@ -37,7 +37,7 @@ export function Navbar({ scrollY }: Props) {
                 display="flex"
                 flexDirection="column"
                 justifyContent="center"
-                background="transparent"
+                backgroundColor="transparent"
             >
                 <Flex px={{ base: '4', xl: '8' }} py="0" alignItems="center">
                     <motion.div style={{ opacity, position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
@@ -49,7 +49,7 @@ export function Navbar({ scrollY }: Props) {
                                 <BeetsBalLogo width="132px" />
                             ) : (
                                 <Box ml="10">
-                                    <NextImage src={GlacierLogo} width="150px" />
+                                    <NextImage src={GlacierLogo} width="160px" />
                                 </Box>
                             )}
                         </NextLink>
@@ -100,7 +100,7 @@ export function Navbar({ scrollY }: Props) {
                     </Box>
                     <FadeInOutBox mr="3" isVisible={isConnected}>
                         <HStack spacing="3">
-                            <NetworkSelectorPopover>
+                            {/* <NetworkSelectorPopover>
                                 <Button
                                     bgColor="white"
                                     width="50px"
@@ -114,7 +114,7 @@ export function Navbar({ scrollY }: Props) {
                                 >
                                     <Image width="24px" height="24px" src={networkConfig.eth.iconUrl} />
                                 </Button>
-                            </NetworkSelectorPopover>
+                            </NetworkSelectorPopover> */}
                             <NavbarPendingRewards />
                             {/*<NavbarAlerts />*/}
                             {/*<NavbarPortfolioDrawer />*/}

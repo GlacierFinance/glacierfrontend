@@ -17,7 +17,7 @@ export function NetworkSelectorPopover({ children }: Props) {
             // @ts-ignore */}
             <PopoverTrigger>{children}</PopoverTrigger>
             <PopoverContent w="fit-content" bg="black">
-                <BeetsBox bg="beets.base.900">
+                <BeetsBox bg="black">
                     <Box px="4" py="2" fontWeight="bold" borderBottomWidth={1} borderBottomColor="gray.400">
                         Select a network
                     </Box>

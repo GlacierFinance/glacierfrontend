@@ -50,7 +50,7 @@ export function PoolDetailAboutThisPool() {
                 })}
             </GridItem>
             <GridItem>
-                <Text fontWeight="semibold" fontSize="xl" color="white" mb="4">
+                <Text fontWeight="semibold" fontSize="xl" color="white" mb="4" textTransform="uppercase">
                     Pool statistics
                 </Text>
 
