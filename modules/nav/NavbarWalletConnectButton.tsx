@@ -11,6 +11,8 @@ import { Image as ChakraImage } from '@chakra-ui/react';
 import { numberFormatLargeUsdValue } from '~/lib/util/number-formats';
 import { useEarlyLudwigNft } from '~/lib/global/useEarlyLudwigNft';
 import { NextLink } from '~/components/link/NextLink';
+import NextImage from 'next/image';
+import glacierIcon from 'public/images/glaciericon.png'
 
 export default function NavbarWalletConnectButton() {
     const txPending = useReactiveVar(txPendingVar);
@@ -75,7 +77,7 @@ export default function NavbarWalletConnectButton() {
                             return (
                                 <HStack spacing="0" position="relative">
                                     <HStack
-                                        bgColor="beets.base.500"
+                                        bgColor="#9AA4DA"
                                         pr="3"
                                         pl="2"
                                         spacing="1"
@@ -90,14 +92,14 @@ export default function NavbarWalletConnectButton() {
                                             <Skeleton height="10px" width="41px" />
                                         ) : (
                                             <Box fontSize="sm" fontWeight="semibold">
-                                                <Tooltip label="Your portfolio value is cached to improve app performance. If you just made a deposit in may take up to a minute for the value to be reflected here.">
+                                                <Tooltip textColor="#9AA4DA" backgroundColor="black" label="Your portfolio value is cached to improve app performance. If you just made a deposit in may take up to a minute for the value to be reflected here.">
                                                     {numberFormatLargeUsdValue(portfolioValueUSD)}
                                                 </Tooltip>
                                             </Box>
                                         )}
                                     </HStack>
                                     <Button
-                                        variant="primary"
+                                        backgroundColor="black"
                                         rounded="md"
                                         fontSize="md"
                                         onClick={openAccountModal}
@@ -126,12 +128,11 @@ export default function NavbarWalletConnectButton() {
                                             >
                                                 {txPending ? (
                                                     <Spinner color="beets.green" />
-                                                ) : earlyLudwig ? (
-                                                    <ChakraImage
-                                                        src={earlyLudwig}
+                                                ) : glacierIcon ? (
+                                                    <NextImage
+                                                        src={glacierIcon}
                                                         width="24px"
                                                         height="24px"
-                                                        rounded="xl"
                                                     />
                                                 ) : (
                                                     <Image src={BeetsSmart} width="24" alt="your-profile" />

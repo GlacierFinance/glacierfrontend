@@ -25,13 +25,13 @@ export function Footer() {
     const { chainId } = useNetworkConfig();
 
     return (
-        <Box width="full" px={{ base: '10', xl: '20' }} bgColor="transparent" pt="10">
-            <Flex>
+        <Box width="full" px={{ base: '10', xl: '20' }} bgColor="transparent" backgroundImage="./images/gridbg-footer.png" >
+            <Flex pt="20">
                 <Box flex="1">
                     <Flex display="flex" justifyContent="space-between">
                         <Flex display="flex" flexDirection="row" gap="8">
                             <Box>
-                                <NextImage src={GlacierLogo} width="150px" />
+                                <NextImage src={GlacierLogo} width="160px" />
                             </Box>
                             <Flex display="flex" gap="2">
                             <BeetsBox display="flex" alignItems="center">
@@ -41,6 +41,7 @@ export function Footer() {
                                     label="TVL"
                                     display={{ base: 'none', sm: 'flex' }}
                                     border="1px"
+                                    style={{borderImage:'linear-gradient(180deg,#ECE3F3 0%, #ECE3F3 44.13%, #8F7D9D  50.9%, #F6ECFD 100%) 1' }}
                                     px="4"
                                     py="0.5"
                                     />
@@ -52,6 +53,7 @@ export function Footer() {
                                     label="TVL"
                                     display={{ base: 'none', sm: 'flex' }}
                                     border="1px"
+                                    style={{borderImage:'linear-gradient(180deg,#ECE3F3 0%, #ECE3F3 44.13%, #8F7D9D  50.9%, #F6ECFD 100%) 1' }}
                                     px="4"
                                     py="0.5"
                                     />

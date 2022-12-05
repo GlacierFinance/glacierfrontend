@@ -13,20 +13,26 @@ export function PoolCard({ pool, ...rest }: Props) {
     const dailyApr = parseFloat(pool.dynamicData.apr.total) / 365;
 
     return (
-        <LinkBox as="article" flex="1" {...rest}>
-            <Flex bgColor="transparent" border="2px" height="216px" borderRadius="none" p="4" flexDirection="column">
-                <Box fontSize="lg" pb="6" flex="1" >
+        <LinkBox as="article" flex="1" {...rest} >
+            <Box position="relative" width="full"
+                border="1px" mb="1" 
+                style={{borderImage:'linear-gradient(180deg,#8F7D9D 0%, #ECE3F3 44.13%, #ECE3F3  50.9%, #F6ECFD 100%) 1' }} bgColor="transparent" height="216px" borderRadius="none" p="4" flexDirection="column">
+                    <Box position="absolute" right="-0.5" top='-1' >                    
+                        <img src="./images/gradientbar.png" />
+                    </Box>
+                <Box fontSize="lg" pb="6" flex="1">
                     <NextLinkOverlay href={`pool/${pool.id}`}>
                         <Text noOfLines={2}>{pool.name}</Text>
                     </NextLinkOverlay>
                 </Box>
+                <Box position="absolute" bottom="2">
                 <TokenAvatarSet
                     tokenData={pool.displayTokens.map((token) => ({
                         address: token.address,
                         ...(token.weight && { weight: token.weight }),
                     }))}
                     width={140}
-                    imageSize={32}
+                    imageSize={42}
                     renderPopover={false}
                 />
                 <Box flex="1" pt="6">
@@ -37,7 +43,8 @@ export function PoolCard({ pool, ...rest }: Props) {
                     />
                     <Text color="#9AA4DA" fontSize="sm">{numeral(dailyApr).format('0.00[0]%')} Daily</Text>
                 </Box>
-            </Flex>
+                </Box>
+            </Box>
         </LinkBox>
     );
 }
