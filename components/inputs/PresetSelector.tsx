@@ -33,7 +33,7 @@ export default function PresetSelector({ onPresetSelected, presets = defaultPres
         onPresetSelected(preset);
     };
     return (
-        <HStack width="full">
+        <HStack width="full" >
             {presets.map((preset) => (
                 <Button
                     key={`preset-${preset.label}`}
