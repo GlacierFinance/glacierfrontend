@@ -1,3 +1,4 @@
+import { background } from '@chakra-ui/react';
 import { ChakraTheme } from '@chakra-ui/theme';
 
 export const fantomTheme: Partial<ChakraTheme> = {
@@ -9,7 +10,9 @@ export const fantomTheme: Partial<ChakraTheme> = {
             },
             body: {
                 backgroundImage:
-                './images/bg.png'
+                './images/bg.png',
+                backgroundColor:
+                'black'
             },
         },
     },

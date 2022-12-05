@@ -5,7 +5,6 @@ import { initializeApolloClient, loadApolloState } from '~/apollo/client';
 import { GetHomeData } from '~/apollo/generated/operations';
 import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
-
 function useV1Redirect() {
     const { push } = useRouter();
     const redirectChecked = useRef(false);
@@ -31,14 +30,15 @@ function useV1Redirect() {
 
 function HomePage() {
     useV1Redirect();
-
     return (
-        <Box>
+        <>
             <Head>
                 <title>Glacier Fi</title>
             </Head>
-            <Home />
-        </Box>
+            <Box backgroundImage='./images/gridbg02.png' backgroundRepeat="no-repeat" backgroundPosition="45% 6%" position="relative">
+                <Home />
+            </Box>
+        </>
     );
 }
 

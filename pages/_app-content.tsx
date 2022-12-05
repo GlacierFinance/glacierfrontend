@@ -35,6 +35,7 @@ export function AppContent({ Component, pageProps }: AppProps) {
             }}
         >
             <GlobalRenderer />
+            <Box backgroundImage="./images/gridbg01.png" backgroundRepeat="no-repeat">
             <Box pt="3" />
             <Navbar scrollY={scrollY} />
             <Box pt="1" />
@@ -47,6 +48,7 @@ export function AppContent({ Component, pageProps }: AppProps) {
                 >
                     <Component {...pageProps} />
                 </Box>
+            </Box>
             </Box>
 
             <Footer />
