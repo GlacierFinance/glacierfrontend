@@ -29,9 +29,9 @@ export function PageMasthead({ title, image }: Props) {
                 {title}
                 </h1>
             {/* </Text> */}
-            <Box alignItems="flex-end" display={{ base: 'none', md: 'flex' }}>
+            {/* <Box alignItems="flex-end" display={{ base: 'none', md: 'flex' }}>
                 {image}
-            </Box>
+            </Box> */}
         </Flex>
     );
 }
