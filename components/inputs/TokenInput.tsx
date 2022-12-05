@@ -68,6 +68,7 @@ export const TokenInput = forwardRef(
                 border="1px" mb="1" 
                 style={{borderImage:'linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 50.9%, #F6ECFD 100%) 1' }}                 
              >
+    {/* theres an additional border on hover */}
                     <BeetsInput
                         ref={ref}
                         min={0}

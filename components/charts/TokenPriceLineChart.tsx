@@ -21,7 +21,7 @@ export function TokenPriceLineChart({ label, prices, priceValueFormatter }: Prop
             tooltip: {
                 trigger: 'axis',
                 type: 'shadow',
-                backgroundColor: 'rgba(24, 24, 46, 0.95)',
+                backgroundColor: 'transparent',
                 borderColor: 'transparent',
                 borderRadius: 8,
                 textStyle: {
@@ -32,8 +32,8 @@ export function TokenPriceLineChart({ label, prices, priceValueFormatter }: Prop
                     animation: false,
                     type: 'cross',
                     lineStyle: {
-                        color: '#376df4',
-                        width: 2,
+                        color: '#F8EEFF',
+                        width: 1,
                         opacity: 1,
                     },
                 },
@@ -79,14 +79,39 @@ export function TokenPriceLineChart({ label, prices, priceValueFormatter }: Prop
                     showSymbol: false,
                     data: prices.map((item) => [item.timestamp * 1000, item.price]),
                     itemStyle: {
-                        color: colors.beets.highlight,
-                        borderColor: colors.beets.highlight,
+                        // color: colors.beets.highlight,
+                        color: new graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: '#FF5D2A' },
+                            { offset: 0.2323, color: '#FF00D6' },
+                            { offset: 0.4198, color: '#BD00FF' },
+                            { offset: 0.6125, color: '#6100FF' },
+                            { offset: 0.8156, color: '#009CF3' },
+                            { offset: 1, color: '#00FFB2' },
+                        ]), 
+                        // borderColor: colors.beets.highlight,
                     },
                     areaStyle: {
-                        opacity: 0.2,
+                        shadowBlur: 100, 
+                        opacity: 0.3,
+// filter: blur(19px);  
                         color: new graphic.LinearGradient(0, 0, 0, 1, [
-                            { offset: 0, color: 'rgba(0, 255, 255,0.5)' },
-                            { offset: 1, color: 'rgba(0, 255, 255, 0)' },
+                            // { offset: 0, color: 'rgba(4, 4, 4, 0.5)' },
+                            // { offset: .5625, color: 'rgba(0, 0, 0, 0)' },
+                            // { offset: 1, color: 'rgba(0, 0, 0, 0.5)' },
+                            // version 1:
+                            // { offset: 0, color: 'rgba(255, 93, 42, 0.534)' },
+                            // { offset: 0.20, color: 'rgba(255, 0, 214, 0.264)' },
+                            // { offset: 0.40, color: 'rgba(189, 0, 255, 0.276)' },
+                            // { offset: 0.60, color: 'rgba(97, 0, 255, 0.27)' },
+                            // { offset: 0.80, color: 'rgba(0, 156, 243, 0.072)' },
+                            // { offset: 1.00, color: 'rgba(0, 255, 178, 0)' },
+                            // version 2: 
+                            { offset: 0, color: 'rgba(255, 93, 42, 0.534)' },
+                            { offset: 0.25, color: 'rgba(255, 0, 214, 0.264)' },
+                            { offset: 0.50, color: 'rgba(189, 0, 255, 0.276)' },
+                            { offset: 0.75, color: 'rgba(97, 0, 255, 0.27)' },
+                            { offset: 1.00, color: 'rgba(0, 156, 243, 0.072)' },
+                            // { offset: 1.00, color: 'rgba(0, 255, 178, 0)' },
                         ]),
                     },
                     tooltip: {
