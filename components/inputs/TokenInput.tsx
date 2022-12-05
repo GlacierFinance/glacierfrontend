@@ -64,8 +64,9 @@ export const TokenInput = forwardRef(
 
         return (
             <VStack width="full" alignItems="flex-start">
-                <Box position="relative" width="full"  border="1px" mb="1"
-                    sx={{boxBorder: "linear-gradient(to right,  #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 50.9%, #F6ECFD 100%)",}}
+                <Box position="relative" width="full"  
+                border="1px" mb="1" 
+                style={{borderImage:'linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 50.9%, #F6ECFD 100%) 1' }}                 
              >
                     <BeetsInput
                         ref={ref}
