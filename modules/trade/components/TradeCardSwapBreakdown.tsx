@@ -34,19 +34,19 @@ export function TradeCardSwapBreakdown({}: Props) {
 
     return (
         <AnimatePresence>
-            <VStack backgroundColor="transparent" padding="3" width="full" spacing="1" marginTop="1">
+            <VStack backgroundColor="transparent" padding="3" width="full" spacing="1" marginTop="1" fontFamily="JetBrains">
                 <HStack width="full" justifyContent="space-between">
-                    <Text color="gray.100" fontSize=".85rem">
+                    <Text color="gray.100" fontSize=".85rem" >
                         Price impact
                     </Text>
                     <Text
-                        fontSize=".85rem"
+                        fontSize=".85rem" 
                         color={hasHighPriceImpact ? 'beets.red' : hasNoticeablePriceImpact ? 'orange' : 'white'}
                     >
                         {numeral(priceImpact).format('0.00%')}
                     </Text>
                 </HStack>
-                <HStack width="full" justifyContent="space-between">
+                <HStack width="full" justifyContent="space-between" >
                     <Text color="gray.100" fontSize=".85rem">
                         1 {tokenIn.symbol} is
                     </Text>

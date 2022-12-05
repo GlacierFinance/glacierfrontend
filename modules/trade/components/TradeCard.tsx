@@ -93,7 +93,6 @@ export function TradeCard() {
                         <TokenInput
                             ref={finalRefTokenIn}
                             label="Sell"
-
                             address={tokenIn}
                             toggleTokenSelect={() => showTokenSelect('tokenIn')}
                             onChange={handleSellAmountChanged}

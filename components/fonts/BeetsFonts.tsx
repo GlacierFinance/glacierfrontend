@@ -11,6 +11,13 @@ export function BeetsFonts() {
                 font-weight: 700;
                 font-style: normal;
             }
+            @font-face {
+                font-family: 'JetBrains';
+                src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2'),
+                        url('/fonts/JetBrainsMono-Regular.woff') format('woff');
+                font-weight: 400;
+                font-style: normal;
+            }
                 @font-face {
                     font-family: 'Gotham';
                     src: url('/fonts/gotham-light-webfont.woff2') format('woff2'),
