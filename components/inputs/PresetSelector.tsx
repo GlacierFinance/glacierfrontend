@@ -33,14 +33,25 @@ export default function PresetSelector({ onPresetSelected, presets = defaultPres
         onPresetSelected(preset);
     };
     return (
-        <HStack width="full">
+        <HStack width="full" >
             {presets.map((preset) => (
                 <Button
                     key={`preset-${preset.label}`}
-                    _focus={{ outline: 'none' }}
+                    // _focus={{ outline: 'none' }}
                     onClick={handlePresetSelected(preset.value)}
-                    size="xs"
+                    size="sm"
                     width="full"
+                    bgColor="glacier.black.100"
+                    borderRadius="5px"
+                    borderColor="glacier.silver.100"
+                    border="1px"
+                    borderStyle="inner"
+                    _hover={{
+                        backgroundImage:
+                          "linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 86.26%, #F6ECFD 100%)",
+                        color:"black", 
+                        borderColor:"glacier.silver.100", 
+                      }}
                 >
                     {preset.label}
                 </Button>

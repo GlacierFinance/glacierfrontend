@@ -93,6 +93,14 @@ export const fantomTheme: Partial<ChakraTheme> = {
             '300': 'rgba(27,20,100,0.25)',
             '500': 'rgba(255,255,255,0.05)',
         },
+        glacier: {
+            black: {
+                '100': '#030303', 
+            }, 
+            silver: {
+                '100': '#F6ECFD', 
+            }, 
+        }, 
         beets: {
             green: '#00F89C',
             red: '#FF0000',
@@ -129,6 +137,7 @@ export const fantomTheme: Partial<ChakraTheme> = {
                 '800': 'rgba(0,248,156, 0.8)',
                 '900': 'rgba(0,248,156, 0.9)',
             },
+            
             highlightAlpha: {
                 '50': 'rgba(0, 255, 255, 0.05)',
                 '100': 'rgba(0, 255, 255, 0.1)',

@@ -78,7 +78,9 @@ export function TradeCard() {
     }
 
     return (
-        <Box width="full" position="relative">
+        <Box width="full" position="relative" 
+            
+            >
             <Card
                 animate={controls}
                 position="relative"
@@ -86,10 +88,12 @@ export function TradeCard() {
                 topRight={sorResponse ? <TradeCardRefreshButton onClick={() => refetchTrade()} /> : null}
             >
                 <VStack spacing="2" padding="4" width="full">
-                    <Box position="relative" width="full">
+                    <Box position="relative" width="full"
+                   >
                         <TokenInput
                             ref={finalRefTokenIn}
                             label="Sell"
+
                             address={tokenIn}
                             toggleTokenSelect={() => showTokenSelect('tokenIn')}
                             onChange={handleSellAmountChanged}
