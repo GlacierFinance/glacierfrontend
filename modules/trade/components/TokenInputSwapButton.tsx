@@ -1,10 +1,13 @@
 import { Button } from '@chakra-ui/button';
 import { Box } from '@chakra-ui/layout';
 import { Spinner } from '@chakra-ui/react';
+import Image from 'next/image';
 import { AnimatePresence, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { ChevronsDown } from 'react-feather';
 import { AnimatedBox } from '~/components/animation/chakra';
+import chevy from '../../../public/images/chevronright.png';
+
 
 type Props = {
     isLoading?: boolean;
@@ -53,8 +56,9 @@ export function TokenInputSwapButton({ isLoading, onSwap }: Props) {
                             exit={{ opacity: 0 }}
                         >
                             <ChevronsDown size={24} color="currentColor" />
+                            {/* <Image width='120px' height='120px' src={chevy} /> */}
 
-                            {/* to be replaced with SVG  */}
+                            {/* to be replaced with SVG, or style the existent chevronsdown w/ colors */}
                         </AnimatedBox>
                     )}
                     {isLoading && (

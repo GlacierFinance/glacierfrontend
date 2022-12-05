@@ -48,11 +48,11 @@ export function TradeContainer() {
                             <AnimatePresence>
                                 {showRouting && (
                                     <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                                        <Text fontSize="xl" fontWeight="bold" lineHeight="1.2rem" mt="8">
+                                        <Text fontSize="xl" fontWeight="bold" lineHeight="1.2rem" mt="48" textTransform="uppercase">
                                             Smart order routing
                                         </Text>
-                                        <Text mb="4" color="gray.200">
-                                            The SOR searches all Beethoven X pools to ensure you receive the best
+                                        <Text mb="16" mt="8" color="gray.200">
+                                            The SOR searches all Glacier Finance pools to ensure you receive the best
                                             available price.
                                         </Text>
                                     </motion.div>
@@ -61,10 +61,10 @@ export function TradeContainer() {
                             {showRouting && <BatchSwapSorRoute swapInfo={swapInfo} />}
 
                             <motion.div layout>
-                                <Text fontSize="xl" fontWeight="bold" lineHeight="1.2rem" mt="8">
+                                <Text fontSize="xl" fontWeight="bold" lineHeight="1.2rem" mt="14" textTransform="uppercase">
                                     Latest swaps
                                 </Text>
-                                <Text mb="4" color="gray.200">
+                                <Text mb="12" mt="4" color="gray.200">
                                     The latest swaps for your selected token pair.
                                 </Text>
                             </motion.div>
