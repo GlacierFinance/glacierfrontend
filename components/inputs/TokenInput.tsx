@@ -63,9 +63,9 @@ export const TokenInput = forwardRef(
         };
 
         return (
-            <VStack width="full" alignItems="flex-start">
+            <VStack width="full" alignItems="flex-start" >
                 <Box position="relative" width="full"  
-                border="1px" mb="1" 
+                border="1px" mb="1" paddingY="4"
                 style={{borderImage:'linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 50.9%, #F6ECFD 100%) 1' }}                 
              >
     {/* theres an additional border on hover */}
@@ -106,7 +106,7 @@ export const TokenInput = forwardRef(
                                 _focus={{ boxShadow: 'none' }}
                             >
                                 <HStack spacing="none">
-                                    <TokenAvatar size="xs" address={address || ''} />
+                                    <TokenAvatar size="sm" address={address || ''} />
                                     <Text fontSize="lg" paddingLeft="2">
                                         {token?.symbol}
                                     </Text>

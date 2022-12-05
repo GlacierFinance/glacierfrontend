@@ -48,11 +48,13 @@ export function TokenInputSwapButton({ isLoading, onSwap }: Props) {
                             display="flex"
                             justifyContent="center"
                             alignItems="center"
-                            initial={{ opacity: 0 }}
+                            initial={{ opacity: 0.5 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                         >
                             <ChevronsDown size={24} color="currentColor" />
+
+                            {/* to be replaced with SVG  */}
                         </AnimatedBox>
                     )}
                     {isLoading && (
