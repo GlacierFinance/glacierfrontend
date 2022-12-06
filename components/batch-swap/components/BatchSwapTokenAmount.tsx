@@ -19,9 +19,9 @@ export function BatchSwapTokenAmount({ address, amount, ...rest }: Props) {
             zIndex="1"
             {...rest}
         >
-            <Flex borderRadius="xl" px="2" py="1" backgroundColor="transparent"
-                    boxShadow="0px 0px 10px #000" 
-                    alignItems="center">
+            <Flex borderRadius="xl" px="2" py="1"   bgGradient='linear(to-br, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8) )'
+                    // boxShadow="0px 0px 10px #000" 
+                    alignItems="center" >
                 <TokenAvatar address={address} width="20px" height="20px" />
                 <Box ml="1.5">{tokenFormatAmount(amount)}</Box>
             </Flex>
