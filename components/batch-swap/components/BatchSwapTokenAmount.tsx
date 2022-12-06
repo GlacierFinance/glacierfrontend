@@ -8,7 +8,7 @@ interface Props extends FlexProps {
     bgColor?: string;
 }
 
-export function BatchSwapTokenAmount({ address, amount, bgColor = 'beets.base.600', ...rest }: Props) {
+export function BatchSwapTokenAmount({ address, amount, ...rest }: Props) {
     return (
         <Flex
             flex="0.1 1 0%"
@@ -19,7 +19,9 @@ export function BatchSwapTokenAmount({ address, amount, bgColor = 'beets.base.60
             zIndex="1"
             {...rest}
         >
-            <Flex borderRadius="lg" px="2" py="1" backgroundColor={bgColor} alignItems="center">
+            <Flex borderRadius="xl" px="2" py="1" backgroundColor="transparent"
+                    boxShadow="0px 0px 10px #000" 
+                    alignItems="center">
                 <TokenAvatar address={address} width="20px" height="20px" />
                 <Box ml="1.5">{tokenFormatAmount(amount)}</Box>
             </Flex>
