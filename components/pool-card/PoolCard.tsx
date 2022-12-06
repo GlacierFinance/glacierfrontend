@@ -41,7 +41,7 @@ export function PoolCard({ pool, ...rest }: Props) {
                         data={pool.dynamicData.apr}
                         placement="left"
                     />
-                    <Text color="#9AA4DA" fontSize="sm">{numeral(dailyApr).format('0.00[0]%')} Daily</Text>
+                    <Text color="glacier.silver.200" fontFamily="JetBrains" fontSize="sm">{numeral(dailyApr).format('0.00[0]%')} Daily</Text>
                 </Box>
                 </Box>
             </Box>

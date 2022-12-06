@@ -17,17 +17,17 @@ export function HomeNewsCard({ item }: Props) {
         <Box bgColor="whiteAlpha.100" borderRadius="md" p="4">
             {image && <Image width="full" src={image} borderRadius="md" />}
             <Flex mt="4" mb="6" alignItems="center">
-                <Box color="gray.200" flex="1">
+                <Box color="glacier.silver.300" flex="1">
                     {formatDistanceToNow(new Date(timestamp), { addSuffix: true })}{' '}
-                    <Link color="beets.highlight" href={url} target="_blank">
-                        via {capitalize(source)}
+                    <Link color="glacier.silver.300"  href={url} target="_blank">
+                        via <u>{capitalize(source)}</u>
                     </Link>
                 </Box>
                 {source === 'twitter' && <IconTwitter />}
                 {source === 'discord' && <IconDiscord />}
                 {source === 'medium' && <IconMedium />}
             </Flex>
-            <Box whiteSpace="pre-line">{text}</Box>
+            <Box fontFamily="JetBrains" whiteSpace="pre-line">{text}</Box>
             {discussionUrl && (
                 <Box mt="2">
                     <Link href={discussionUrl} target="_blank">

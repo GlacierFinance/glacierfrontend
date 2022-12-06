@@ -90,6 +90,7 @@ export const fantomTheme: Partial<ChakraTheme> = {
             silver: {
                 '100': '#F6ECFD', 
                 '200': '#9AA4DA', 
+                '300': '#A974FF', 
             }, 
         }, 
         beets: {
