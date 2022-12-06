@@ -41,7 +41,7 @@ export function BatchSwapHop({ hop }: Props) {
         >
             <NextLink href={`/pool/${hop.pool.id}`} chakraProps={{ color: 'white' }}>
                 <TokenAvatarSet
-                    imageSize={20}
+                    imageSize={24}
                     width={80}
                     tokenData={[
                         ...(tokenIn ? [tokenIn] : []),

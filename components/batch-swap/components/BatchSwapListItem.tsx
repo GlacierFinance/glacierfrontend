@@ -72,7 +72,7 @@ export function BatchSwapListItem({ tokenIn, tokenOut, tokenInPrice, tokenOutPri
                             address={batchSwap.tokenIn}
                             amount={batchSwap.tokenAmountIn}
                             padding="19.5px 0px"
-                            bgColor="beets.base.700"
+                            bgColor="transparent"
                         />
                         <Flex flex="1" height="64px" alignItems="center" position="relative" top="2px">
                             <BatchSwapRouteDashedLineArrowSpacer />
@@ -89,7 +89,7 @@ export function BatchSwapListItem({ tokenIn, tokenOut, tokenInPrice, tokenOutPri
                             address={batchSwap.tokenOut}
                             amount={batchSwap.tokenAmountOut}
                             padding="19.5px 0px"
-                            bgColor="beets.base.700"
+                            bgColor="transparent"
                         />
                     </Flex>
                 </Flex>

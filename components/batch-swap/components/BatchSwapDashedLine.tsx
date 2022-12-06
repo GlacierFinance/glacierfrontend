@@ -1,5 +1,7 @@
 import { Box, Circle, Flex, Icon, IconProps } from '@chakra-ui/react';
+import Image from 'next/image';
 import { ChevronsRight } from 'react-feather';
+import Right from '../../../public/images/right.svg'; 
 
 export function BatchSwapRouteDashedLineLeftSide(props: IconProps) {
     return (
@@ -19,7 +21,6 @@ export function BatchSwapRouteDashedLineLeftSide(props: IconProps) {
         </Icon>
     );
 }
-
 export function BatchSwapRouteDashedLineRightSide(props: IconProps) {
     return (
         <Icon
@@ -60,23 +61,26 @@ export function BatchSwapDashedLine(props: IconProps) {
 
 export function BatchSwapRouteDashedLineArrowSpacer() {
     return (
+   
         <Flex flex="1" justifyContent="center" position="relative">
             <Circle
-                size="22px"
+                size="48px"
                 zIndex="1"
-                backgroundColor="beets.base.700"
+                backgroundColor="transparent"
                 alignItems="center"
                 justifyContent="center"
                 display="flex"
             >
-                <Icon width="6px" height="10px" viewBox="0 0 6 10" fill="none">
+                <Image width="44px" src={Right} />
+
+                {/* <Icon width="6px" height="10px" viewBox="0 0 6 10" fill="none">
                     <path
                         fillRule="evenodd"
                         clipRule="evenodd"
                         d="M0.741661 9.16312C0.546399 8.96786 0.546399 8.65128 0.741661 8.45602L4.19763 5.00005L0.741661 1.54408C0.546399 1.34881 0.546399 1.03223 0.741661 0.83697C0.936923 0.641708 1.25351 0.641708 1.44877 0.83697L5.25829 4.64649C5.35206 4.74026 5.40474 4.86744 5.40474 5.00005C5.40474 5.13265 5.35206 5.25983 5.25829 5.3536L1.44877 9.16312C1.25351 9.35839 0.936924 9.35839 0.741661 9.16312Z"
                         fill="currentColor"
                     />
-                </Icon>
+                </Icon> */}
             </Circle>
         </Flex>
     );
