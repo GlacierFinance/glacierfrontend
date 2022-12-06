@@ -53,18 +53,18 @@ export const BeetsInput = forwardRef(
                     fontSize="lg"
                     fontWeight="semibold"
                     borderColor="transparent"
-                    border="2px"
+                    // border="2px"
                     bgColor="transparent"
                     paddingTop="5"
-                    _hover={{
-                        borderColor: 'gray.200',
-                    }}
-                    _focus={{
-                        outline: 'none',
-                    }}
-                    _placeholder={{
-                        color: 'gray.400',
-                    }}
+                    // _hover={{
+                    //     borderColor: 'gray.200',
+                    // }}
+                    // _focus={{
+                    //     outline: 'none',
+                    // }}
+                    // _placeholder={{
+                    //     color: 'gray.400',
+                    // }}
                     {...inputProps}
                 />
                 {children}

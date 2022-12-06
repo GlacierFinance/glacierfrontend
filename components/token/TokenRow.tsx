@@ -74,13 +74,13 @@ export default function TokenRow({
                         onChange={(e) => {
                             _onAmountChange(e.currentTarget.value);
                         }}
-                        _hover={{ borderColor: 'gray.200' }}
-                        _focus={{ outline: 'none' }}
-                        _placeholder={{ color: 'gray.400' }}
+                        // _hover={{ borderColor: 'gray.200' }}
+                        // _focus={{ outline: 'none' }}
+                        // _placeholder={{ color: 'gray.400' }}
                         color="gray.100"
                         borderColor="transparent"
                         border="2px"
-                        bgColor="blackAlpha.400"
+                        // bgColor="blackAlpha.400"
                         fontWeight="semibold"
                         onKeyDown={tokenInputBlockInvalidCharacters}
                         width="full"

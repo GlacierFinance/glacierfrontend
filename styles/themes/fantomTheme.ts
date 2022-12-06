@@ -169,21 +169,21 @@ export const fantomTheme: Partial<ChakraTheme> = {
             variants: {
                 filled: {
                     field: {
-                        color: 'gray.100',
-                        bgColor: 'beets.lightAlpha.500',
-                        borderColor: 'transparent',
+                        // color: 'gray.100',
+                        // bgColor: 'beets.lightAlpha.500',
+                        // borderColor: 'transparent',
                         //color: 'gray.100',
-                        _hover: {
-                            borderColor: 'beets.base.200',
-                            bgColor: 'beets.lightAlpha.500',
-                        },
-                        _focus: {
-                            bgColor: 'beets.lightAlpha.500',
-                            borderColor: 'beets.base.200',
-                        },
-                        _placeholder: {
-                            color: 'gray.200',
-                        },
+                        // _hover: {
+                        //     borderColor: 'beets.base.200',
+                        //     bgColor: 'beets.lightAlpha.500',
+                        // },
+                        // _focus: {
+                        //     bgColor: 'beets.lightAlpha.500',
+                        //     borderColor: 'beets.base.200',
+                        // },
+                        // _placeholder: {
+                        //     color: 'gray.200',
+                        // },
                     },
                 },
             },
