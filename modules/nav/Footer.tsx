@@ -28,13 +28,13 @@ export function Footer() {
         <Box width="full" px={{ base: '10', xl: '20' }} bgColor="transparent" backgroundImage="./images/gridbg-footer.png" >
             <Flex pt="20">
                 <Box flex="1">
-                    <Flex display="flex" justifyContent="space-between">
+                    <Flex display="flex" justifyContent="space-between" alignItems="center">
                         <Flex display="flex" flexDirection="row" gap="8">
-                            <Box>
-                                <NextImage src={GlacierLogo} width="160px" />
+                            <Box width={{ base: "130px", md: "160px"}} >
+                                <NextImage src={GlacierLogo} />
                             </Box>
                             <Flex display="flex" gap="2">
-                            <BeetsBox display="flex" alignItems="center">
+                            <BeetsBox display={{ base: 'none', lg: 'flex' }} alignItems="center">
                                 <SubNavBarStat
                                     loading={loading && !protocolData}
                                     value={protocolData?.totalLiquidity || '0'}
@@ -46,7 +46,7 @@ export function Footer() {
                                     py="0.5"
                                     />
                             </BeetsBox>
-                            <BeetsBox display="flex" alignItems="center">
+                            <BeetsBox display={{ base: 'none', lg: 'flex' }} alignItems="center">
                                 <SubNavBarStat
                                     loading={loading && !protocolData}
                                     value={protocolData?.totalLiquidity || '0'}
@@ -61,7 +61,7 @@ export function Footer() {
                             </Flex>
                         </Flex>
                     {/* <Box>{chainId === '10' ? <BeetsBalLogo /> : <BeetsLogo />}</Box> */}
-                    <Flex display="flex" flexDirection="row" justifyContent="flex-end" gap="8">
+                    <Flex display="flex" flexDirection="row" justifyContent="flex-end" gap={{ base: "5", md: "8"}} fontSize={{ base: "sm", md: "lg"}} alignItems="center">
                             <FooterLink href="/pools" linkType="internal">
                                 Invest
                             </FooterLink>
@@ -76,8 +76,8 @@ export function Footer() {
                             </FooterLink>
                         </Flex>
                     </Flex>
-                    <Flex display="flex" flex="1" justifyContent='space-between' alignItems="center">
-                    <HStack gap="8" mt="24" mb="20">
+                    <Flex display="flex" flex="1" justifyContent='space-between' alignItems="center" gap="8">
+                    <HStack gap={{ base: "5", md: "8"}} mt="24" mb="20">
                         <Box>
                             <Link href="https://discord.gg/jedS4zGk28" target="_blank" _active={{ boxShadow: 'none' }}>
                                 <NextImage src={DiscordIcon} />
@@ -120,7 +120,7 @@ export function Footer() {
                             </Link>
                         </Box>
                     </HStack>
-                    <Text display="flex" justifyContent="flex-end">
+                    <Text display="flex" justifyContent="flex-end" fontSize={{ base: "sm", md: "lg"}} minW="180px">
                 Copyright &copy; GLACIER 2022
                     </Text>
                     </Flex>

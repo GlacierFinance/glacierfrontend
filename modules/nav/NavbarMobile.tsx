@@ -15,7 +15,8 @@ export function NavbarMobile() {
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            bgColor="beets.base.800"
+            bgColor="black"
+            opacity="80%"
             shadow="lg"
             display={{ base: 'flex', md: 'none' }}
             zIndex="999"

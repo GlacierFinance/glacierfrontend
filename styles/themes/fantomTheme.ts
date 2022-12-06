@@ -1,3 +1,4 @@
+import { background } from '@chakra-ui/react';
 import { ChakraTheme } from '@chakra-ui/theme';
 
 export const fantomTheme: Partial<ChakraTheme> = {
@@ -9,17 +10,11 @@ export const fantomTheme: Partial<ChakraTheme> = {
                 backgroundColor:
                 'transparent'
             },
-             body: {
-               backgroundImage:
-                './images/bg.png'
-            //     color: '#C1C1D1',
-            //     background:
-            //         'radial-gradient(ellipse at top, #111111, #020202), radial-gradient(ellipse at bottom, #020202, #020202) !important',
-            // },
-            // '.bg': {
-            //     // background: `radial-gradient(ellipse at top, rgba(18, 14, 68, 1) 10%, transparent 80%),
-            //     //              radial-gradient(ellipse at bottom, rgba(18, 14, 68, 1) 10%, transparent 80%) !important`,
-            //     background: `black`
+            body: {
+                backgroundImage:
+                './images/bg.png',
+                backgroundColor:
+                'black'
             },
         },
     },
