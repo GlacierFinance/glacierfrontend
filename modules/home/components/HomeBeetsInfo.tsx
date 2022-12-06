@@ -13,7 +13,7 @@ export function HomeBeetsInfo(props: BoxProps) {
            <Box>
                 <img src="./images/governanceredefined.png"/>
            </Box>
-            <Box my="10" textAlign="center" maxW="1000px" minW={{ lg: "800px"}} color="#9AA4DA" letterSpacing="1px">
+            <Box my="10" textAlign="center" maxW="1000px" minW={{ lg: "800px"}} fontFamily="JetBrains" color="glacier.silver.200" letterSpacing="1px">
                 Bringing power back to the people: The BEETs token grants users the ability to influence the evolution
                 of the protocol through decentralized governance; make sure your voice is heard and have your say in
                 decisions that shape the future of Beethoven X.

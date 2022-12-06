@@ -10,7 +10,7 @@ export function HomeLearn(props: BoxProps) {
             <Grid templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }} mb="16">
                 <GridItem>
                     <BeetsHeadline mb="8">Learning the notes</BeetsHeadline>
-                    <Box>
+                    <Box fontFamily="JetBrains" color="white">
                         DeFi can be confusing; whether you’re a beginner or a seasoned veteran, we want to provide you
                         with information that helps. 
                         <br />
@@ -21,9 +21,9 @@ export function HomeLearn(props: BoxProps) {
                 </GridItem>
             </Grid>
             <Grid templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }} gap="12">
-                <GridItem>
-                    <BeetsSubHeadline mb="8">Beethoven X Basics</BeetsSubHeadline>
-                    <HomeLearnItem
+                <GridItem fontFamily="JetBrains">
+                    <BeetsSubHeadline fontFamily="Space" mb="8">Beethoven X Basics</BeetsSubHeadline>
+                    <HomeLearnItem 
                         title="Weighted Pools"
                         description="From multiple assets, customized token weightings and dynamic swap fees, weighted pools are the industry standard when it comes to tailored investment strategies. Discover more about this unique type of liquidity pool and how you can get the most out of it."
                         url="https://beethovenxio.medium.com/learning-the-notes-weighted-pools-3d3af2d2ebc6"
@@ -45,8 +45,8 @@ export function HomeLearn(props: BoxProps) {
                         last={true}
                     />
                 </GridItem>
-                <GridItem>
-                    <BeetsSubHeadline mb="8">DeFi 101</BeetsSubHeadline>
+                <GridItem fontFamily="JetBrains">
+                    <BeetsSubHeadline mb="8" fontFamily="Space">DeFi 101</BeetsSubHeadline>
                     <HomeLearnItem
                         title="Getting started: What is DeFi?"
                         description="Discover a brand new way to manage your finances. Decentralized Finance (DeFi) is an emerging industry that removes the control banks and institutions have over financial services. Permissionless and decentralized, DeFi is revolutionizing the financial world as we know it."
@@ -64,8 +64,9 @@ export function HomeLearn(props: BoxProps) {
                         last={true}
                     />
                 </GridItem>
-                <GridItem>
-                    <BeetsSubHeadline mb="8">Other resources</BeetsSubHeadline>
+                <GridItem fontFamily="JetBrains">
+
+                    <BeetsSubHeadline mb="8" fontFamily="Space">Other resources</BeetsSubHeadline>
                     <HomeLearnItem
                         title="Lrn.fi"
                         description="Lrn.fi is a next generation education platform built to educate and empower users on the wonderful world of web3. Learn all you need to know to successfully start your journey into Defi."
