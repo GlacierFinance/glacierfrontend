@@ -15,19 +15,20 @@ export function HomeHero() {
             // backgroundImage="./images/gridbg02.png"
             // backgroundPosition="10% 120%"
             // backgroundRepeat="no-repeat"
-            backgroundImage={{
-                md:
-                    chainId === '10'
-                        ? "url('/images/hero-image-optimism.jpg')"
-                        : "url('/images/glacierhero.png')",
-            }}
+            // backgroundImage={{
+            //     md:
+            //         chainId === '10'
+            //             ? "url('/images/hero-image-optimism.jpg')"
+            //             : "url('/images/glacierhero.png')",
+            // }}
             
-            backgroundPosition="88% 10%"
-            backgroundRepeat="no-repeat"
-            boxShadow="0px 0px 24px 0px rgba(0,0,0,0.25);"
+            // backgroundPosition="88% 10%"
+            // backgroundRepeat="no-repeat"
+            // backgroundSize="contain"
+            // boxShadow="0px 0px 24px 0px rgba(0,0,0,0.25);"
         >     
             <Flex flex="1" pl={{ base: '4', xl: '8' }} mb="12" alignItems="center">
-                <Flex flexDirection="column" width={{ md: '40%', lg: '80%' }} mr={{ base: "10", lg: "20"}} ml="32">
+                <Flex flexDirection="column" width={{ base: '50%', lg: '80%' }} mr={{ base: "10", lg: "20"}} px={{ base: "10", lg: "24"}} minW="450px">
                <Box>
                 <img src='/images/glaciertext.png'
                      width='470'
@@ -68,11 +69,11 @@ export function HomeHero() {
                         {"I'm new! Help me get started."}
                     </Link>*/}
                 </Flex>
-                {/* <Box mr="144">
+                <Box mr="144">
                 <img src='/images/glacierhero.png'
                     width="700px"
                     />
-               </Box> */}
+               </Box>
                 {/* <Flex justify='end' padding='4' marginLeft='72' >
                     <Image src={placeholder}  height='440px'
                     objectFit="contain"

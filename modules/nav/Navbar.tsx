@@ -48,8 +48,8 @@ export function Navbar({ scrollY }: Props) {
                             {chainId === '10' ? (
                                 <BeetsBalLogo width="132px" />
                             ) : (
-                                <Box ml="10">
-                                    <NextImage src={GlacierLogo} width="160px" />
+                                <Box ml={{base: "4", md: "10"}} width={{ base: "130px", md: "160px"}}>
+                                    <NextImage src={GlacierLogo} />
                                 </Box>
                             )}
                         </NextLink>
@@ -58,7 +58,7 @@ export function Navbar({ scrollY }: Props) {
                     </Flex>
                     <Box display="flex" zIndex="2" justifyContent="flex-end" textTransform="uppercase">
                     <NetworkSelectorPopover>
-                    <HStack spacing="1.5" mr={10} cursor="pointer">
+                    <HStack spacing="1.5" mr={10} cursor="pointer" display={{ base: 'none', md: 'flex' }}>
                         <Image src={networkConfig.eth.iconUrl} width="20px" height="20px" />
                         <Text fontWeight="bold">{networkConfig.networkShortName}</Text>
                         <Box>
@@ -66,7 +66,7 @@ export function Navbar({ scrollY }: Props) {
                         </Box>
                     </HStack>
                 </NetworkSelectorPopover>
-                        <Flex alignItems="center" display={{ base: 'none', md: 'flex' }} color='white' gap="3">
+                        <Flex alignItems="center" display={{ base: 'none', lg: 'flex' }} color='white' gap="3">
                         <NavbarLink
                                 href={'/'}
                                 

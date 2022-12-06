@@ -23,11 +23,11 @@ export default function NavbarWalletConnectButton() {
         <ConnectButton.Custom>
             {({ account, chain, openAccountModal, openChainModal, openConnectModal, mounted }) => {
                 return (
-                    <Box>
+                    <Box display="flex" justifyContent="flex-end">
                         {(() => {
                             if (!mounted || !account || !chain) {
                                 return (
-                                        <Button ml='4' borderRadius="none" px='0' backgroundColor="black"
+                                        <Button ml='4' borderRadius="none" px='0' backgroundColor="black" width={{ base: "80%", md: "full"}}
                                         _hover={{
                                             opacity: '60%',
                                             transform: 'scale(1.05)',
