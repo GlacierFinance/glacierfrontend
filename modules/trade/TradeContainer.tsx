@@ -51,7 +51,7 @@ export function TradeContainer() {
                                         <Text fontSize="xl" fontWeight="bold" lineHeight="1.2rem" mt="48" textTransform="uppercase">
                                             Smart order routing
                                         </Text>
-                                        <Text mb="16" mt="8" color="gray.200">
+                                        <Text mb="16" mt="8" color="glacier.silver.200" fontFamily="JetBrains" >
                                             The SOR searches all Glacier Finance pools to ensure you receive the best
                                             available price.
                                         </Text>
@@ -60,11 +60,11 @@ export function TradeContainer() {
                             </AnimatePresence>
                             {showRouting && <BatchSwapSorRoute swapInfo={swapInfo} />}
 
-                            <motion.div layout>
+                            <motion.div layout >
                                 <Text fontSize="xl" fontWeight="bold" lineHeight="1.2rem" mt="14" textTransform="uppercase">
                                     Latest swaps
                                 </Text>
-                                <Text mb="12" mt="4" color="gray.200">
+                                <Text mb="12" mt="4" color="glacier.silver.200" fontFamily="JetBrains">
                                     The latest swaps for your selected token pair.
                                 </Text>
                             </motion.div>

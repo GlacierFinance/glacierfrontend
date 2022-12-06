@@ -28,20 +28,20 @@ export function BatchSwapListItem({ tokenIn, tokenOut, tokenInPrice, tokenOutPri
     const percentChange = tokenInPrice !== 0 ? (tokenOutPrice / tokenInPrice - exchangeRate) / exchangeRate : 0;
 
     return (
-        <Card px="2" pt="2" mb="1">
+        <Card px="2" pt="2" mb="1" bgColor="glacier.black.200">
             <Flex alignItems="center">
                 <Flex flex="1" fontSize="sm" alignItems="flex-end">
                     <Text fontSize="md" fontWeight="bold">
                         1
                     </Text>
-                    <Text>
+                    <Text fontFamily="JetBrains" color="glacier.silver.200">
                         {'\u00A0'}
                         {tokenOut?.symbol} ={'\u00A0'}
                     </Text>
                     <Text fontSize="md" fontWeight="bold">
                         {tokenFormatAmount(exchangeRate)}
                     </Text>
-                    <Text>
+                    <Text fontFamily="JetBrains" color="glacier.silver.200">
                         {'\u00A0'}
                         {tokenIn?.symbol}
                     </Text>
@@ -58,10 +58,10 @@ export function BatchSwapListItem({ tokenIn, tokenOut, tokenInPrice, tokenOutPri
             </Flex>
             <Flex>
                 <Box flex="1">
-                    <PercentChangeBadge percentChange={percentChange} />
+                    <PercentChangeBadge fontFamily="JetBrains" percentChange={percentChange} />
                 </Box>
                 <Box>
-                    <Badge>{formatDistanceToNow(new Date(batchSwap.timestamp * 1000), { addSuffix: true })}</Badge>
+                    <Badge fontFamily="JetBrains" color="glacier.silver.200">{formatDistanceToNow(new Date(batchSwap.timestamp * 1000), { addSuffix: true })}</Badge>
                 </Box>
             </Flex>
             <Box height="64px">

@@ -15,13 +15,13 @@ export function TradePageHeader() {
             <Flex>
                 <Text fontSize="2xl" fontWeight="bold" color="white">
                     1
-                    <Text as="span" fontSize="lg" fontWeight="normal" color="gray.100">
+                    <Text as="span" fontSize="lg" fontWeight="normal" color="glacier.silver.200" fontFamily="JetBrains">
                         {' '}
                         {tokenIn?.symbol}
                         {' = '}
                     </Text>
                     {tokenFormatAmount(reverseRatio)}
-                    <Text as="span" fontSize="lg" fontWeight="normal" color="gray.100">
+                    <Text as="span" fontSize="lg" fontWeight="normal" color="glacier.silver.200" fontFamily="JetBrains">
                         {' '}
                         {tokenOut?.symbol}
                     </Text>
@@ -31,9 +31,9 @@ export function TradePageHeader() {
                 </Box>
             </Flex>
             {percentChange !== null && (
-                <HStack>
+                <HStack fontFamily="JetBrains">
                     <PercentChangeBadge percentChange={percentChange} />
-                    <Text>in the past {range === 'SEVEN_DAY' ? 'week' : 'month'}</Text>
+                    <Text fontFamily="JetBrains" color="glacier.silver.200">in the past {range === 'SEVEN_DAY' ? 'week' : 'month'}</Text>
                 </HStack>
             )}
         </>

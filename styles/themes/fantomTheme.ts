@@ -90,9 +90,11 @@ export const fantomTheme: Partial<ChakraTheme> = {
         glacier: {
             black: {
                 '100': '#030303', 
+                '200': 'rgba(13, 11, 14, 0.8)', 
             }, 
             silver: {
                 '100': '#F6ECFD', 
+                '200': '#9AA4DA', 
             }, 
         }, 
         beets: {

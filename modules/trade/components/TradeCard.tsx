@@ -78,7 +78,7 @@ export function TradeCard() {
     }
 
     return (
-        <Box width="full" position="relative" 
+        <Box width="full" position="relative" bg="transparent"
             
             >
             <Card

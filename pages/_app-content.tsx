@@ -22,17 +22,26 @@ export function AppContent({ Component, pageProps }: AppProps) {
             ref={ref}
             css={{
                 '&::-webkit-scrollbar': {
-                    width: '4px',
+                    width: '12px',
                 },
                 '&::-webkit-scrollbar-track': {
                     width: '6px',
                     background: theme.colors.gray['400'],
                 },
                 '&::-webkit-scrollbar-thumb': {
-                    background: theme.colors.beets.base['300'],
-                    borderRadius: '24px',
+                    // background: theme.colors.beets.base['300'],
+                    // background: 'linear-gradient(to bottom left, #FF5D2A,  #FF00D6, #009CF3, #00FFB2)', 
+                    background: 'linear-gradient(to bottom, #FF5D2A, #FF00D6, #009CF3, #00FFB2)', 
+
+                    borderRadius: '10px',
                 },
             }}
+            // { offset: 0, color: '#' },
+            // { offset: 0.2323, color: '#' },
+            // { offset: 0.4198, color: '#' },
+            // { offset: 0.6125, color: '#' },
+            // { offset: 0.8156, color: '#' },
+            // { offset: 1, color: '#' },
         >
             <GlobalRenderer />
             <Box pt="3" />

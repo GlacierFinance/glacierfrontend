@@ -32,7 +32,7 @@ export function BatchSwapList({ tokenIn, tokenOut }: Props) {
     const batchSwaps = data?.batchSwaps || [];
 
     return (
-        <Box>
+        <Box  >
             {batchSwaps.map((batchSwap) => {
                 return (
                     <AnimatePresence key={batchSwap.id}>
