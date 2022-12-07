@@ -58,11 +58,22 @@ export function PoolInvestModal() {
 
     return (
         <Box width={{ base: 'full', md: 'fit-content' }}>
-            <Button variant="primary" onClick={onOpen} width={{ base: 'full', md: 'fit-content' }}>
+            <Button variant="secondary" onClick={onOpen} width={{ base: 'full', md: 'fit-content' }}>
                 Invest
             </Button>
+            {/* <Button borderRadius="none" px='0' backgroundColor="transparent" width={{ base: "80%", md: "full"}}
+                                        _hover={{
+                                            opacity: '60%',
+                                            transform: 'scale(1.05)',
+                                        }}
+                                        _active={{
+                                            transform: 'scale(1.05)'
+                                        }}
+                                        onClick={onOpen}>
+                                            <img src="/public/images/investbutton.png" />
+                                        </Button> */}
             <Modal isOpen={isOpen} onClose={onModalClose} size="lg" initialFocusRef={initialRef}>
-                <ModalOverlay bg="blackAlpha.900" />
+                <ModalOverlay />
                 <BeetsModalContent>
                     <ModalCloseButton />
                     {modalState !== 'start' ? (

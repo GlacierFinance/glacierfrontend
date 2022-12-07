@@ -1,4 +1,4 @@
-import { Badge, Box, Divider, HStack, Text, VStack } from '@chakra-ui/layout';
+import { Badge, Box, Divider, HStack, Text, Flex } from '@chakra-ui/layout';
 import numeral from 'numeral';
 import AprTooltip from '~/components/apr-tooltip/AprTooltip';
 import { PercentChangeBadge } from '~/components/badge/PercentChangeBadge';
@@ -42,60 +42,72 @@ export default function PoolOverallStats() {
         );
 
     return (
-        <VStack spacing="4" width="full" alignItems="flex-start" px="2">
-            <VStack spacing="0" alignItems="flex-start">
-                <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="beets.base.50">
+        <Flex width="full" flexDirection="column" alignItems="flex-start" px="2">
+            <Flex flexDirection="column" alignItems="flex-start">
+                <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="glacier.silver.200" fontFamily="JetBrains">
                     Pool APR
                 </Text>
                 <HStack>
-                    <div className="apr-stripes">{numeral(data.apr.total).format('0.00%')}</div>
+                    <Box textColor="white" fontSize="42">{numeral(data.apr.total).format('0.00%')}</Box>
                     <AprTooltip onlySparkles data={data.apr} />
                 </HStack>
-            </VStack>
+            </Flex>
             <Divider />
-            <VStack spacing="0" alignItems="flex-start">
-                <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="beets.base.50">
+            <Flex mt="5" flexDirection="column" width="full">
+                <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="glacier.silver.200" fontFamily="JetBrains">
                     BPT price
                 </Text>
+                <Flex display="flex" flexDirection="row" flex="1" justifyContent='space-between' alignItems="center">                
                 <Text color="white" fontSize="1.75rem">
                     {numberFormatUSDValue(sharePrice)}
                 </Text>
-                <PercentChangeBadge percentChange={sharePricePercentChange} />
-            </VStack>
-            <VStack spacing="0" alignItems="flex-start">
-                <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="beets.base.50">
+                <Box display="flex" justifyContent="flex-end">
+                    <PercentChangeBadge percentChange={sharePricePercentChange} />
+                </Box>
+               </Flex>
+            </Flex>
+            <Flex mt="5" flexDirection="column" width="full">
+                <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="glacier.silver.200" fontFamily="JetBrains">
                     TVL
                 </Text>
+                <Flex display="flex" flexDirection="row" flex="1" justifyContent='space-between' alignItems="center">                
                 <Text color="white" fontSize="1.75rem">
-                    {numeral(data.totalLiquidity).format('$0,0.00a')}
+                    {numberFormatUSDValue(sharePrice)}
                 </Text>
-                <PercentChangeBadge percentChange={tvlPercentChange} />
-            </VStack>
-            <VStack spacing="0" alignItems="flex-start">
-                <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="beets.base.50">
+                <Box display="flex" justifyContent="flex-end">
+                    <PercentChangeBadge percentChange={sharePricePercentChange} />
+                </Box>
+               </Flex>
+            </Flex>
+            <Flex mt="5" flexDirection="column" width="full">                
+            <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="glacier.silver.200" fontFamily="JetBrains">
                     24h Volume
                 </Text>
+                <Flex display="flex" flexDirection="row" flex="1" justifyContent='space-between' alignItems="center">                
                 <Text color="white" fontSize="1.75rem">
-                    {numeral(data.volume24h).format('$0,0.00a')}
+                    {numberFormatUSDValue(sharePrice)}
                 </Text>
-                <PercentChangeBadge percentChange={volumePercentChange} />
-            </VStack>
-            <VStack spacing="0" alignItems="flex-start">
-                <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="beets.base.50">
+                <Box display="flex" justifyContent="flex-end">
+                    <PercentChangeBadge percentChange={sharePricePercentChange} />
+                </Box>
+               </Flex>
+            </Flex>
+            <Flex mt="5" flexDirection="column" width="full">                
+            <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="glacier.silver.200" fontFamily="JetBrains">
                     24h Fees
                 </Text>
                 <Text color="white" fontSize="1.75rem">
                     {numeral(data.fees24h).format('$0,0.00a')}
                 </Text>
-            </VStack>
+            </Flex>
             {pool.staking?.farm && (
-                <VStack spacing="0" alignItems="flex-start">
-                    <InfoButton
+                <Flex mt="5" flexDirection="column" width="full">                    <InfoButton
                         labelProps={{
                             lineHeight: '1rem',
                             fontWeight: 'semibold',
                             fontSize: 'sm',
-                            color: 'beets.base.50',
+                            textColor: "glacier.silver.200",
+                            fontFamily: "JetBrains",
                         }}
                         label="Liquidity incentives"
                         infoText={`Liquidity incentives are additional incentives available for this pool when you stake your BPT in the ${networkConfig.farmTypeName}. The daily value is an approximation based on current token prices and emissions.`}
@@ -129,8 +141,8 @@ export default function PoolOverallStats() {
                             </HStack>
                         ))}
                     </Box>
-                </VStack>
+                </Flex>
             )}
-        </VStack>
+        </Flex>
     );
 }

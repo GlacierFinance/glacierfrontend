@@ -65,12 +65,12 @@ export function PoolDetailTokenInfoCard({ token, price, data, dynamicData, ...re
                             <Text fontWeight="semibold" fontSize="lg" lineHeight="1.6rem">
                                 {token.symbol}
                             </Text>
-                            <Link href={etherscanGetTokenUrl(token.address)} target="_blank">
+                            <Link href={etherscanGetTokenUrl(token.address)} target="_blank" color="#FF01D6">
                                 <ExternalLink size={16} style={{ marginBottom: 1 }} />
                             </Link>
                         </HStack>
 
-                        <Text lineHeight="1.1rem" color="gray.200">
+                        <Text lineHeight="1.1rem" color="glacier.silver.200" fontFamily="JetBrains">
                             {token.name}
                         </Text>
                     </Box>
@@ -98,13 +98,13 @@ export function PoolDetailTokenInfoCard({ token, price, data, dynamicData, ...re
                         dangerouslySetInnerHTML={{ __html: data.description }}
                     />
                     <Box mt="1">
-                        <Link onClick={textState.toggle}>{showFullText ? 'Show less' : 'Show more'}</Link>
+                        <Link textColor="#FF01D6" onClick={textState.toggle}>{showFullText ? 'Show less' : 'Show more'}</Link>
                     </Box>
                 </Box>
             ) : null}
             {hasLinks && <Divider mt="4" mb="4" />}
             {hasLinks && (
-                <Flex>
+                <Flex justifyContent="flex-end">
                     <Link mr="3" href={`https://www.coingecko.com/en/coins/${token.address}`} target="_blank">
                         <NextImage src={CoingeckoLogo} width="24" height="24" />
                     </Link>

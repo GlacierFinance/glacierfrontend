@@ -26,10 +26,10 @@ const PoolPage = ({ pool }: Props) => {
     return (
         <>
             <Head>
-                <title>Beethoven X | {pool.name}</title>
-                <meta name="title" content={`Beethoven X | ${pool.name}`} />
-                <meta property="og:title" content={`Beethoven X | ${pool.name}`} />
-                <meta property="twitter:title" content={`Beethoven X | ${pool.name}`} />
+                <title>Glacier Fi {pool.name}</title>
+                <meta name="title" content={`Glacier Fi ${pool.name}`} />
+                <meta property="og:title" content={`Glacier Fi ${pool.name}`} />
+                <meta property="twitter:title" content={`Glacier Fi ${pool.name}`} />
             </Head>
             <PoolProvider pool={pool}>
                 <PoolUserBptBalanceProvider>

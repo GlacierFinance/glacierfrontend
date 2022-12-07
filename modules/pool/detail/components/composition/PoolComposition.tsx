@@ -111,17 +111,17 @@ function PoolCompositionTable({ columns, data, hasNestedTokens }: PoolCompositio
             return (
                 <HStack>
                     {cell.row.depth > 0 ? (
-                        <Box color="whiteAlpha.400" paddingLeft={cell.row.depth === 1 ? '2' : '12'}>
+                        <Box color="white" paddingLeft={cell.row.depth === 1 ? '2' : '12'}>
                             <CornerDownRight />
                         </Box>
                     ) : null}
                     <TokenAvatar size="xs" address={address} />
                     <HStack spacing="1">
-                        <Text fontSize="sm" color="beets.base.50">
+                        <Text fontSize="sm" color="white" fontFamily="JetBrains">
                             {symbol}
                         </Text>
                         <Link href={etherscanGetTokenUrl(address)} target="_blank">
-                            <ExternalLink size={14} />
+                            <ExternalLink color="#FF01D6" size={14} />
                         </Link>
                     </HStack>
                 </HStack>

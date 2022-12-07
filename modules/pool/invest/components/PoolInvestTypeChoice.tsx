@@ -130,7 +130,7 @@ export function PoolInvestTypeChoice({ onShowProportional, onShowCustom }: Props
                 </HStack>
             </VStack>
             <VStack width="full" p="4" backgroundColor="blackAlpha.500" alignItems="flex-start">
-                <Text fontSize="md" fontWeight="semibold">
+                <Text fontSize="md" fontWeight="semibold" textTransform="uppercase">
                     Pool tokens in your wallet
                 </Text>
                 <BeetsBox width="full" p="4">
@@ -177,7 +177,7 @@ export function PoolInvestTypeChoice({ onShowProportional, onShowCustom }: Props
                                                                 target="_blank"
                                                                 ml="1.5"
                                                             >
-                                                                <ExternalLink size={14} />
+                                                                <ExternalLink size={14} color="#FF01D6" />
                                                             </Link>
                                                         </HStack>
                                                     </Box>

@@ -31,9 +31,9 @@ export function PoolDetailAboutThisPool() {
     });
 
     return (
-        <Grid templateColumns={{ base: '1fr', lg: '2fr 1fr' }} gap="4" width="full">
+        <Grid background="transparent" templateColumns={{ base: '1fr', lg: '2fr 1fr' }} gap="4" width="full">
             <GridItem>
-                <Text fontWeight="semibold" fontSize="xl" color="white" mb="4">
+                <Text fontWeight="semibold" fontSize="xl" color="white" mb="4" textTransform="uppercase">
                     Pool tokens
                 </Text>
                 {tokensOfInterest.map((token, index) => {
@@ -45,6 +45,7 @@ export function PoolDetailAboutThisPool() {
                             data={data?.staticData.find((item) => item.tokenAddress === token.address)}
                             dynamicData={data?.dynamicData.find((item) => item.tokenAddress === token.address)}
                             mb="2"
+                            background="rgba(13, 11, 14, 0.8)"
                         />
                     );
                 })}
@@ -54,9 +55,9 @@ export function PoolDetailAboutThisPool() {
                     Pool statistics
                 </Text>
 
-                <Card padding="2" mb="8">
-                    <CardRow>
-                        <Box flex="1" fontWeight="semibold">
+                <Card background="transparent" padding="2" mb="8">
+                    <CardRow background="rgba(13, 11, 14, 0.8)">
+                        <Box flex="1" fontWeight="semibold" >
                             Created
                         </Box>
                         <VStack spacing="0" alignItems="flex-end">
@@ -66,21 +67,21 @@ export function PoolDetailAboutThisPool() {
                             </Box>
                         </VStack>
                     </CardRow>
-                    <CardRow flexDirection="column">
+                    <CardRow background="rgba(13, 11, 14, 0.8)" flexDirection="column">
                         <Box fontWeight="semibold">Lifetime stats</Box>
                         <Box ml="4" mt="2">
                             <Flex>
-                                <Box flex="1">Volume</Box>
+                                <Box flex="1" color="glacier.silver.200" fontFamily="JetBrains">Volume</Box>
                                 <Box>{numberFormatLargeUsdValue(dynamicData.lifetimeVolume)}</Box>
                             </Flex>
                             <Divider mt="1.5" mb="1.5" />
                             <Flex>
-                                <Box flex="1">Swap fees</Box>
+                                <Box flex="1" color="glacier.silver.200" fontFamily="JetBrains">Swap fees</Box>
                                 <Box>{numberFormatLargeUsdValue(dynamicData.lifetimeSwapFees)}</Box>
                             </Flex>
                             <Divider mt="1.5" mb="1.5" />
                             <Flex>
-                                <Box flex="1">Swaps</Box>
+                                <Box flex="1" color="glacier.silver.200" fontFamily="JetBrains">Swaps</Box>
                                 <Box>{numberFormatLargeValue(dynamicData.swapsCount)}</Box>
                             </Flex>
                         </Box>
@@ -131,7 +132,7 @@ export function PoolDetailAboutThisPool() {
                         ]}
                     />
 
-                    <CardRow mb="0">
+                    <CardRow background="rgba(13, 11, 14, 0.8)" mb="0">
                         <Box flex="1" fontWeight="semibold">
                             Number of investors
                         </Box>
@@ -139,49 +140,57 @@ export function PoolDetailAboutThisPool() {
                     </CardRow>
                 </Card>
 
-                <Text fontWeight="semibold" fontSize="xl" color="white" mb="4">
+                <Text fontWeight="semibold" fontSize="xl" color="white" mb="4" textTransform="uppercase">
                     Pool info
                 </Text>
-                <Card padding="2">
-                    <CardRow>
+                <Card padding="2" background="transparent">
+                    <CardRow background="rgba(13, 11, 14, 0.8)">
                         <Box flex="1">BPT symbol</Box>
                         <Box>{pool.symbol}</Box>
                     </CardRow>
                     <CardRow>
                         <Box flex="1">Pool contract</Box>
-                        <Link href={etherscanGetAddressUrl(pool.address)} target="_blank">
+                        <Link color="glacier.silver.200" fontFamily="JetBrains" href={etherscanGetAddressUrl(pool.address)} target="_blank">
                             <HStack spacing="1">
                                 <Box>{addressShortDisplayName(pool.address)}</Box>
-                                <ExternalLink size={16} />
+                                <Box color="glacier.silver.200" fontFamily="JetBrains">
+                                    <ExternalLink size={16} />
+                                </Box>
                             </HStack>
                         </Link>
                     </CardRow>
                     <CardRow>
                         <Box flex="1">Pool owner</Box>
-                        <Link href={etherscanGetAddressUrl(pool.owner)} target="_blank">
+                        <Link color="glacier.silver.200" fontFamily="JetBrains" href={etherscanGetAddressUrl(pool.address)} target="_blank">
                             <HStack spacing="1">
-                                <Box>{addressShortDisplayName(pool.owner)}</Box>
-                                <ExternalLink size={16} />
+                                <Box>{addressShortDisplayName(pool.address)}</Box>
+                                <Box color="glacier.silver.200" fontFamily="JetBrains">
+                                    <ExternalLink size={16} />
+                                </Box>
                             </HStack>
                         </Link>
                     </CardRow>
                     {pool.factory && (
                         <CardRow>
                             <Box flex="1">Factory contract</Box>
-                            <Link href={etherscanGetAddressUrl(pool.factory)} target="_blank">
-                                <HStack spacing="1">
-                                    <Box>{addressShortDisplayName(pool.factory)}</Box>
+                            <Link color="glacier.silver.200" fontFamily="JetBrains" href={etherscanGetAddressUrl(pool.address)} target="_blank">
+                            <HStack spacing="1">
+                                <Box>{addressShortDisplayName(pool.address)}</Box>
+                                <Box color="glacier.silver.200" fontFamily="JetBrains">
                                     <ExternalLink size={16} />
-                                </HStack>
-                            </Link>
+                                </Box>
+                            </HStack>
+                        </Link>
                         </CardRow>
                     )}
                     <CardRow mb="0">
                         <Box flex="1">Vault</Box>
-                        <Link href={etherscanGetAddressUrl(config.balancer.vault)} target="_blank">
+                        <Link color="glacier.silver.200" fontFamily="JetBrains" href={etherscanGetAddressUrl(pool.address)} target="_blank">
                             <HStack spacing="1">
-                                <Box>{addressShortDisplayName(config.balancer.vault)}</Box>
-                                <ExternalLink size={16} />
+                                <Box>{addressShortDisplayName(pool.address)}</Box>
+                                <Box color="glacier.silver.200" fontFamily="JetBrains">
+                                    <ExternalLink size={16} />
+                                </Box>
                             </HStack>
                         </Link>
                     </CardRow>
