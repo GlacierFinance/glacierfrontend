@@ -13,7 +13,7 @@ interface Props {
 
 export function PoolDetailUsdStatsWithDate({ title, stats }: Props) {
     return (
-        <CardRow flexDirection="column" background="rgba(13, 11, 14, 0.8)">
+        <CardRow flexDirection="column" background="glacier.black.200">
             <Box fontWeight="semibold">{title}</Box>
             <Box ml="4" mt="2">
                 {stats.map(({ label, value, currentValue, timestamp }, index) => {

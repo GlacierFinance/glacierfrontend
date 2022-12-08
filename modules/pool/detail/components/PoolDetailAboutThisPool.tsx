@@ -45,7 +45,7 @@ export function PoolDetailAboutThisPool() {
                             data={data?.staticData.find((item) => item.tokenAddress === token.address)}
                             dynamicData={data?.dynamicData.find((item) => item.tokenAddress === token.address)}
                             mb="2"
-                            background="rgba(13, 11, 14, 0.8)"
+                            background="glacier.black.200"
                         />
                     );
                 })}
@@ -56,7 +56,7 @@ export function PoolDetailAboutThisPool() {
                 </Text>
 
                 <Card background="transparent" padding="2" mb="8">
-                    <CardRow background="rgba(13, 11, 14, 0.8)">
+                    <CardRow background="glacier.black.200">
                         <Box flex="1" fontWeight="semibold" >
                             Created
                         </Box>
@@ -67,7 +67,7 @@ export function PoolDetailAboutThisPool() {
                             </Box>
                         </VStack>
                     </CardRow>
-                    <CardRow background="rgba(13, 11, 14, 0.8)" flexDirection="column">
+                    <CardRow background="glacier.black.200" flexDirection="column">
                         <Box fontWeight="semibold">Lifetime stats</Box>
                         <Box ml="4" mt="2">
                             <Flex>
@@ -132,7 +132,7 @@ export function PoolDetailAboutThisPool() {
                         ]}
                     />
 
-                    <CardRow background="rgba(13, 11, 14, 0.8)" mb="0">
+                    <CardRow background="glacier.black.200" mb="0">
                         <Box flex="1" fontWeight="semibold">
                             Number of investors
                         </Box>
@@ -144,7 +144,7 @@ export function PoolDetailAboutThisPool() {
                     Pool info
                 </Text>
                 <Card padding="2" background="transparent">
-                    <CardRow background="rgba(13, 11, 14, 0.8)">
+                    <CardRow background="glacier.black.200">
                         <Box flex="1">BPT symbol</Box>
                         <Box>{pool.symbol}</Box>
                     </CardRow>

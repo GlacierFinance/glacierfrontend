@@ -26,7 +26,7 @@ export function PoolListItem({ pool, userBalance, showUserBalance, tokens, hasUn
             mb={{ base: '4', lg: '0' }}
             borderRadius={{ base: 'md', lg: '0' }}
             {...rest}
-           background="rgba(13, 11, 14, 0.8)"
+           background="glacier.black.200"
         >
             <Link href={`/pool/${pool.id}`} passHref>
                 <a>

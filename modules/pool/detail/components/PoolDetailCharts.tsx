@@ -16,7 +16,7 @@ export function PoolDetailCharts() {
     const { data } = useGetPoolSnapshotsQuery({ variables: { poolId: pool.id, range } });
 
     return (
-        <Card height="full" minHeight="540px" background="rgba(13, 11, 14, 0.8)">
+        <Card height="full" minHeight="540px" background="glacier.black.200">
             <HStack padding={{ base: '2', lg: '4' }} pb="0" justify={{ base: 'space-between', lg: 'flex-start' }}>
                 <Select
                     value={chartType}
