@@ -29,7 +29,7 @@ export default function NavbarWalletConnectButton() {
                                 return (
                                         <Button ml='4' borderRadius="none" px='0' backgroundColor="black" width={{ base: "80%", md: "full"}}
                                         _hover={{
-                                            opacity: '100%',
+                                            opacity: '80%',
                                             transform: 'scale(1.05)',
                                         }}
                                         _active={{

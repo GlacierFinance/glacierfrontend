@@ -16,13 +16,15 @@ export function PoolDetailCharts() {
     const { data } = useGetPoolSnapshotsQuery({ variables: { poolId: pool.id, range } });
 
     return (
-        <Card height="full" minHeight="540px">
+        <Card height="full" minHeight="540px" background="rgba(13, 11, 14, 0.8)">
             <HStack padding={{ base: '2', lg: '4' }} pb="0" justify={{ base: 'space-between', lg: 'flex-start' }}>
                 <Select
                     value={chartType}
                     onChange={(e) => setChartType(e.currentTarget.value as ChartType)}
                     width="160px"
-                    variant="filled"
+                    textColor="black"
+                    color="black"
+                    bgColor="white"
                 >
                     <option value="BPT_PRICE">BPT price</option>
                     <option value="FEES">Fees</option>
@@ -33,7 +35,8 @@ export function PoolDetailCharts() {
                     value={range}
                     onChange={(e) => setRange(e.currentTarget.value as GqlPoolSnapshotDataRange)}
                     width="160px"
-                    variant="filled"
+                    color="black"
+                    bgColor="white"
                 >
                     <option value="THIRTY_DAYS">last 30 days</option>
                     <option value="NINETY_DAYS">last 90 days</option>

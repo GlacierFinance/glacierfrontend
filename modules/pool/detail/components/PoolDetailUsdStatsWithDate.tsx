@@ -13,7 +13,7 @@ interface Props {
 
 export function PoolDetailUsdStatsWithDate({ title, stats }: Props) {
     return (
-        <CardRow flexDirection="column">
+        <CardRow flexDirection="column" background="rgba(13, 11, 14, 0.8)">
             <Box fontWeight="semibold">{title}</Box>
             <Box ml="4" mt="2">
                 {stats.map(({ label, value, currentValue, timestamp }, index) => {
@@ -24,7 +24,7 @@ export function PoolDetailUsdStatsWithDate({ title, stats }: Props) {
                     return (
                         <Fragment key={`stat-${index}`}>
                             <Flex>
-                                <Box flex="1">{label}</Box>
+                                <Box color="glacier.silver.200" fontFamily="JetBrains" flex="1">{label}</Box>
                                 <VStack alignItems="flex-end" spacing="0.5">
                                     <Flex alignItems="center">
                                         <Box>{numberFormatLargeUsdValue(value)}</Box>
@@ -33,7 +33,7 @@ export function PoolDetailUsdStatsWithDate({ title, stats }: Props) {
                                             ml="1.5"
                                         />
                                     </Flex>
-                                    <Box fontSize="sm" color="gray.200">
+                                    <Box fontSize="sm" color="glacier.silver.200" fontFamily="JetBrains">
                                         {format(date, 'MMM. d, yy')} ({formatDistanceToNow(date, { addSuffix: true })})
                                     </Box>
                                 </VStack>
