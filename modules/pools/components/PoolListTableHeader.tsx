@@ -14,9 +14,10 @@ export function PoolListTableHeader() {
                 borderTopLeftRadius="md"
                 borderTopRightRadius="md"
                 alignItems={'center'}
-                bgColor="rgba(255,255,255,0.08)"
+                // bgColor="rgba(255,255,255,0.08)"
+                background="transparent"
                 borderBottom="2px"
-                borderColor="beets.base.500"
+                borderColor="white"
                 mb={{ base: '4', lg: '0' }}
                 templateColumns={
                     showMyInvestments
@@ -27,13 +28,13 @@ export function PoolListTableHeader() {
                 display={{ base: 'none', lg: 'grid' }}
             >
                 <GridItem>
-                    <Text fontSize="md" fontWeight="semibold" color="beets.base.100">
+                    <Text fontSize="md" fontWeight="semibold" color="glacier.silver.200" >
                         Pool details
                     </Text>
                 </GridItem>
                 {showMyInvestments && (
                     <GridItem textAlign="right">
-                        <Flex justifyContent="flex-end" color="beets.base.100">
+                        <Flex justifyContent="flex-end" color="glacier.silver.200">
                             <Text fontSize="md" fontWeight="semibold">
                                 My balance
                             </Text>
@@ -64,7 +65,7 @@ export function PoolListTableHeader() {
                         </Text>
                     ) : (
                         <PoolListSortLink
-                            title="Volume (24h)"
+                            title="(24h)"
                             orderDirection={state.orderBy === 'volume24h' ? state.orderDirection : null}
                             onClick={() => changeSort('volume24h')}
                         />
