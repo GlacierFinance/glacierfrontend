@@ -84,14 +84,23 @@ export function PoolDetailBptPriceChart({ prices }: Props) {
                     showSymbol: false,
                     data: prices.map((item) => [item.timestamp * 1000, item.price]),
                     itemStyle: {
-                        color: chartGetSecondaryColor(networkConfig.chainId, 1),
+                        color: new graphic.LinearGradient(0, 0, 0, 1, [
+                            { offset: 0, color: '#FF5D2A' },
+                            { offset: 0.25, color: '#FF00D6' },
+                            { offset: 0.75, color: '#BD00FF' },
+                            { offset: 1, color: '#6100FF' },
+
+                        ]), 
                     },
                     areaStyle: {
-                        opacity: networkConfig.chainId === '10' ? 0.75 : 0.2,
+                        shadowBlur: 100, 
+                        opacity: 0.3,
                         color: new graphic.LinearGradient(0, 0, 0, 1, [
-                            { offset: 0, color: chartGetPrimaryColor(networkConfig.chainId, 1) },
-                            { offset: 0.5, color: chartGetPrimaryColor(networkConfig.chainId, 1) },
-                            { offset: 1, color: chartGetPrimaryColor(networkConfig.chainId, 0) },
+                            { offset: 0, color: '#FF5D2A' },
+                            { offset: 0.25, color: 'rgba(255, 0, 214, 0.264)' },
+                            { offset: 0.50, color: 'rgba(189, 0, 255, 0.276)' },
+                            { offset: 0.75, color: 'rgba(97, 0, 255, 0.27)' },
+                            { offset: 1.00, color: 'rgba(0, 156, 243, 0.072)' },
                         ]),
                     },
                     axisLine: { show: false },
