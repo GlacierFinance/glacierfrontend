@@ -5,7 +5,7 @@ import { Box, HeadingProps } from '@chakra-ui/layout';
 export function BeetsModalContent(props: ModalContentProps) {
     return (
         <ModalContent {...props}>
-            <Box bg="blackAlpha.400">
+            <Box bg="black" border="2px">
                 <Box className="bg">{props.children}</Box>
             </Box>
         </ModalContent>
@@ -13,11 +13,11 @@ export function BeetsModalContent(props: ModalContentProps) {
 }
 
 export function BeetsModalHeader(props: ModalHeaderProps) {
-    return <ModalHeader px="4" {...props} />;
+    return <ModalHeader {...props} />;
 }
 
 export function BeetsModalBody(props: ModalBodyProps) {
-    return <ModalBody px="4" pb="6" {...props} />;
+    return <ModalBody {...props} />;
 }
 
 export function BeetsModalHeadline(props: HeadingProps) {
