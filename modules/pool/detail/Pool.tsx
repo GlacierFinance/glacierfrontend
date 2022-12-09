@@ -21,7 +21,7 @@ export function Pool() {
             <VStack width="full" spacing="4">
                 {pool.staking && !isFbeetsPool && <PoolStakeInFarmWarning />}
                 {isFbeetsPool && hasBpt && <PoolFbeetsWarning />}
-                <HStack width="full" justifyContent="flex-end">
+                <HStack width="full" justifyContent="flex-start">
                     <PoolInvestModal />
                     <PoolWithdrawModal />
                 </HStack>

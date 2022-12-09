@@ -21,8 +21,8 @@ export function PoolTokenPill({ token }: Props) {
     const content = (
         <BeetsBox p="2">
             <Flex alignItems="center">
-                <TokenAvatar address={token.address} size="xs" />
-                <Text ml="2">
+                <TokenAvatar address={token.address} size="md" alignSelf="center" />
+                <Text ml="2" fontFamily="JetBrains" fontSize="14px" alignSelf="center" >
                     {token.nestedTokens
                         ? token.nestedTokens.map((nestedToken) => getToken(nestedToken.address)?.symbol).join('/')
                         : getToken(token.address)?.symbol}

@@ -58,7 +58,7 @@ export default function PoolOverallStats() {
                     BPT price
                 </Text>
                 <Flex display="flex" flexDirection="row" flex="1" justifyContent='space-between' alignItems="center">                
-                <Text color="white" fontSize="1.75rem">
+                <Text color="white" fontSize="20px">
                     {numberFormatUSDValue(sharePrice)}
                 </Text>
                 <Box display="flex" justifyContent="flex-end">
@@ -71,7 +71,7 @@ export default function PoolOverallStats() {
                     TVL
                 </Text>
                 <Flex display="flex" flexDirection="row" flex="1" justifyContent='space-between' alignItems="center">                
-                <Text color="white" fontSize="1.75rem">
+                <Text color="white" fontSize="20px">
                     {numberFormatUSDValue(sharePrice)}
                 </Text>
                 <Box display="flex" justifyContent="flex-end">
@@ -84,7 +84,7 @@ export default function PoolOverallStats() {
                     24h Volume
                 </Text>
                 <Flex display="flex" flexDirection="row" flex="1" justifyContent='space-between' alignItems="center">                
-                <Text color="white" fontSize="1.75rem">
+                <Text color="white" fontSize="20px">
                     {numberFormatUSDValue(sharePrice)}
                 </Text>
                 <Box display="flex" justifyContent="flex-end">
@@ -96,7 +96,7 @@ export default function PoolOverallStats() {
             <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="glacier.silver.200" fontFamily="JetBrains">
                     24h Fees
                 </Text>
-                <Text color="white" fontSize="1.75rem">
+                <Text color="white" fontSize="20px">
                     {numeral(data.fees24h).format('$0,0.00a')}
                 </Text>
             </Flex>
@@ -112,7 +112,7 @@ export default function PoolOverallStats() {
                         label="Liquidity incentives"
                         infoText={`Liquidity incentives are additional incentives available for this pool when you stake your BPT in the ${networkConfig.farmTypeName}. The daily value is an approximation based on current token prices and emissions.`}
                     />
-                    <Text color="white" fontSize="1.75rem">
+                    <Text color="white" fontSize="20px">
                         ~{numeral(incentivesDailyValue).format('$0,0.00a')}
                         <Text as="span" fontSize="md">
                             {' '}
