@@ -63,10 +63,10 @@ export function PoolInvestTypeChoice({ onShowProportional, onShowCustom }: Props
 
     return (
         <VStack width="full">
-            <VStack alignItems="flex-start" px="4" pb="4" width="full">
-                <VStack alignItems="flex-start" spacing="0">
-                    <Heading size="sm">Choose your investment type</Heading>
-                    <Box fontSize="base">
+            <VStack alignItems="flex-start" px="6" pb="4" width="full">
+                <VStack alignItems="flex-start" spacing="3" fontFamily="JetBrains">
+                    <Heading fontSize="13px" fontFamily="JetBrains">Choose your investment type</Heading>
+                    <Box textColor="glacier.silver.200" fontSize="13px">
                         The max amount you can invest is shown for each option.
                         {proportionalSupported && (
                             <BeetsTooltip
@@ -74,11 +74,11 @@ export function PoolInvestTypeChoice({ onShowProportional, onShowCustom }: Props
                                 label="When investing proportionally, you enter the Liquidity Pool in the specific ratios set by the pool. This helps to ensure you aren’t subject to the fees associated with price impact. Alternatively, customising your investment allows you to invest with your desired proportions. However, this action may shift the pool out of balance and subject you to price impact."
                             >
                                 <HStack spacing="1" alignItems="center">
-                                    <Text color="beets.highlight" fontSize="sm">
+                                    <Text mb="5" textDecoration="underline" _hover={{ textDecoration: "none" }}>
                                         What&apos;s the difference
                                     </Text>
                                     <Box _hover={{ transform: 'scale(1.2)' }}>
-                                        <Image src={BeetsThinking} width="24" height="24" alt="beets-balanced" />
+                                        {/* <Image src={BeetsThinking} width="24" height="24" alt="beets-balanced" /> */}
                                     </Box>
                                 </HStack>
                             </BeetsTooltip>
@@ -90,47 +90,52 @@ export function PoolInvestTypeChoice({ onShowProportional, onShowCustom }: Props
                     <BeetsTooltip noImage label={_canInvestProportionally ? '' : disabledProportionalInvestmentTooltip}>
                         <Box width="full">
                             <Button
-                                _hover={{ borderColor: 'beets.green' }}
+                                _hover={{ borderColor: 'glacier.silver.200' }}
+                                // 'Temporary Border Color'
                                 borderWidth={1}
                                 borderColor="beets.transparent"
+                                borderRadius="none"
                                 disabled={!_canInvestProportionally || !proportionalSupported}
-                                height="140px"
+                                height="120px"
                                 width="full"
                                 onClick={onShowProportional}
                             >
-                                <VStack spacing="1">
-                                    <Image src={Scales} height="48" alt="beets-balanced" />
+                                <VStack spacing="8">
+                                    {/* <Image src={Scales} height="48" alt="beets-balanced" /> */}
 
-                                    <Text fontSize="lg">{numberFormatUSDValue(data?.maxAmount || 0)}</Text>
-                                    <Text fontSize="sm">Proportional investment</Text>
-                                    <Text fontSize="xs" color="beets.green">
+                                    <VStack spacing="1" fontFamily="JetBrains" fontWeight="300">
+                                        <Text fontSize="sm">Proportional investment</Text>
+                                        <Text fontSize="xs" color="glacier.silver.200">
                                         Recommended
                                     </Text>
+                                    </VStack>
+                                    <Text fontSize="lg">{numberFormatUSDValue(data?.maxAmount || 0)}</Text>
                                 </VStack>
                             </Button>
                         </Box>
                     </BeetsTooltip>
                     <Button
-                        _hover={{ borderColor: 'beets.green' }}
+                        _hover={{ borderColor: 'glacier.silver.200' }}
                         borderWidth={1}
                         borderColor="beets.transparent"
-                        height="140px"
+                        borderRadius="none"
+                        height="120px"
                         width="full"
                         onClick={onShowCustom}
                     >
-                        <VStack spacing="1">
-                            <Image src={BeetSmart} height="48" alt="beets-smart" />
-                            <Text fontSize="lg">{numberFormatUSDValue(investableAmount)}</Text>
-                            <Text fontSize="sm">Custom investment</Text>
-                            <Text fontSize="xs" color="beets.green">
+                        <VStack spacing="4">
+                            {/* <Image src={BeetSmart} height="48" alt="beets-smart" /> */}
+                            <Text fontFamily="JetBrains" fontSize="sm">Custom investment</Text>
+                            <Text fontSize="xs" color="glacier.silver.200">
                                 &nbsp;
                             </Text>
+                            <Text fontSize="lg">{numberFormatUSDValue(investableAmount)}</Text>
                         </VStack>
                     </Button>
                 </HStack>
             </VStack>
             <VStack width="full" p="4" backgroundColor="blackAlpha.500" alignItems="flex-start">
-                <Text fontSize="md" fontWeight="semibold" textTransform="uppercase">
+                <Text fontSize="lg" fontWeight="semibold">
                     Pool tokens in your wallet
                 </Text>
                 <BeetsBox width="full" p="4">
@@ -171,7 +176,7 @@ export function PoolInvestTypeChoice({ onShowProportional, onShowCustom }: Props
                                                     <Box>
                                                         {tokenOption.name}
                                                         <HStack spacing="1">
-                                                            <Text fontWeight="bold">{tokenOption?.symbol}</Text>
+                                                            <Text fontSize="sm" fontFamily="JetBrains" fontWeight="300" textColor="glacier.silver.200">{tokenOption?.symbol}</Text>
                                                             <Link
                                                                 href={etherscanGetTokenUrl(tokenOption.address)}
                                                                 target="_blank"
@@ -182,9 +187,9 @@ export function PoolInvestTypeChoice({ onShowProportional, onShowCustom }: Props
                                                         </HStack>
                                                     </Box>
                                                 </HStack>
-                                                <VStack alignItems="flex-end" spacing="0">
+                                                <VStack alignItems="flex-end" spacing="0" fontFamily="JetBrains">
                                                     <Text>{tokenFormatAmountPrecise(userBalance, tokenPrecision)}</Text>
-                                                    <Text fontSize="sm" color="beets.base.100">
+                                                    <Text fontSize="xs" color="glacier.silver.200">
                                                         ~
                                                         {formattedPrice({
                                                             address: tokenOption.address,

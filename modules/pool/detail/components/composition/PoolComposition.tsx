@@ -175,9 +175,9 @@ function PoolCompositionTable({ columns, data, hasNestedTokens }: PoolCompositio
                                         padding={column.id === Columns.Expander ? '0' : '2'}
                                     >
                                         {column.id === Columns.Expander ? (
-                                            <Box color="beets.base.50">{column.render('Header')}</Box>
+                                            <Box>{column.render('Header')}</Box>
                                         ) : (
-                                            <Text fontSize="xs" color="beets.base.50">
+                                            <Text fontSize="xs" color="glacier.silver.200">
                                                 {column.render('Header')}
                                             </Text>
                                         )}
@@ -190,7 +190,7 @@ function PoolCompositionTable({ columns, data, hasNestedTokens }: PoolCompositio
                         {rows.map((row) => {
                             prepareRow(row);
                             return (
-                                <Tr {...row.getRowProps()} padding="2" width="full" background="whiteAlpha.100">
+                                <Tr {...row.getRowProps()} padding="2" width="full" background="rgba(13, 11, 14, 0.8)">
                                     {row.cells.map((cell, i) => {
                                         return (
                                             <Td
@@ -306,7 +306,7 @@ export function PoolComposition() {
     );
 
     return (
-        <Card px="2" py="2" mt={4} width="full">
+        <Card px="2" py="2" mt={4} width="full" background="transparent">
             <PoolCompositionTable columns={columns} data={data} hasNestedTokens={hasNestedTokens} />
         </Card>
     );

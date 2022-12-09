@@ -101,13 +101,13 @@ export function PoolInvestModal() {
                             }}
                         />
                     ) : null}
-                    <BeetsModalHeader>
+                    <BeetsModalHeader lineHeight='8' p="6">
                         {modalState === 'start' ? (
                             <>
-                                <Heading size="md" noOfLines={1}>
+                                <Heading textTransform="uppercase" fontSize="24px">
                                     Invest into {pool.name}
                                 </Heading>
-                                <Text color="gray.200" fontSize="md">
+                                <Text color="glacier.silver.200" fontFamily="JetBrains" fontSize="sm" fontWeight="300">
                                     {formattedTypeName}
                                 </Text>
                             </>
