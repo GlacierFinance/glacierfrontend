@@ -79,7 +79,7 @@ export function PoolDetailBptPriceChart({ prices }: Props) {
             series: [
                 {
                     type: 'line',
-                    smooth: true,
+                    smooth: false,
                     name: 'BPT price',
                     showSymbol: false,
                     data: prices.map((item) => [item.timestamp * 1000, item.price]),
