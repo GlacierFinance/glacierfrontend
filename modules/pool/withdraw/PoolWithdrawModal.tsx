@@ -58,7 +58,7 @@ export function PoolWithdrawModal() {
                 initialFocusRef={initialRef}
             >
                 <ModalOverlay />
-                <ModalContent backgroundColor="black">
+                <ModalContent backgroundColor="black" border="2px">
                     <ModalCloseButton />
                     {modalState !== 'start' ? (
                         <IconButton
@@ -88,10 +88,10 @@ export function PoolWithdrawModal() {
                     <ModalHeader className="bg">
                         {modalState === 'start' ? (
                             <>
-                                <Heading size="md" noOfLines={1}>
+                                <Heading size="md" textTransform="uppercase" noOfLines={1}>
                                     Withdraw from {pool.name}
                                 </Heading>
-                                <Text color="gray.200" fontSize="md">
+                                <Text color="glacier.silver.200" fontFamily="JetBrains" fontSize="14">
                                     {formattedTypeName}
                                 </Text>
                             </>
