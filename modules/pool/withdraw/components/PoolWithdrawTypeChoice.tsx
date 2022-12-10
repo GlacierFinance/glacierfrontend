@@ -64,13 +64,13 @@ export function PoolWithdrawTypeChoice({ onShowProportional, onShowSingleAsset }
                         {pool.staking ? (
                             <>
                                 <CardRow>
-                                    <Text flex="1" fontFamily="JetBrains">Wallet balance</Text>
+                                    <Text flex="1" fontFamily="JetBrains" fontSize="14px">Wallet balance</Text>
                                     <Skeleton isLoaded={!isLoading}>
                                         <Text>{numberFormatUSDValue(valueInWallet)}</Text>
                                     </Skeleton>
                                 </CardRow>
                                 <CardRow mb="0">
-                                    <Text flex="1" fontFamily="JetBrains">Staked balance</Text>
+                                    <Text flex="1" fontFamily="JetBrains" fontSize="14px">Staked balance</Text>
                                     <Skeleton isLoaded={!isLoading}>
                                         <Text>{numberFormatUSDValue(valueStaked)}</Text>
                                     </Skeleton>

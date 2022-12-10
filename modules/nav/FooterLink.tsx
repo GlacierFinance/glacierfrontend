@@ -13,7 +13,7 @@ export function FooterLink({ linkType = 'external', href, ...rest }: Props) {
         <Box mb="4">
             {linkType === 'internal' ? (
                 <NextLink
-                    chakraProps={{ color: 'white', _hover: { color: 'beets.highlight', textDecoration: 'underline' } }}
+                    chakraProps={{ color: 'white', _hover: { color: 'glacier.pink.100', textDecoration: 'underline' } }}
                     href={href}
                 >
                     {rest.children}
@@ -21,7 +21,7 @@ export function FooterLink({ linkType = 'external', href, ...rest }: Props) {
             ) : (
                 <Link
                     color="white"
-                    _hover={{ color: 'beets.highlight', textDecoration: 'underline' }}
+                    _hover={{ color: 'glacier.pink.100', textDecoration: 'underline' }}
                     alignSelf="flex-start"
                     href={href}
                     target="_blank"
