@@ -48,10 +48,10 @@ export function BatchSwapListItem({ tokenIn, tokenOut, tokenInPrice, tokenOutPri
                 </Flex>
 
                 <HStack>
-                    <Link href={etherscanGetTxUrl(batchSwap.tx)} target="_blank" mr="1">
+                    <Link href={etherscanGetTxUrl(batchSwap.tx)} target="_blank" mr="1" color="glacier.pink.100">
                         <ExternalLink size={16} />
                     </Link>
-                    <Link href={etherscanGetAddressUrl(batchSwap.userAddress)} target="_blank">
+                    <Link href={etherscanGetAddressUrl(batchSwap.userAddress)} target="_blank" color="glacier.pink.100">
                         <User size={16} />
                     </Link>
                 </HStack>
