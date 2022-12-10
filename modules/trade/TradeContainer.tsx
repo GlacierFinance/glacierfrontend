@@ -18,7 +18,7 @@ export function TradeContainer() {
 
     return (
         <Box
-            backgroundImage='./images/bg.png'
+            // backgroundImage='./images/bg.png'
         >
             <Grid
                 templateAreas={{

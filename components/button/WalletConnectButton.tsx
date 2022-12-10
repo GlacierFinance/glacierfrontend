@@ -18,8 +18,16 @@ export function WalletConnectButton(props: Omit<ButtonProps, 'children' | 'onCli
                         {(() => {
                             if (!mounted || !account || !chain) {
                                 return (
-                                    <Button variant="primary" onClick={openConnectModal} {...props}>
-                                        Connect Wallet
+                                    <Button ml='4' borderRadius="none" px='0' backgroundColor="black" alignItems="center"
+                                    _hover={{
+                                        opacity: '80%',
+                                        transform: 'scale(1.05)',
+                                    }}
+                                    _active={{
+                                        transform: 'scale(1.05)'
+                                    }}
+                                    onClick={openConnectModal}>
+                                        <img src="./images/walletbuttonswap.png" />
                                     </Button>
                                 );
                             }
