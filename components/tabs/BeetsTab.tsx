@@ -11,10 +11,14 @@ const BeetsTab = forwardRef((props: { children: any } & TabProps, ref: any) => {
     return (
         <Button
             fontSize="sm"
-            rounded="full"
-            color={isSelected ? 'gray.100' : 'white'}
-            bgColor={isSelected ? 'beets.base.300' : 'beets.lightAlpha.300'}
-            _hover={{ bgColor: 'beets.light' }}
+            marginX={0}
+            border="1px"
+            borderColor="white"
+            textTransform="uppercase"
+            rounded="1px"
+            color={isSelected ? 'glacier.black.100' : 'white'}
+            bg={isSelected ? 'linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 86.26%, #F6ECFD 100%)' : 'glacier.black.100'}
+            _hover={{ bgGradient: 'linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 86.26%, #F6ECFD 100%)', color: 'glacier.black.100', bgOpacity: '10' }}
             _focus={{ outline: 'none !important' }}
             height="fit-content"
             paddingY="3"
@@ -22,10 +26,10 @@ const BeetsTab = forwardRef((props: { children: any } & TabProps, ref: any) => {
             {...tabProps}
             {...props}
         >
-            <HStack>
+            {/* <HStack spacing={0}>
                 <Box>{tabProps.children}</Box>
-                {isSelected && <Eye size={16} />}
-            </HStack>
+                {isSelected && <Eye size={16} />} 
+            </HStack> */}
         </Button>
     );
 });

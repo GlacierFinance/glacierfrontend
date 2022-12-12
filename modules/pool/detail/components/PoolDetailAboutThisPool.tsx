@@ -31,9 +31,9 @@ export function PoolDetailAboutThisPool() {
     });
 
     return (
-        <Grid background="transparent" templateColumns={{ base: '1fr', lg: '2fr 1fr' }} gap="4" width="full">
+        <Grid background="transparent" templateColumns={{ base: '1fr', lg: '2fr 1fr' }} gap="8" width="full">
             <GridItem>
-                <Text fontWeight="semibold" fontSize="xl" color="white" mb="4" textTransform="uppercase">
+                <Text fontWeight="semibold" letterSpacing=".12em" fontSize="xl" color="white" mb="8" textTransform="uppercase">
                     Pool tokens
                 </Text>
                 {tokensOfInterest.map((token, index) => {
@@ -44,16 +44,16 @@ export function PoolDetailAboutThisPool() {
                             price={priceFor(token.address)}
                             data={data?.staticData.find((item) => item.tokenAddress === token.address)}
                             dynamicData={data?.dynamicData.find((item) => item.tokenAddress === token.address)}
-                            mb="2"
+                            mb="4"
                             background="glacier.black.200"
                         />
                     );
                 })}
             </GridItem>
             <GridItem>
-                <Text fontWeight="semibold" fontSize="xl" color="white" mb="4" textTransform="uppercase">
+                {/* <Text fontWeight="semibold" fontSize="xl" color="white" mb="4" textTransform="uppercase">
                     Pool statistics
-                </Text>
+                </Text> */}
 
                 <Card background="transparent" padding="2" mb="8">
                     <CardRow background="glacier.black.200">

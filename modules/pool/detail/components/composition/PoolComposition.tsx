@@ -46,6 +46,13 @@ import {
 } from '~/lib/services/pool/pool-util';
 import { oldBnumScale } from '~/lib/services/pool/lib/old-big-number';
 
+
+const borderstyle = {
+    borderBottom: "1px",
+    borderImage: "radial-gradient(116.97% 116.97% at 34.87% -2.72%, rgba(189, 106, 255, 0.66) 0%, #FFFFFF 100%) 1",
+    borderImageSlice: "1",
+    borderImageRepeat: "round"
+  };
 interface PoolCompositionTableProps {
     columns: Column<TableDataTemplate>[];
     data: TableData[];
@@ -117,7 +124,7 @@ function PoolCompositionTable({ columns, data, hasNestedTokens }: PoolCompositio
                     ) : null}
                     <TokenAvatar size="xs" address={address} />
                     <HStack spacing="1">
-                        <Text fontSize="sm" color="white" fontFamily="JetBrains">
+                        <Text fontSize="xl" color="white" fontFamily="">
                             {symbol}
                         </Text>
                         <Link href={etherscanGetTokenUrl(address)} target="_blank">
@@ -165,7 +172,9 @@ function PoolCompositionTable({ columns, data, hasNestedTokens }: PoolCompositio
             )}
             <TableContainer>
                 <Table {...getTableProps()} style={{ borderCollapse: 'separate', borderSpacing: '0 3px' }}>
-                    <Thead width="full" paddingX="2">
+                    <Thead width="full" 
+                    
+                    borderStyle="dashed">
                         {headerGroups.map((headerGroup) => (
                             <Tr {...headerGroup.getHeaderGroupProps()}>
                                 {headerGroup.headers.map((column) => (
@@ -177,7 +186,7 @@ function PoolCompositionTable({ columns, data, hasNestedTokens }: PoolCompositio
                                         {column.id === Columns.Expander ? (
                                             <Box>{column.render('Header')}</Box>
                                         ) : (
-                                            <Text fontSize="xs" color="glacier.silver.200">
+                                            <Text fontSize="md" color="glacier.silver.200" fontFamily="JetBrains">
                                                 {column.render('Header')}
                                             </Text>
                                         )}
@@ -195,13 +204,16 @@ function PoolCompositionTable({ columns, data, hasNestedTokens }: PoolCompositio
                                         return (
                                             <Td
                                                 {...cell.getCellProps()}
-                                                borderBottom="0"
+                                                borderBottom="1px" 
+                                                fontSize="xl"
+                                                borderColor="#B18ACF"
+                                                borderStyle="dashed" 
                                                 p="2"
                                                 marginBottom="4"
-                                                borderTopLeftRadius={i == 0 ? 'lg' : undefined}
-                                                borderBottomLeftRadius={i == 0 ? 'lg' : undefined}
-                                                borderTopRightRadius={i == row.cells.length - 1 ? 'lg' : undefined}
-                                                borderBottomRightRadius={i == row.cells.length - 1 ? 'lg' : undefined}
+                                                // borderTopLeftRadius={i == 0 ? 'lg' : undefined}
+                                                // borderBottomLeftRadius={i == 0 ? 'lg' : undefined}
+                                                // borderTopRightRadius={i == row.cells.length - 1 ? 'lg' : undefined}
+                                                // borderBottomRightRadius={i == row.cells.length - 1 ? 'lg' : undefined}
                                                 width={hasBpt ? '14%' : '20%'}
                                             >
                                                 {parseCell(cell)}

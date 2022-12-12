@@ -94,6 +94,7 @@ export function PoolDetailTokenInfoCard({ token, price, data, dynamicData, ...re
             {data?.description ? (
                 <Box mt="4">
                     <Text
+                        fontFamily="JetBrains" fontSize="14px"
                         noOfLines={showFullText ? undefined : 3}
                         dangerouslySetInnerHTML={{ __html: data.description }}
                     />

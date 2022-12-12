@@ -42,7 +42,7 @@ export function PoolTransactions({ ...rest }: Props & BoxProps) {
                         </Menu>
                     </Box>
                     <TabList display={{ base: 'none', md: 'block' }}>
-                        <HStack mb="4">
+                        <HStack mb="12 ">
                             {tabs.map((tab, index) => (
                                 <BeetsTab key={index}>{tab}</BeetsTab>
                             ))}

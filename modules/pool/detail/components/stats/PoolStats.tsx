@@ -20,7 +20,7 @@ export default function PoolStats() {
                 {hasBpt && (
                     <Tabs width="full" variant="soft-rounded" display="flex" onChange={handleTabChanged} px="2">
                         <TabList>
-                            <HStack spacing="2">
+                            <HStack>
                                 <BeetsTab paddingX="4" paddingY="2" fontSize="xs" textTransform="uppercase">
                                     My Stats
                                 </BeetsTab>
