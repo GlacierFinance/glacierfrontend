@@ -134,7 +134,7 @@ export function PoolInvestTypeChoice({ onShowProportional, onShowCustom }: Props
                     </Button>
                 </HStack>
             </VStack>
-            <VStack width="full" p="4" backgroundColor="blackAlpha.500" alignItems="flex-start">
+            <VStack width="full" p="6" backgroundColor="blackAlpha.500" alignItems="flex-start">
                 <Text fontSize="lg" fontWeight="semibold">
                     Pool tokens in your wallet
                 </Text>

@@ -44,13 +44,13 @@ function PoolTransactionAction(props: PoolTransaction) {
 
     const getColor = () => {
         if (props.type === PoolTransactionType.Join) {
-            return 'beets.green';
+            return 'glacier.pink.100';
         }
         if (props.type === PoolTransactionType.Exit) {
             return 'beets.red';
         }
         if (props.type === PoolTransactionType.Swap) {
-            return 'beets.green';
+            return 'glacier.pink.100';
         }
     };
     return (
@@ -155,8 +155,8 @@ export default function PoolTransactionItem({ transaction, ...rest }: Props) {
                              "details value"`,
                 lg: `"action details value time"`,
             }}
-            bgColor="rgba(255,255,255,0.05)"
-            _hover={{ bg: 'beets.base.800' }}
+            background="glacier.black.200"
+            _hover={{ bg: 'transparent' }}
         >
             <Flex align={flexAlign}>
                 <GridItem area="action">
@@ -183,8 +183,8 @@ export default function PoolTransactionItem({ transaction, ...rest }: Props) {
                                 addSuffix: true,
                             })}
                         </Text>
-                        <Link href={etherscanGetTxUrl(transaction.transaction.tx)} isExternal>
-                            <ExternalLink size={14} />
+                        <Link color='glacier.pink.100' href={etherscanGetTxUrl(transaction.transaction.tx)} isExternal>
+                            <ExternalLink  size={14} />
                         </Link>
                     </HStack>
                 </GridItem>

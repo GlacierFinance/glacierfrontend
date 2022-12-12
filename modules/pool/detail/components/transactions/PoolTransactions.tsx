@@ -24,15 +24,15 @@ export function PoolTransactions({ ...rest }: Props & BoxProps) {
     ];
 
     return (
-        <Box width="full" {...rest}>
+        <Box background="transparent" width="full" {...rest} mb="12">
             <Tabs variant="soft-rounded" onChange={setActiveTab}>
-                <VStack width="full" alignItems="flex-start">
+                <VStack width="full" alignItems="center">
                     <Box width="full" display={{ base: 'block', md: 'none' }} mb="2">
                         <Menu matchWidth={true}>
-                            <MenuButton as={Button} rightIcon={<ChevronDown />} width="full">
+                            <MenuButton background="glacier.black.200" _hover={{ background: "black"}} _active={{ background: "black"}} as={Button} rightIcon={<ChevronDown />} width="full">
                                 {tabs[activeTab]}
                             </MenuButton>
-                            <MenuList>
+                            <MenuList background="black">
                                 {tabs.map((tab, index) => (
                                     <MenuItem onClick={() => setActiveTab(index)} key={index}>
                                         {tab}

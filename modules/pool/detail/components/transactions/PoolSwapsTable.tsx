@@ -58,6 +58,7 @@ export function PoolSwapsTable() {
 
     return (
         <PaginatedTable
+            // background="glacier.black.200"
             isInfinite
             width="full"
             items={transactions}

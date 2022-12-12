@@ -36,7 +36,7 @@ export function TradeCardSwapBreakdown({}: Props) {
         <AnimatePresence>
             <VStack backgroundColor="transparent" padding="3" width="full" spacing="1" marginTop="1" fontFamily="JetBrains">
                 <HStack width="full" justifyContent="space-between">
-                    <Text color="gray.100" fontSize=".85rem" >
+                    <Text color="glacier.silver.200" fontSize=".85rem" >
                         Price impact
                     </Text>
                     <Text
@@ -47,7 +47,7 @@ export function TradeCardSwapBreakdown({}: Props) {
                     </Text>
                 </HStack>
                 <HStack width="full" justifyContent="space-between" >
-                    <Text color="gray.100" fontSize=".85rem">
+                    <Text color="glacier.silver.200" fontSize=".85rem">
                         1 {tokenIn.symbol} is
                     </Text>
                     <Text fontSize=".85rem" color="white">
@@ -55,7 +55,7 @@ export function TradeCardSwapBreakdown({}: Props) {
                     </Text>
                 </HStack>
                 <HStack width="full" justifyContent="space-between">
-                    <Text color="gray.100" fontSize=".85rem">
+                    <Text color="glacier.silver.200" fontSize=".85rem">
                         1 {tokenOut.symbol} is
                     </Text>
                     <Text fontSize=".85rem" color="white">
@@ -64,7 +64,7 @@ export function TradeCardSwapBreakdown({}: Props) {
                 </HStack>
                 <HStack width="full" justifyContent="space-between">
                     <HStack alignItems="center" spacing="1">
-                        <Text color="gray.100" fontSize=".85rem">
+                        <Text color="glacier.silver.200" fontSize=".85rem">
                             Compared to
                         </Text>
                         <Flex alignItems="center" height="full">

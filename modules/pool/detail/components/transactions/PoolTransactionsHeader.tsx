@@ -9,7 +9,7 @@ export default function PoolTransactionHeader() {
             borderTopLeftRadius="md"
             borderTopRightRadius="md"
             alignItems="center"
-            bgColor="rgba(255,255,255,0.08)"
+            background="glacier.black.200"
             borderBottom="2px"
             borderColor="beets.base.500"
             mb={{ base: '4', lg: '0' }}
@@ -18,17 +18,17 @@ export default function PoolTransactionHeader() {
             display={{ base: 'none', xl: 'grid' }}
         >
             <GridItem>
-                <Text fontSize="md" fontWeight="semibold" color="beets.base.100">
+                <Text fontSize="md" fontWeight="semibold" color="glacier.silver.200">
                     Action
                 </Text>
             </GridItem>
             <GridItem>
-                <Text fontSize="md" fontWeight="semibold" color="beets.base.100">
+                <Text fontSize="md" fontWeight="semibold" color="glacier.silver.200">
                     Details
                 </Text>
             </GridItem>
             <GridItem>
-                <Text fontSize="md" fontWeight="semibold" color="beets.base.100">
+                <Text fontSize="md" fontWeight="semibold" color="glacier.silver.200">
                     Value
                 </Text>
             </GridItem>
@@ -36,7 +36,7 @@ export default function PoolTransactionHeader() {
                 <Text
                     fontSize="md"
                     fontWeight="semibold"
-                    color="beets.base.100"
+                    color="glacier.silver.200"
                     textAlign={{ base: 'left', lg: 'right' }}
                     mr="6"
                 >

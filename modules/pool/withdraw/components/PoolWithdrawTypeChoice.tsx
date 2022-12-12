@@ -64,15 +64,15 @@ export function PoolWithdrawTypeChoice({ onShowProportional, onShowSingleAsset }
                         {pool.staking ? (
                             <>
                                 <CardRow>
-                                    <Text flex="1">Wallet balance</Text>
+                                    <Text flex="1" fontFamily="JetBrains" fontSize="14px">Wallet balance</Text>
                                     <Skeleton isLoaded={!isLoading}>
-                                        <Text>{numberFormatUSDValue(valueInWallet)}</Text>
+                                        <Text fontFamily="JetBrains" fontWeight="300">{numberFormatUSDValue(valueInWallet)}</Text>
                                     </Skeleton>
                                 </CardRow>
                                 <CardRow mb="0">
-                                    <Text flex="1">Staked balance</Text>
+                                    <Text flex="1" fontFamily="JetBrains" fontSize="14px">Staked balance</Text>
                                     <Skeleton isLoaded={!isLoading}>
-                                        <Text>{numberFormatUSDValue(valueStaked)}</Text>
+                                        <Text fontFamily="JetBrains" fontWeight="300">{numberFormatUSDValue(valueStaked)}</Text>
                                     </Skeleton>
                                 </CardRow>
                             </>
@@ -119,11 +119,11 @@ export function PoolWithdrawTypeChoice({ onShowProportional, onShowSingleAsset }
                                     </Box>
 
                                     <Box>
-                                        <Box textAlign="right" fontSize="lg">
+                                        <Box textAlign="right" fontSize="lg" fontFamily="JetBrains" fontWeight="300">
                                             <Skeleton isLoaded={!isLoading}>{tokenFormatAmount(balance)}</Skeleton>
                                         </Box>
 
-                                        <Box textAlign="right" fontSize="sm" color="gray.200">
+                                        <Box textAlign="right" fontSize="sm" fontFamily="JetBrains" color="glacier.silver.200" fontWeight="300">
                                             <Skeleton isLoaded={!isLoading}>
                                                 {numberFormatUSDValue(
                                                     priceForAmount({
@@ -157,12 +157,23 @@ export function PoolWithdrawTypeChoice({ onShowProportional, onShowSingleAsset }
                     </Button>
                 </Alert>
             )}
-            <Button variant="primary" width="full" mb="2" isDisabled={!hasBptInWallet} onClick={onShowProportional}>
-                Withdraw proportionally
+            <Flex flexDirection="row" justifyContent="space-between">
+            <Button
+                                        _hover={{
+                                            opacity: '80%',
+                                            transform: 'scale(1.05)',
+                                        }}
+                                        _active={{
+                                            transform: 'scale(1.05)'
+                                        }}
+                                         isDisabled={!hasBptInWallet} onClick={onShowProportional}
+                                        >
+               <img src="public/images/wp_button.png" />
             </Button>
-            <Button variant="secondary" width="full" isDisabled={!hasBptInWallet} onClick={onShowSingleAsset}>
-                Single asset withdraw
+            <Button isDisabled={!hasBptInWallet} onClick={onShowSingleAsset}>
+                <img src="./images/saw_button.png" />
             </Button>
+            </Flex>
 
             <PoolUnstakeModal {...unstakeDisclosure} />
         </Box>

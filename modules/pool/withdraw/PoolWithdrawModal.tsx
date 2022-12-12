@@ -48,9 +48,20 @@ export function PoolWithdrawModal() {
 
     return (
         <>
-            <Button onClick={onOpen} variant="secondary" width={{ base: 'full', md: 'fit-content' }}>
+         <Button borderRadius="none" px='0' backgroundColor="transparent" width={{ base: "80%", md: "full"}}
+                                        _hover={{
+                                            opacity: '60%',
+                                            transform: 'scale(1.05)',
+                                        }}
+                                        _active={{
+                                            transform: 'scale(1.05)'
+                                        }}
+                                        onClick={onOpen}>
+                                            <img src="/public/images/withdrawbutton.png" />
+                                        </Button>
+            {/* <Button onClick={onOpen} variant="secondary" width={{ base: 'full', md: 'fit-content' }}>
                 Withdraw
-            </Button>
+            </Button> */}
             <Modal
                 isOpen={isOpen}
                 onClose={onModalClose}
@@ -58,7 +69,7 @@ export function PoolWithdrawModal() {
                 initialFocusRef={initialRef}
             >
                 <ModalOverlay />
-                <ModalContent backgroundColor="black">
+                <ModalContent backgroundColor="black" border="2px">
                     <ModalCloseButton />
                     {modalState !== 'start' ? (
                         <IconButton
@@ -88,10 +99,10 @@ export function PoolWithdrawModal() {
                     <ModalHeader className="bg">
                         {modalState === 'start' ? (
                             <>
-                                <Heading size="md" noOfLines={1}>
+                                <Heading size="md" textTransform="uppercase" noOfLines={1}>
                                     Withdraw from {pool.name}
                                 </Heading>
-                                <Text color="gray.200" fontSize="md">
+                                <Text color="glacier.silver.200" fontFamily="JetBrains" fontSize="14">
                                     {formattedTypeName}
                                 </Text>
                             </>

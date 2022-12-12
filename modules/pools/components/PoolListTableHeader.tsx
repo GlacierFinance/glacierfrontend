@@ -44,7 +44,7 @@ export function PoolListTableHeader() {
                 )}
                 <GridItem textAlign="right">
                     {showMyInvestments ? (
-                        <Text fontSize="md" fontWeight="semibold" color="beets.base.100">
+                        <Text fontSize="md" fontWeight="semibold" color="glscier.silver.200">
                             TVL
                         </Text>
                     ) : (
@@ -60,7 +60,7 @@ export function PoolListTableHeader() {
                     display={showMyInvestments ? { base: 'block', lg: 'none', xl: 'block' } : 'block'}
                 >
                     {showMyInvestments ? (
-                        <Text fontSize="md" fontWeight="semibold" color="beets.base.100">
+                        <Text fontSize="md" fontWeight="semibold" color="glscier.silver.200">
                             Volume (24h)
                         </Text>
                     ) : (
@@ -73,7 +73,7 @@ export function PoolListTableHeader() {
                 </GridItem>
                 <GridItem textAlign="right" pr="4">
                     {showMyInvestments ? (
-                        <Text fontSize="md" fontWeight="semibold" color="beets.base.100">
+                        <Text fontSize="md" fontWeight="semibold" color="glscier.silver.200">
                             APR
                         </Text>
                     ) : (

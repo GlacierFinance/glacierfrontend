@@ -78,16 +78,17 @@ export function TradeCard() {
     }
 
     return (
-        <Box width="full" position="relative" bg="transparent"
+        <Box width="full" position="relative"
             
             >
             <Card
                 animate={controls}
+                background="transparent"
                 position="relative"
                 shadow="lg"
                 topRight={sorResponse ? <TradeCardRefreshButton onClick={() => refetchTrade()} /> : null}
             >
-                <VStack spacing="6" padding="4" width="full" bgColor="transparent">
+                <VStack spacing="6" padding="4" width="full">
                     <Box position="relative" width="full"
                    >
                         <TokenInput
