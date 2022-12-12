@@ -50,7 +50,7 @@ export function PaginatedTable({
                     </Flex>
                 )}
                 {!isLoadingRows && items.length === 0 && (
-                    <Box height="md" display="flex" alignItems="center" justifyContent="center" bg="box.500">
+                    <Box background="glacier.black.200" height="md" display="flex" alignItems="center" justifyContent="center">
                         No results found for your search criteria.
                     </Box>
                 )}
@@ -129,8 +129,16 @@ export function PaginatedTable({
             )}
             {!isShort && isInfinite && (
                 <Flex justifyContent="center" width="full">
-                    <Button variant="primary" isLoading={fetchingMore} onClick={onFetchMore}>
-                        Load More
+                     <Button alignItems="center"
+                                    _hover={{
+                                        opacity: '80%',
+                                        transform: 'scale(1.05)',
+                                    }}
+                                    _active={{
+                                        transform: 'scale(1.05)'
+                                    }}
+                                 isLoading={fetchingMore} onClick={onFetchMore}>
+                        <img src="public/images/loadmore.png"/>
                     </Button>
                 </Flex>
             )}
