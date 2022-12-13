@@ -47,7 +47,7 @@ export function HomeHero() {
                     </Text>
 
                     <HStack spacing="16" mb={{ base: '6', lg: '10' }}>
-                        <NextLink href="/pools" chakraProps={{ _hover: { opacity: '60%', transform: 'scale(1.05)'}}} 
+                        <NextLink href="/pools" chakraProps={{ _hover: { opacity: '100%', transform: 'scale(1.05)'}}} 
                         // chakraProps={{ _hover: { textDecoration: 'none' } }}>
                         >
                             {/* <Button bgImage='./images/investbutton.png' width='193px'>
@@ -61,7 +61,7 @@ export function HomeHero() {
                                 Swap
                             </Button>
                         </NextLink> */}
-                        <NextLink href="/swap" chakraProps={{ _hover: { opacity: '60%', transform: 'scale(1.05)'}}}>
+                        <NextLink href="/swap" chakraProps={{ _hover: { opacity: '100%', transform: 'scale(1.05)'}}}>
                             <img src="./images/swapbutton.png" width='200px' />
                         </NextLink>
                     </HStack>

@@ -37,7 +37,7 @@ export function Navbar({ scrollY }: Props) {
                 display="flex"
                 flexDirection="column"
                 justifyContent="center"
-                backgroundColor="transparent"
+                backgroundColor="glacier.black.100"
             >
                 <Flex px={{ base: '4', xl: '8' }} py="0" alignItems="center">
                     <motion.div style={{ opacity, position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}>
@@ -66,37 +66,37 @@ export function Navbar({ scrollY }: Props) {
                         </Box>
                     </HStack>
                 </NetworkSelectorPopover>
-                        <Flex alignItems="center" display={{ base: 'none', lg: 'flex' }} color='white' gap="3">
-                        <NavbarLink
-                                href={'/'}
-                                
-                                text="Home"
-                                mr="5"
-                            />
-                            <NavbarLink
-                                href={'/pools'}
-                                selected={router.asPath.startsWith('/pool')}
-                                text="Invest"
-                                mr="5"
-                            />
-                            <NavbarLink href={'/swap'} selected={router.asPath === '/swap'} text="Swap" mr="5" />
-                            
-                            {/* {networkConfig.stakeUrl && <NavbarLink href={networkConfig.stakeUrl} text="Stake" mr={5} />} */}
+                <Flex alignItems="center" display={{ base: 'none', lg: 'flex' }} fontSize="16px" color='white' gap="2" mr="10" >
+                <NavbarLink
+                        href={'/'}
+                        
+                        text="Home"
+                        mr="5"
+                    />
+                    <NavbarLink
+                        href={'/pools'}
+                        selected={router.asPath.startsWith('/pool')}
+                        text="Invest"
+                        mr="5"
+                    />
+                    <NavbarLink href={'/swap'} selected={router.asPath === '/swap'} text="Swap" mr="5" />
+                    
+                    {/* {networkConfig.stakeUrl && <NavbarLink href={networkConfig.stakeUrl} text="Stake" mr={5} />} */}
 
-                            <NavbarLink
-                                href={'/staking'}
-                                selected={router.asPath === '/staking'}
-                                text="Staking"
-                                mr="5"
-                            />
-                            
-                            {networkConfig.launchUrl && (
-                            
-                            <NavbarLink href={networkConfig.launchUrl} text="Launch" mr={5} />
-                            )}
+                    <NavbarLink
+                        href={'/staking'}
+                        selected={router.asPath === '/staking'}
+                        text="Staking"
+                        mr="5"
+                    />
+                    
+                    {networkConfig.launchUrl && (
+                    
+                    <NavbarLink href={networkConfig.launchUrl} text="Launch" mr={5} />
+                    )}
 
-                            {/*<NavbarAdditionalLinksMenu />*/}
-                        </Flex>
+                    {/* <NavbarAdditionalLinksMenu /> */}
+                </Flex>
                     </Box>
                     <FadeInOutBox mr="3" isVisible={isConnected}>
                         <HStack spacing="3">
@@ -115,7 +115,7 @@ export function Navbar({ scrollY }: Props) {
                                     <Image width="24px" height="24px" src={networkConfig.eth.iconUrl} />
                                 </Button>
                             </NetworkSelectorPopover> */}
-                            <NavbarPendingRewards />
+                            {/* <NavbarPendingRewards /> */}
                             {/*<NavbarAlerts />*/}
                             {/*<NavbarPortfolioDrawer />*/}
                         </HStack>

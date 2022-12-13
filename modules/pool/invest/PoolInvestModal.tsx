@@ -10,6 +10,7 @@ import {
     Text,
     useDisclosure,
 } from '@chakra-ui/react';
+import { NextLink } from '~/components/link/NextLink';
 import { PoolInvestProportional } from '~/modules/pool/invest/components/PoolInvestProportional';
 import { ChevronLeft } from 'react-feather';
 import { PoolInvestPreview } from '~/modules/pool/invest/components/PoolInvestPreview';
@@ -58,20 +59,11 @@ export function PoolInvestModal() {
 
     return (
         <Box width={{ base: 'full', md: 'fit-content' }}>
-            {/* <Button variant="secondary" onClick={onOpen} width={{ base: 'full', md: 'fit-content' }}>
+            <Button variant="secondary" onClick={onOpen} width={{ base: 'full', md: 'fit-content' }}>
                 Invest
-            </Button> */}
-            <Button borderRadius="none" px='0' backgroundColor="transparent" width={{ base: "80%", md: "full"}}
-                                        _hover={{
-                                            opacity: '60%',
-                                            transform: 'scale(1.05)',
-                                        }}
-                                        _active={{
-                                            transform: 'scale(1.05)'
-                                        }}
-                                        onClick={onOpen}>
-                                            <img src="/public/images/investbutton.png" />
-                                        </Button>
+            </Button>
+            
+            
             <Modal isOpen={isOpen} onClose={onModalClose} size="lg" initialFocusRef={initialRef}>
                 <ModalOverlay />
                 <BeetsModalContent>

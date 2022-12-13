@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Menu, MenuButton, MenuItem, MenuList, TabList, Tabs, VStack } from '@chakra-ui/react';
+import { Box, Button, HStack, Menu, MenuButton, MenuItem, MenuList, TabList, Tabs, VStack, Flex } from '@chakra-ui/react';
 import { BoxProps } from '@chakra-ui/layout';
 import BeetsTab from '~/components/tabs/BeetsTab';
 import { useState } from 'react';
@@ -23,38 +23,41 @@ export function PoolTransactions({ ...rest }: Props & BoxProps) {
         `My ${isPhantomStable ? 'transactions' : 'investments'}`,
     ];
 
-    return (
-        <Box background="transparent" width="full" {...rest} mb="12">
-            <Tabs variant="soft-rounded" onChange={setActiveTab}>
-                <VStack width="full" alignItems="center">
-                    <Box width="full" display={{ base: 'block', md: 'none' }} mb="2">
-                        <Menu matchWidth={true}>
-                            <MenuButton background="glacier.black.200" _hover={{ background: "black"}} _active={{ background: "black"}} as={Button} rightIcon={<ChevronDown />} width="full">
-                                {tabs[activeTab]}
-                            </MenuButton>
-                            <MenuList background="black">
-                                {tabs.map((tab, index) => (
-                                    <MenuItem onClick={() => setActiveTab(index)} key={index}>
-                                        {tab}
-                                    </MenuItem>
-                                ))}
-                            </MenuList>
-                        </Menu>
-                    </Box>
-                    <TabList display={{ base: 'none', md: 'block' }}>
-                        <HStack mb="12 ">
+return (
+    <Box background="transparent" width="full" {...rest} mb="12">
+        <Tabs variant="soft-rounded" onChange={setActiveTab}>
+            <VStack width="full" alignItems="center">
+                <Box width="full" display={{ base: 'block', md: 'none' }} mb="2">
+                    <Menu matchWidth={true}>
+                        <MenuButton background="glacier.black.200" _hover={{ background: "black"}} _active={{ background: "black"}} as={Button} rightIcon={<ChevronDown />} width="full">
+                            {tabs[activeTab]}
+                        </MenuButton>
+                        <MenuList background="black">
                             {tabs.map((tab, index) => (
-                                <BeetsTab key={index}>{tab}</BeetsTab>
+                                <MenuItem onClick={() => setActiveTab(index)} key={index}>
+                                    {tab}
+                                </MenuItem>
+                            ))}
+                        </MenuList>
+                    </Menu>
+                </Box>
+                
+                    <TabList display={{ base: 'none', md: 'block' }}>
+                        <HStack mb="20 " >
+                            {tabs.map((tab, index) => (
+                                <BeetsTab key={index}>{tab}
+                                </BeetsTab>
                             ))}
                         </HStack>
                     </TabList>
+                
 
-                    {activeTab === 0 && <PoolDetailAboutThisPool />}
-                    {activeTab === 1 && (isPhantomStable ? <PoolSwapsTable /> : <PoolJoinExitsTable />)}
-                    {activeTab === 2 && (isPhantomStable ? <PoolUserSwapsTable /> : <PoolSwapsTable />)}
-                    {activeTab === 3 && <PoolUserInvestmentsTable />}
-                </VStack>
-            </Tabs>
-        </Box>
-    );
+                {activeTab === 0 && <PoolDetailAboutThisPool />}
+                {activeTab === 1 && (isPhantomStable ? <PoolSwapsTable /> : <PoolJoinExitsTable />)}
+                {activeTab === 2 && (isPhantomStable ? <PoolUserSwapsTable /> : <PoolSwapsTable />)}
+                {activeTab === 3 && <PoolUserInvestmentsTable />}
+            </VStack>
+        </Tabs>
+    </Box>
+);
 }

@@ -1,4 +1,4 @@
-import { Button, TabProps, HStack, Tab, Text, useTab, useMultiStyleConfig, Box } from '@chakra-ui/react';
+import { Button, TabProps, HStack, Flex, Tab, Text, useTab, useMultiStyleConfig, Box } from '@chakra-ui/react';
 import { AnimatePresence } from 'framer-motion';
 import { forwardRef } from 'react';
 import { Eye } from 'react-feather';
@@ -9,6 +9,7 @@ const BeetsTab = forwardRef((props: { children: any } & TabProps, ref: any) => {
     const isSelected = !!tabProps['aria-selected'];
 
     return (
+        <Flex gap="0" >
         <Button
             fontSize="sm"
             marginX={0}
@@ -31,6 +32,7 @@ const BeetsTab = forwardRef((props: { children: any } & TabProps, ref: any) => {
                 {isSelected && <Eye size={16} />} 
             </HStack> */}
         </Button>
+        </Flex>
     );
 });
 

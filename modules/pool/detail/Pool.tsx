@@ -16,7 +16,7 @@ export function Pool() {
     const { hasBpt } = usePoolUserBptBalance();
 
     return (
-        <Box marginBottom="8">
+        <Box marginBottom="8"  backgroundImage="url(./public/images/bg2.png)">
             <PoolHeader />
             <VStack width="full" spacing="4">
                 {pool.staking && !isFbeetsPool && <PoolStakeInFarmWarning />}

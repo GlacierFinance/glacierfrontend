@@ -21,6 +21,9 @@ import { FadeInBox } from '~/components/animation/FadeInBox';
 import { useWithdrawState } from '~/modules/pool/withdraw/lib/useWithdrawState';
 import { usePool } from '~/modules/pool/lib/usePool';
 import { useNetworkConfig } from '~/lib/global/useNetworkConfig';
+import Withdraw from 'public/images/withdrawbutton.png';
+import NextImage from 'next/image';
+import { NextLink } from '~/components/link/NextLink';
 
 export function PoolWithdrawModal() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -48,7 +51,7 @@ export function PoolWithdrawModal() {
 
     return (
         <>
-         <Button borderRadius="none" px='0' backgroundColor="transparent" width={{ base: "80%", md: "full"}}
+         {/* <Button borderRadius="none" px='0' backgroundColor="transparent" width={{ base: "80%", md: "full"}}
                                         _hover={{
                                             opacity: '60%',
                                             transform: 'scale(1.05)',
@@ -58,10 +61,11 @@ export function PoolWithdrawModal() {
                                         }}
                                         onClick={onOpen}>
                                             <img src="/public/images/withdrawbutton.png" />
-                                        </Button>
-            {/* <Button onClick={onOpen} variant="secondary" width={{ base: 'full', md: 'fit-content' }}>
+                                        </Button> */}
+            <Button onClick={onOpen} variant="secondary" width={{ base: 'full', md: 'fit-content' }}>
                 Withdraw
-            </Button> */}
+            </Button>
+            
             <Modal
                 isOpen={isOpen}
                 onClose={onModalClose}
