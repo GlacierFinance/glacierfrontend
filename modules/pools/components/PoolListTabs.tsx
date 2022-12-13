@@ -41,7 +41,7 @@ export function PoolListTabs() {
             defaultIndex={showMyInvestments ? 2 : state.where?.categoryIn?.includes('INCENTIVIZED') ? 0 : 1}
         >
             <TabList>
-                <HStack spacing="2">
+                <HStack spacing="0">
                     <BeetsTab key="incentivized">Incentivized pools</BeetsTab>
                     <BeetsTab key="community">Community pools</BeetsTab>
                     {isConnected ? <BeetsTab key="my-investments">My investments</BeetsTab> : null}

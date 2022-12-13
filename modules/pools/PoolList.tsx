@@ -48,6 +48,7 @@ function PoolList() {
             )}
             <PaginatedTable
                 items={poolsToRender}
+                paddingX={{ base: '2', lg: '12' }} 
                 currentPage={state.skip / state.first + 1}
                 pageSize={state.first}
                 count={poolCount}
@@ -65,9 +66,10 @@ function PoolList() {
                             pool={item}
                             userBalance={`${usdBalanceForPool(item.id)}`}
                             showUserBalance={showMyInvestments}
-                            borderBottomColor="beets.base.800"
+                            borderBottomColor="glacier.pink.200"
+                            borderStyle="dashed" 
                             borderBottomWidth={index === pools.length - 1 ? 0 : 1}
-                            bg="box.500"
+                            bg="transparent"
                             tokens={item.displayTokens.map((token) => ({
                                 ...token,
                                 logoURI: getToken(token.address)?.logoURI || undefined,

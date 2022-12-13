@@ -6,15 +6,15 @@ import { DEFAULT_POOL_LIST_QUERY_VARS, PoolListProvider } from '~/modules/pools/
 import Head from 'next/head';
 import { PageMasthead } from '~/components/masthead/PageMasthead';
 import NextImage from 'next/image';
-import InvestMastheadImage from '~/assets/images/invest-masthead-image.png';
-import InvestMastheadOpImage from '~/assets/images/invest-masthead-image-OP.png';
+import InvestMastheadImage from '~/assets/images/bg.png';
+import InvestMastheadOpImage from '~/assets/images/bg.png';
 import { useNetworkConfig } from '~/lib/global/useNetworkConfig';
 import { UserTokenBalancesProvider } from '~/lib/user/useUserTokenBalances';
 
 function Pools() {
     const { chainId } = useNetworkConfig();
 
-    const TITLE = 'Beethoven X | Investment pools';
+    const TITLE = 'Glacier Fi | Investment pools';
     const DESCRIPTION =
         'Competitive yield with unmatched flexibility. Invest in a pool of your choice or create your own.';
 
@@ -30,7 +30,7 @@ function Pools() {
                 <meta property="og:description" content={DESCRIPTION} />
                 <meta property="twitter:description" content={DESCRIPTION} />
             </Head>
-            <PoolListProvider>
+            <PoolListProvider >
                 <UserTokenBalancesProvider>
                     <PageMasthead
                         title="Invest & Farm"
