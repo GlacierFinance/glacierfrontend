@@ -52,7 +52,7 @@ export default function PoolOverallStats() {
                     <AprTooltip onlySparkles data={data.apr} />
                 </HStack>
             </Flex>
-            <Divider />
+            <Divider borderColor="glacier.silver.500" borderWidth="1.5px"/>
             <Flex mt="5" flexDirection="column" width="full">
                 <Text lineHeight="1rem" fontWeight="semibold" fontSize="sm" color="glacier.silver.200" fontFamily="JetBrains">
                     BPT price
@@ -101,48 +101,51 @@ export default function PoolOverallStats() {
                 </Text>
             </Flex>
             {pool.staking?.farm && (
-                <Flex mt="5" flexDirection="column" width="full">                    <InfoButton
-                        labelProps={{
-                            lineHeight: '1rem',
-                            fontWeight: 'semibold',
-                            fontSize: 'sm',
-                            textColor: "glacier.silver.200",
-                            fontFamily: "JetBrains",
-                        }}
-                        label="Liquidity incentives"
-                        infoText={`Liquidity incentives are additional incentives available for this pool when you stake your BPT in the ${networkConfig.farmTypeName}. The daily value is an approximation based on current token prices and emissions.`}
-                    />
-                    <Text color="white" fontSize="20px" mt="2">
-                        ~{numeral(incentivesDailyValue).format('$0,0.00a')}
-                        <Text as="span" fontSize="md">
-                            {' '}
-                            / day
-                        </Text>
+            <Flex mt="5" flexDirection="column" width="full">                    
+                <InfoButton
+                    labelProps={{
+                        lineHeight: '1rem',
+                        fontWeight: 'semibold',
+                        fontSize: 'sm',
+                        textColor: "glacier.silver.200",
+                        fontFamily: "JetBrains",
+                    }}
+                    label="Liquidity incentives"
+                    infoText={`Liquidity incentives are additional incentives available for this pool when you stake your BPT in the ${networkConfig.farmTypeName}. The daily value is an approximation based on current token prices and emissions.`}
+                />
+                <Text color="white" fontSize="20px" mt="2">
+                    ~{numeral(incentivesDailyValue).format('$0,0.00a')}
+                    <Text as="span" fontSize="md">
+                        {' '}
+                        / day
                     </Text>
-                    <Box>
-                        {beetsPerDay > 0 && (
-                            <HStack spacing="1" mb="0.5">
-                                <TokenAvatar height="20px" width="20px" address={networkConfig.beets.address} />
-                                <Tooltip
-                                    label={`BEETS emissions are calculated per block, so daily emissions are an estimate based on an average block time over last 5,000 blocks. Avg block time: ${blocksData?.avgBlockTime}s.`}
-                                >
-                                    <Text fontSize="1rem" lineHeight="1rem">
-                                        {numeral(beetsPerDay).format('0,0')} / day
-                                    </Text>
-                                </Tooltip>
-                            </HStack>
-                        )}
-                        {pool.staking.farm.rewarders?.map((rewarder) => (
-                            <HStack spacing="1" mb="0.5" key={rewarder.id}>
-                                <TokenAvatar height="20px" width="20px" address={rewarder.tokenAddress} />
+                </Text>
+                <Box>
+                    {beetsPerDay > 0 && (
+                        <HStack spacing="1" mb="0.5">
+                            <TokenAvatar height="20px" width="20px" address={networkConfig.beets.address} />
+                            <Tooltip
+                                label={`BEETS emissions are calculated per block, so daily emissions are an estimate based on an average block time over last 5,000 blocks. Avg block time: ${blocksData?.avgBlockTime}s.`}
+                            >
                                 <Text fontSize="1rem" lineHeight="1rem">
-                                    {numeral(parseFloat(rewarder.rewardPerSecond) * 86400).format('0,0')} / day
+                                    {numeral(beetsPerDay).format('0,0')} / day
                                 </Text>
-                            </HStack>
-                        ))}
-                    </Box>
-                </Flex>
+                            </Tooltip>
+                        </HStack>
+                    )}
+                    {pool.staking.farm.rewarders?.map((rewarder) => (
+                        <HStack spacing="1" mb="0.5" key={rewarder.id}>
+                            <TokenAvatar height="20px" width="20px" address={rewarder.tokenAddress} />
+                            <Text fontSize="1rem" lineHeight="1rem">
+                                {numeral(parseFloat(rewarder.rewardPerSecond) * 86400).format('0,0')} / day
+                            </Text>
+                        </HStack>
+                    ))}
+                </Box>
+            </Flex>
             )}
+            <Divider mt="2" borderColor="glacier.silver.500" borderWidth="1px"/>
+
         </Flex>
     );
 }

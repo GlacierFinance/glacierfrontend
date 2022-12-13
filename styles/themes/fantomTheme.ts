@@ -92,6 +92,7 @@ export const fantomTheme: Partial<ChakraTheme> = {
                 '200': '#9AA4DA', 
                 '300': '#A974FF', 
                 '400': 'rgba(154, 164, 218, 0.2)', 
+                '500': '#B9C6FA', 
             }, 
 
             pink: {

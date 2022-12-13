@@ -89,7 +89,6 @@ export function PoolDetailBptPriceChart({ prices }: Props) {
                             { offset: 0.25, color: '#FF00D6' },
                             { offset: 0.75, color: '#BD00FF' },
                             { offset: 1, color: '#6100FF' },
-
                         ]), 
                     },
                     areaStyle: {
@@ -106,7 +105,6 @@ export function PoolDetailBptPriceChart({ prices }: Props) {
                     axisLine: { show: false },
                     minorSplitLine: { show: false },
                     splitLine: { show: false },
-
                     tooltip: {
                         valueFormatter: (value) => numberFormatUSDValue(value as number),
                     },

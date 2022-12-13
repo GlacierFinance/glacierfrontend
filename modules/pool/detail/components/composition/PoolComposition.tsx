@@ -199,7 +199,7 @@ function PoolCompositionTable({ columns, data, hasNestedTokens }: PoolCompositio
                         {rows.map((row) => {
                             prepareRow(row);
                             return (
-                                <Tr {...row.getRowProps()} padding="2" width="full" background="rgba(13, 11, 14, 0.8)">
+                                <Tr {...row.getRowProps()} padding="2" width="full" background="transparent">
                                     {row.cells.map((cell, i) => {
                                         return (
                                             <Td
