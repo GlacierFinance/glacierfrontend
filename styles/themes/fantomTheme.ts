@@ -97,6 +97,7 @@ export const fantomTheme: Partial<ChakraTheme> = {
 
             pink: {
                 '100' : '#FF01D6',
+                '200': '#B18ACF', 
             }
         }, 
         beets: {

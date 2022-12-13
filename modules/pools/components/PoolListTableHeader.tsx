@@ -9,6 +9,8 @@ export function PoolListTableHeader() {
     return (
         <>
             <Grid
+                fontFamily="JetBrains"
+                textTransform="uppercase"
                 pl="4"
                 py="3"
                 borderTopLeftRadius="md"
@@ -29,7 +31,7 @@ export function PoolListTableHeader() {
             >
                 <GridItem>
                     <Text fontSize="md" fontWeight="semibold" color="glacier.silver.200" >
-                        Pool details
+                        Pool Name
                     </Text>
                 </GridItem>
                 {showMyInvestments && (
@@ -44,7 +46,7 @@ export function PoolListTableHeader() {
                 )}
                 <GridItem textAlign="right">
                     {showMyInvestments ? (
-                        <Text fontSize="md" fontWeight="semibold" color="glscier.silver.200">
+                        <Text fontSize="md" fontWeight="semibold" color="glacier.silver.200">
                             TVL
                         </Text>
                     ) : (
@@ -60,7 +62,7 @@ export function PoolListTableHeader() {
                     display={showMyInvestments ? { base: 'block', lg: 'none', xl: 'block' } : 'block'}
                 >
                     {showMyInvestments ? (
-                        <Text fontSize="md" fontWeight="semibold" color="glscier.silver.200">
+                        <Text fontSize="md" fontWeight="semibold" color="glacier.silver.200">
                             Volume (24h)
                         </Text>
                     ) : (
@@ -73,7 +75,7 @@ export function PoolListTableHeader() {
                 </GridItem>
                 <GridItem textAlign="right" pr="4">
                     {showMyInvestments ? (
-                        <Text fontSize="md" fontWeight="semibold" color="glscier.silver.200">
+                        <Text fontSize="md" fontWeight="semibold" color="glacier.silver.200">
                             APR
                         </Text>
                     ) : (

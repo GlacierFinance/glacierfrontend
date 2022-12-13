@@ -50,8 +50,13 @@ export function PaginatedTable({
                     </Flex>
                 )}
                 {!isLoadingRows && items.length === 0 && (
-                    <Box background="glacier.black.200" height="md" display="flex" alignItems="center" justifyContent="center">
-                        No results found for your search criteria.
+                    <Box background="transparent" 
+                    height="md" 
+                    display="flex" 
+                    alignItems="center" 
+                    justifyContent="center" 
+                    fontFamily="JetBrains">
+                        🫠 No results found for your search criteria.
                     </Box>
                 )}
                 {!isLoadingRows &&

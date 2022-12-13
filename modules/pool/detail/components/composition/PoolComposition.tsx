@@ -206,7 +206,7 @@ function PoolCompositionTable({ columns, data, hasNestedTokens }: PoolCompositio
                                                 {...cell.getCellProps()}
                                                 borderBottom="1px" 
                                                 fontSize="xl"
-                                                borderColor="#B18ACF"
+                                                borderColor="glacier.pink.200"
                                                 borderStyle="dashed" 
                                                 p="2"
                                                 marginBottom="4"
