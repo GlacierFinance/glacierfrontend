@@ -18,7 +18,7 @@ export function TokenActionRow({ symbol, address, onClick, action }: TokenRowPro
                     <Text fontSize="lg">{symbol}</Text>
                 </HStack>
                 <Box>
-                    <Button size="sm" colorScheme="orange" onClick={onClick}>
+                    <Button size="sm" onClick={onClick}>
                         {action === 'import' ? 'Import' : 'Remove'}
                     </Button>
                 </Box>

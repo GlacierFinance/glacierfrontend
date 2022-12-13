@@ -45,13 +45,13 @@ export function TokenSelectModal({ isOpen, onClose, finalFocusRef }: Props) {
             finalFocusRef={finalFocusRef}
         >
             <ModalOverlay bg="blackAlpha.800" />
-            <ModalContent borderWidth={1} borderColor="beets.base.600">
-                <Box bg="blackAlpha.400">
+            <ModalContent borderWidth={1}>
+                <Box bg="black">
                     <Box className="bg">
                         <ModalCloseButton />
-                        <ModalHeader>Select a token to {tokenSelectKey === 'tokenIn' ? 'sell' : 'buy'}</ModalHeader>
+                        <ModalHeader textTransform="uppercase">Select a token to {tokenSelectKey === 'tokenIn' ? 'sell' : 'buy'}</ModalHeader>
                         <ModalBody p="0" position="relative">
-                            <Box px="6" pb="6" boxShadow="2xl" borderBottomWidth={1} borderBottomColor="beets.base.500">
+                            <Box px="6" pb="6" boxShadow="2xl" borderBottomWidth={1} borderBottomColor="glacier.silver.200">
                                 <TokenSelectSearchInput
                                     ref={initialFocusRef}
                                     placeholder="Search by symbol or address..."
@@ -91,7 +91,7 @@ export function TokenSelectModal({ isOpen, onClose, finalFocusRef }: Props) {
                                     alertDisclosure.onClose();
                                 }}
                             />
-                            <Box height="20px" boxShadow="dark-lg" borderTopWidth={1} borderTopColor="beets.base.600" />
+                            <Box height="20px" boxShadow="dark-lg" borderTopWidth={1} borderTopColor="glacier.silver.200" />
                         </ModalBody>
                     </Box>
                 </Box>

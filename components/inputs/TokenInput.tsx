@@ -63,8 +63,8 @@ export const TokenInput = forwardRef(
         };
 
         return (
-            <VStack width="full" alignItems="flex-start" >
-                <Box position="relative" width="full"  
+            <VStack width="full" alignItems="flex-start" fontFamily="JetBrains">
+                <Box position="relative" width="full"
                 border="1px" mb="1" paddingY="4"
                 style={{borderImage:'linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 50.9%, #F6ECFD 100%) 1' }}                 
              >
@@ -84,7 +84,7 @@ export const TokenInput = forwardRef(
                         paddingBottom="5"
                     >
                         {requiresApproval && (
-                            <Box position="absolute" color="orange" top=".5rem" right=".75rem" mt="1">
+                            <Box position="absolute" top=".5rem" right=".75rem" mt="1">
                                 <Tooltip
                                     label={`Before swapping, you'll need to give the Glacier Finance vault contract permission to move ${token?.symbol} on your behalf.`}
                                     hasArrow
@@ -101,7 +101,7 @@ export const TokenInput = forwardRef(
                                 paddingY="1"
                                 onClick={toggleTokenSelect}
                                 backgroundColor="transparent"
-                                _hover={{ backgroundColor: 'beets.green', color: 'gray.500' }}
+                                // _hover={{ backgroundColor: 'beets.green', color: 'gray.500' }}
                                 paddingX="1"
                                 _focus={{ boxShadow: 'none' }}
                             >
@@ -141,9 +141,9 @@ export const TokenInput = forwardRef(
                         <Text
                             position="absolute"
                             bottom=".75rem"
-                            right=".75rem"
+                            left=".75rem"
                             fontWeight="normal"
-                            color="gray.200"
+                            color="glacier.silver.200"
                             size="xs"
                             fontSize=".85rem"
                         >

@@ -37,7 +37,7 @@ import {
 import { CanvasRenderer } from 'echarts/renderers';
 import { chakraTheme } from '~/styles/chakraTheme';
 import { WagmiConfig } from 'wagmi';
-import { darkTheme, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { darkTheme, midnightTheme, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { networkChainDefinitions, wagmiClient } from '~/lib/global/network';
 import { BeetsFonts } from '~/components/fonts/BeetsFonts';
 import { AppContent } from '~/pages/_app-content';
@@ -98,7 +98,7 @@ function BeetsApp(props: AppProps) {
                     chains={networkChainDefinitions}
                     showRecentTransactions={true}
                     appInfo={{ appName: 'Beethoven X', learnMoreUrl: 'https://docs.beets.fi' }}
-                    theme={darkTheme()}
+                    theme={midnightTheme()}
                     avatar={() => <WalletUserAvatar />}
                 >
                     <ApolloProvider client={client}>

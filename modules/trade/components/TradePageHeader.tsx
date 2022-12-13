@@ -26,9 +26,9 @@ export function TradePageHeader() {
                         {tokenOut?.symbol}
                     </Text>
                 </Text>
-                <Box display="flex" alignItems="flex-end" mb="6px" ml="1">
+                {/* <Box display="flex" alignItems="flex-end" mb="6px" ml="1">
                     <InfoButton infoText="Global average price" />
-                </Box>
+                </Box> */}
             </Flex>
             {percentChange !== null && (
                 <HStack fontFamily="JetBrains">

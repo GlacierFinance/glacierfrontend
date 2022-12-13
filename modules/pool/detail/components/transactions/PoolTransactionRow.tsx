@@ -93,7 +93,7 @@ function Pool(props: PoolTransaction) {
                                 amount={(props.transaction as GqlPoolSwap).tokenAmountIn}
                                 address={(props.transaction as GqlPoolSwap).tokenIn}
                             />
-                            <Box mx={{ base: 0, lg: 2 }} pl={{ base: 10, lg: 0 }}>
+                            <Box color="glacier.pink.100" mx={{ base: 0, lg: 2 }} pl={{ base: 10, lg: 0 }}>
                                 {isMobile ? <ArrowDown /> : <ArrowRight />}
                             </Box>
                             <TokenAmountPill
