@@ -20,7 +20,8 @@ export function WalletConnectButton(props: Omit<ButtonProps, 'children' | 'onCli
                                 return (
                                     <Button ml='4' borderRadius="none" px='0' backgroundColor="black" alignItems="center"
                                     _hover={{
-                                        opacity: '80%',
+                                        opacity: '100%',
+                                        
                                         transform: 'scale(1.05)',
                                     }}
                                     _active={{

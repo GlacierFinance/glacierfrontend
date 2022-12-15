@@ -39,7 +39,7 @@ export function TradeChart() {
                     />
                 </Box>
             )}
-            <Flex mt="2">
+            <Flex mt="8">
                 <Box flex={1} />
                 <HStack>
                 <Button
