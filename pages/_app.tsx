@@ -98,7 +98,10 @@ function BeetsApp(props: AppProps) {
                     chains={networkChainDefinitions}
                     showRecentTransactions={true}
                     appInfo={{ appName: 'Beethoven X', learnMoreUrl: 'https://docs.beets.fi' }}
-                    theme={midnightTheme()}
+                    theme={midnightTheme({
+                        accentColor: '#9AA4DA',
+                        accentColorForeground: 'white',
+                    })}
                     avatar={() => <WalletUserAvatar />}
                 >
                     <ApolloProvider client={client}>

@@ -22,9 +22,10 @@ export function PoolListTop() {
                             icon={<Filter />}
                             ml={4}
                             onClick={toggleFilterVisibility}
-                            color={showFilters ? 'gray.100' : 'white'}
-                            bgColor={showFilters ? 'beets.base.300' : 'beets.lightAlpha.300'}
-                            _hover={{ bgColor: 'beets.light' }}
+                            background="transparent"
+                            // color={showFilters ? 'gray.100' : 'white'}
+                            // bgColor={showFilters ? 'beets.base.300' : 'beets.lightAlpha.300'}
+                            _hover={{ bgColor: '#242424' }}
                         />
                         {hasFiltersSelected ? (
                             <Circle size="3" bg="red.500" opacity="0.85" position="absolute" top="-4px" right="-4px" />

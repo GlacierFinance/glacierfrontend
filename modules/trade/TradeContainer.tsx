@@ -48,7 +48,7 @@ export function TradeContainer() {
                             <AnimatePresence>
                                 {showRouting && (
                                     <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                                        <Text fontSize="xl" fontWeight="bold" lineHeight="1.2rem" mt="48" textTransform="uppercase">
+                                        <Text fontSize="xl" fontWeight="bold" lineHeight="1.2rem" mt="48" textTransform="uppercase" letterSpacing="3px">
                                             Smart order routing
                                         </Text>
                                         <Text mb="16" mt="8" color="glacier.silver.200" fontFamily="JetBrains" >
@@ -61,7 +61,7 @@ export function TradeContainer() {
                             {showRouting && <BatchSwapSorRoute swapInfo={swapInfo} />}
 
                             <motion.div layout >
-                                <Text fontSize="xl" fontWeight="bold" lineHeight="1.2rem" mt="14" textTransform="uppercase">
+                                <Text fontSize="xl" fontWeight="bold" lineHeight="1.2rem" mt="14" textTransform="uppercase" letterSpacing="3px">
                                     Latest swaps
                                 </Text>
                                 <Text mb="12" mt="4" color="glacier.silver.200" fontFamily="JetBrains">
