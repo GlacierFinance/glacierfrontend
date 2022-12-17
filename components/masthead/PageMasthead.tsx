@@ -19,18 +19,21 @@ export function PageMasthead({ title, image }: Props) {
             flex="1" mb="2" 
             textTransform="uppercase"
             > */}
-             <h1 style={{
+           
+      <Box        >
+        
+    </Box>
+        <Text style={{
                 fontSize:'72px', 
                 fontWeight: 'semibold',
                 textTransform: 'uppercase', 
-                background: 'linear-gradient(to bottom, #F4F1F7 0%, #ECE3F3 25.13%, #AC3DB0 50.9%, #7054E0 58.19%, #C0AFF1 67.05%, #FFFFFF 81.11%, #F6ECFD 90.48%), linear-gradient(180deg, #DFCAD7 16.67%, #A16AB8 49.48%, #BACDFF 75.38%, #5D9988 100%)', 
+                backgroundImage:
+                'linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #000000 44.14%, #AC3DB0 50.9%, #7054E0 58.19%, #C0AFF1 67.05%, #FFFFFF 81.11%, #F6ECFD 90.48%), linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 50.9%, #F6ECFD 100%), linear-gradient(180deg, #F4F1F7 0%, #ECE3F3 44.13%, #8F7D9D 50.9%, #F6ECFD 100%)',                
                 WebkitTextFillColor: 'transparent',
                 WebkitBackgroundClip: 'text', 
-                // border: '1.64px solid',
-                // borderImageSource: 'linear-gradient(180deg, #DFCAD7 16.67%, #A16AB8 49.48%, #BACDFF 75.38%, #5D9988 100%)', 
                 }}>
                 {title}
-                </h1>
+                </Text>
                 
             {/* </Text> */}
             {/* <Box alignItems="flex-end" display={{ base: 'none', md: 'flex' }}>
