@@ -16,7 +16,7 @@ export function TextButtonPopupMenu({ buttonText, items }: Props) {
             <MenuButton
                 fontSize="lg"
                 userSelect="none"
-                color="beets.green"
+                color="glacier.pink.100"
                 fontWeight="bold"
                 _hover={{ textDecoration: 'underline', cursor: 'pointer' }}
             >

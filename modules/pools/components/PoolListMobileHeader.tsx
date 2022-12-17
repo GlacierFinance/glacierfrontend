@@ -111,7 +111,7 @@ export function PoolListMobileHeader() {
                     ]}
                 />
             </Box>
-            <Link onClick={onOpen} fontSize="lg" color="beets.green" fontWeight="bold" position="relative">
+            <Link onClick={onOpen} fontSize="lg" color="glacier.pink.100" fontWeight="bold" position="relative">
                 <Box>Filter</Box>
                 {hasFiltersSelected ? (
                     <Circle size="1.5" bg="red.500" opacity="0.85" position="absolute" top="4px" right="-6px" />

@@ -84,7 +84,7 @@ export function PoolListItem({ pool, userBalance, showUserBalance, tokens, hasUn
                             </GridItem>
                         )}
                         <StatGridItem area="tvl">
-                            <MobileLabel text="TVL" />
+                            <Text fontSize="xs" color="glacier.silver.200" fontFamily="JetBrains">TVL</Text>
                             <Text fontSize={{ base: 'xl', lg: 'md' }}>
                                 {numeral(pool.dynamicData.totalLiquidity).format('$0,0')}
                             </Text>
@@ -93,7 +93,7 @@ export function PoolListItem({ pool, userBalance, showUserBalance, tokens, hasUn
                             area="volume"
                             display={showUserBalance ? { base: 'block', lg: 'none', xl: 'block' } : 'block'}
                         >
-                            <MobileLabel text="VOLUME (24H)" />
+                            <Text fontSize="xs" color="glacier.silver.200" fontFamily="JetBrains">VOLUME (24H)</Text> 
                             <Text fontSize={{ base: 'xl', lg: 'md' }}>
                                 {numeral(pool.dynamicData.volume24h).format('$0,0')}
                             </Text>
@@ -104,14 +104,14 @@ export function PoolListItem({ pool, userBalance, showUserBalance, tokens, hasUn
                             justifyContent={{ base: 'flex-start', lg: 'end' }}
                             mr="4"
                         >
-                            <MobileLabel text="APR" />
+                            <Text fontSize="xs" color="glacier.silver.200" fontFamily="JetBrains">APR</Text> 
                             <MemoizedAprTooltip
                                 data={pool.dynamicData.apr}
                                 textProps={{ fontWeight: 'normal', fontSize: { base: 'xl', lg: 'md' } }}
                             />
                         </StatGridItem>
                         <StatGridItem area="fees" display={{ base: 'block', lg: 'none' }}>
-                            <MobileLabel text="FEES (24H)" />
+                            <Text fontSize="xs" color="glacier.silver.200" fontFamily="JetBrains">FEES (24H)</Text> 
                             <Text fontSize={{ base: 'xl', lg: 'md' }}>
                                 {numeral(pool.dynamicData.fees24h).format('$0,0')}
                             </Text>

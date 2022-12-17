@@ -124,7 +124,7 @@ export function PaginatedTable({
                             const selected = pageNumber === currentPage;
 
                             return (
-                                <Button borderRadius={0} color={selected ? 'beets.highlight' : undefined}>
+                                <Button borderRadius={0} color={selected ? 'glacier.pink.100' : undefined}>
                                     {element}
                                 </Button>
                             );

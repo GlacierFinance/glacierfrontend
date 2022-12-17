@@ -20,7 +20,7 @@ export default function PoolListSortLink({ title, orderDirection, ...rest }: Pro
             {...rest}
             userSelect="none"
         >
-            <Flex justifyContent="flex-end" alignItems="center">
+            <Flex justifyContent="flex-end" alignItems="center" color="glacier.silver.200">
                 <Text mr={orderDirection ? 0.5 : 0} fontSize="md" fontWeight="semibold">
                     {title}
                 </Text>
