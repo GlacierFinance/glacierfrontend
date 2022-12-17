@@ -148,7 +148,7 @@ export function PoolDetailAboutThisPool() {
                         <Box flex="1">BPT symbol</Box>
                         <Box>{pool.symbol}</Box>
                     </CardRow>
-                    <CardRow>
+                    <CardRow background="glacier.black.200">
                         <Box flex="1">Pool contract</Box>
                         <Link color="glacier.silver.200" fontFamily="JetBrains" href={etherscanGetAddressUrl(pool.address)} target="_blank">
                             <HStack spacing="1">
@@ -159,7 +159,7 @@ export function PoolDetailAboutThisPool() {
                             </HStack>
                         </Link>
                     </CardRow>
-                    <CardRow>
+                    <CardRow background="glacier.black.200">
                         <Box flex="1">Pool owner</Box>
                         <Link color="glacier.silver.200" fontFamily="JetBrains" href={etherscanGetAddressUrl(pool.address)} target="_blank">
                             <HStack spacing="1">
@@ -171,7 +171,7 @@ export function PoolDetailAboutThisPool() {
                         </Link>
                     </CardRow>
                     {pool.factory && (
-                        <CardRow>
+                        <CardRow background="glacier.black.200">
                             <Box flex="1">Factory contract</Box>
                             <Link color="glacier.silver.200" fontFamily="JetBrains" href={etherscanGetAddressUrl(pool.address)} target="_blank">
                             <HStack spacing="1">
@@ -183,7 +183,7 @@ export function PoolDetailAboutThisPool() {
                         </Link>
                         </CardRow>
                     )}
-                    <CardRow mb="0">
+                    <CardRow background="glacier.black.200" mb="0">
                         <Box flex="1">Vault</Box>
                         <Link color="glacier.silver.200" fontFamily="JetBrains" href={etherscanGetAddressUrl(pool.address)} target="_blank">
                             <HStack spacing="1">

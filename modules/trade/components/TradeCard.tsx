@@ -78,9 +78,7 @@ export function TradeCard() {
     }
 
     return (
-        <Box width="full" position="relative"
-            
-            >
+        <Box width="full" position="relative">
             <Card
                 animate={controls}
                 background="transparent"
@@ -111,9 +109,9 @@ export function TradeCard() {
                         onChange={handleBuyAmountChanged}
                         value={buyAmount}
                     />
-                    <Box width="full" paddingTop="2">
+                    <Box width="full" paddingTop="2" display="flex" justifyContent="center">
                         {!isConnected ? (
-                            <WalletConnectButton width="full" size="lg" />
+                            <WalletConnectButton width="full" size="lg"/>
                         ) : isNativeAssetWrap ? (
                             <BeetsSubmitTransactionButton
                                 {...wrapEthQuery}

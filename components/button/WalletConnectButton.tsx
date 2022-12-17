@@ -18,7 +18,7 @@ export function WalletConnectButton(props: Omit<ButtonProps, 'children' | 'onCli
                         {(() => {
                             if (!mounted || !account || !chain) {
                                 return (
-                                    <Button ml='4' borderRadius="none" px='0' backgroundColor="black" alignItems="center"
+                                    <Button borderRadius="none" backgroundColor="black"
                                     _hover={{
                                         opacity: '100%',
                                         
